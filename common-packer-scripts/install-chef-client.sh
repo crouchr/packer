@@ -2,13 +2,9 @@
 # Install Chef Client
 
 USER=vagrant
-CHEF_CLIENT_VERSION=16.1.16
+CHEF_CLIENT_VERSION=16.2.44
 
-# Install prerequisites for Chef
-sudo yum install -y git
-
-# Install Chef Client - this is latest as of April 2020
-#sudo curl -L https://www.chef.io/chef/install.sh | sudo bash -s -- -v 15.9.17
+# Install latest version of Chef Client - speeds up chef solo provisioning of Box
 sudo curl -L https://www.chef.io/chef/install.sh | sudo bash -s -- -v ${CHEF_CLIENT_VERSION}
 
 sudo mkdir -p /home/${USER}/.chef
