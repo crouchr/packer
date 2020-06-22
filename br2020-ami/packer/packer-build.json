@@ -19,7 +19,7 @@
         "communicator": "ssh",
         "associate_public_ip_address": true,
         "subnet_id": "{{user `subnet_id`}}",
-        "ami_name": "{{user `ami_name`}}",
+        "ami_name": "{{user `ami_name`}}-{{timestamp}}",
         "source_ami_filter": {
           "filters": {
                 "virtualization-type": "hvm",
