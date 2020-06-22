@@ -33,6 +33,7 @@
             "Name": "packer-build-image"
         },
         "tags": {
+            "Name": "CENTOS7_DEV_NETWORK_SANDBOX",
             "OWNER_TEAM": "NETWORK",
             "STACK": "NETWORK",
             "BUILT_BY": "PACKER"
