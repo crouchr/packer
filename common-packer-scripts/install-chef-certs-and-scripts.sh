@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # see https://serverfault.com/questions/709820/unattended-chef-client-installation
-
+# do this after install-chef-client.sh
+# Install credentials for Hosted Chef
 
 # config
 # ------
@@ -12,6 +13,8 @@ sudo wget --no-check-certificate \
    http://web.ermin/private/bootstrap-chef-files/validation.pem \
    -O /etc/chef/validation.pem
 
+sudo mkdir -p /home/vagrant/.chef
+
 sudo wget --no-check-certificate \
    http://web.ermin/private/bootstrap-chef-files/knife.rb \
    -O /home/vagrant/.chef/knife.rb
@@ -19,10 +22,6 @@ sudo wget --no-check-certificate \
 sudo wget --no-check-certificate \
    http://web.ermin/private/bootstrap-chef-files/first-run.json \
    -O /home/vagrant/first-run.json
-
-sudo wget --no-check-certificate \
-   http://web.ermin/private/bootstrap-chef-files/knife.rb \
-   -O /home/vagrant/.chef/knife.rb
 
 # certs
 # -----
