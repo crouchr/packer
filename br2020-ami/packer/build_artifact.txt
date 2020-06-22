@@ -1,0 +1,6 @@
+1592839619,,ui,error,Build 'amazon-ebs' errored: error validating regions: AuthFailure: AWS was not able to validate the provided access credentials\n	status code: 401%!(PACKER_COMMA) request id: 9821b79c-cfee-449a-9ebc-b923b56db9fe
+1592839619,,error-count,1
+1592839619,,ui,error,\n==> Some builds didn't complete successfully and had errors:
+1592839619,amazon-ebs,error,error validating regions: AuthFailure: AWS was not able to validate the provided access credentials\n	status code: 401%!(PACKER_COMMA) request id: 9821b79c-cfee-449a-9ebc-b923b56db9fe
+1592839619,,ui,error,--> amazon-ebs: error validating regions: AuthFailure: AWS was not able to validate the provided access credentials\n	status code: 401%!(PACKER_COMMA) request id: 9821b79c-cfee-449a-9ebc-b923b56db9fe
+1592839619,,ui,say,\n==> Builds finished but no artifacts were created.
