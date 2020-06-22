@@ -49,7 +49,6 @@ Write-Host "Env: NOTES : $Env:NOTES"
 $Json = Get-Content 'stack_vars/rch-centos7-vars.json' | Out-String | ConvertFrom-Json
 $IsoFilename = $Json.iso_filename
 
-#[string]$BuildDate = Get-Date -Format "dddd dd/MM/yyyy HH:mm K"
 # ISO 8601 format
 [string]$BuildDate = [DateTime]::UtcNow | get-date -Format "yyyy-MM-ddTHH:mm:ss.000Z"
 
