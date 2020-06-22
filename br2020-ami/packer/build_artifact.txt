@@ -1,6 +1,81 @@
-1592839619,,ui,error,Build 'amazon-ebs' errored: error validating regions: AuthFailure: AWS was not able to validate the provided access credentials\n	status code: 401%!(PACKER_COMMA) request id: 9821b79c-cfee-449a-9ebc-b923b56db9fe
-1592839619,,error-count,1
-1592839619,,ui,error,\n==> Some builds didn't complete successfully and had errors:
-1592839619,amazon-ebs,error,error validating regions: AuthFailure: AWS was not able to validate the provided access credentials\n	status code: 401%!(PACKER_COMMA) request id: 9821b79c-cfee-449a-9ebc-b923b56db9fe
-1592839619,,ui,error,--> amazon-ebs: error validating regions: AuthFailure: AWS was not able to validate the provided access credentials\n	status code: 401%!(PACKER_COMMA) request id: 9821b79c-cfee-449a-9ebc-b923b56db9fe
-1592839619,,ui,say,\n==> Builds finished but no artifacts were created.
+1592842755,,ui,say,==> amazon-ebs: Force Deregister flag found%!(PACKER_COMMA) skipping prevalidating AMI Name
+1592842757,,ui,message,    amazon-ebs: Found Image ID: ami-0b850cf02cc00fdc8
+1592842757,,ui,say,==> amazon-ebs: Creating temporary keypair: packer_5ef0da03-10f3-707e-38f9-775d1991863a
+1592842757,,ui,say,==> amazon-ebs: Creating temporary security group for this instance: packer_5ef0da05-ab62-7966-b707-c7fab354e0d6
+1592842758,,ui,say,==> amazon-ebs: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
+1592842758,,ui,say,==> amazon-ebs: Launching a source AWS instance...
+1592842758,,ui,say,==> amazon-ebs: Adding tags to source instance
+1592842758,,ui,message,    amazon-ebs: Adding tag: "Name": "packer-build-image"
+1592842759,,ui,message,    amazon-ebs: Instance ID: i-022fd600d0721c666
+1592842759,,ui,say,==> amazon-ebs: Waiting for instance (i-022fd600d0721c666) to become ready...
+1592842775,,ui,say,==> amazon-ebs: Using ssh communicator to connect: 18.203.126.236
+1592842775,,ui,say,==> amazon-ebs: Waiting for SSH to become available...
+1592842843,,ui,say,==> amazon-ebs: Connected to SSH!
+1592842843,,ui,say,==> amazon-ebs: Provisioning with shell script: /tmp/packer-shell234918617
+1592842844,,ui,say,==> amazon-ebs: Provisioning with shell script: ./provisioners/scripts/bootstrap.sh
+1592842844,,ui,error,==> amazon-ebs: + sudo yum install -y epel-release
+1592842844,,ui,message,    amazon-ebs: Loaded plugins: fastestmirror
+1592842845,,ui,message,    amazon-ebs: Determining fastest mirrors
+1592842845,,ui,message,    amazon-ebs:  * base: d36uatko69830t.cloudfront.net
+1592842845,,ui,message,    amazon-ebs:  * extras: d36uatko69830t.cloudfront.net
+1592842845,,ui,message,    amazon-ebs:  * updates: d36uatko69830t.cloudfront.net
+1592842848,,ui,message,    amazon-ebs: Resolving Dependencies
+1592842848,,ui,message,    amazon-ebs: --> Running transaction check
+1592842848,,ui,message,    amazon-ebs: ---> Package epel-release.noarch 0:7-11 will be installed
+1592842849,,ui,message,    amazon-ebs: --> Finished Dependency Resolution
+1592842849,,ui,message,    amazon-ebs:
+1592842849,,ui,message,    amazon-ebs: Dependencies Resolved
+1592842849,,ui,message,    amazon-ebs:
+1592842849,,ui,message,    amazon-ebs: ================================================================================
+1592842849,,ui,message,    amazon-ebs:  Package                Arch             Version         Repository        Size
+1592842849,,ui,message,    amazon-ebs: ================================================================================
+1592842849,,ui,message,    amazon-ebs: Installing:
+1592842849,,ui,message,    amazon-ebs:  epel-release           noarch           7-11            extras            15 k
+1592842849,,ui,message,    amazon-ebs:
+1592842849,,ui,message,    amazon-ebs: Transaction Summary
+1592842849,,ui,message,    amazon-ebs: ================================================================================
+1592842849,,ui,message,    amazon-ebs: Install  1 Package
+1592842849,,ui,message,    amazon-ebs:
+1592842849,,ui,message,    amazon-ebs: Total download size: 15 k
+1592842849,,ui,message,    amazon-ebs: Installed size: 24 k
+1592842849,,ui,message,    amazon-ebs: Downloading packages:
+1592842849,,ui,message,    amazon-ebs: Public key for epel-release-7-11.noarch.rpm is not installed
+1592842849,,ui,error,==> amazon-ebs: warning: /var/cache/yum/x86_64/7/extras/packages/epel-release-7-11.noarch.rpm: Header V3 RSA/SHA256 Signature%!(PACKER_COMMA) key ID f4a80eb5: NOKEY
+1592842849,,ui,message,    amazon-ebs: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+1592842849,,ui,error,==> amazon-ebs: Importing GPG key 0xF4A80EB5:
+1592842849,,ui,error,==> amazon-ebs:  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+1592842849,,ui,error,==> amazon-ebs:  Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+1592842849,,ui,error,==> amazon-ebs:  Package    : centos-release-7-7.1908.0.el7.centos.x86_64 (installed)
+1592842849,,ui,error,==> amazon-ebs:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+1592842849,,ui,message,    amazon-ebs: Running transaction check
+1592842849,,ui,message,    amazon-ebs: Running transaction test
+1592842849,,ui,message,    amazon-ebs: Transaction test succeeded
+1592842849,,ui,message,    amazon-ebs: Running transaction
+1592842849,,ui,message,    amazon-ebs:   Installing : epel-release-7-11.noarch                                     1/1
+1592842849,,ui,message,    amazon-ebs:   Verifying  : epel-release-7-11.noarch                                     1/1
+1592842849,,ui,message,    amazon-ebs:
+1592842849,,ui,message,    amazon-ebs: Installed:
+1592842849,,ui,message,    amazon-ebs:   epel-release.noarch 0:7-11
+1592842849,,ui,message,    amazon-ebs:
+1592842849,,ui,message,    amazon-ebs: Complete!
+1592842849,,ui,say,==> amazon-ebs: Stopping the source instance...
+1592842849,,ui,message,    amazon-ebs: Stopping instance
+1592842850,,ui,say,==> amazon-ebs: Waiting for the instance to stop...
+1592842865,,ui,say,==> amazon-ebs: Deregistered AMI br2020-ami%!(PACKER_COMMA) id: ami-09d1b4885efd8de77
+1592842865,,ui,say,==> amazon-ebs: Creating AMI br2020-ami from instance i-022fd600d0721c666
+1592842866,,ui,message,    amazon-ebs: AMI: ami-08baad85f1d0c14c7
+1592842866,,ui,say,==> amazon-ebs: Waiting for AMI to become ready...
+1592842942,,ui,say,==> amazon-ebs: Terminating the source AWS instance...
+1592842958,,ui,say,==> amazon-ebs: Cleaning up any extra volumes...
+1592842958,,ui,say,==> amazon-ebs: Destroying volume (vol-0baae0854919f8933)...
+1592842958,,ui,say,==> amazon-ebs: Deleting temporary security group...
+1592842958,,ui,say,==> amazon-ebs: Deleting temporary keypair...
+1592842958,,ui,say,Build 'amazon-ebs' finished.
+1592842958,,ui,say,\n==> Builds finished. The artifacts of successful builds are:
+1592842958,amazon-ebs,artifact-count,1
+1592842958,amazon-ebs,artifact,0,builder-id,mitchellh.amazonebs
+1592842958,amazon-ebs,artifact,0,id,eu-west-1:ami-08baad85f1d0c14c7
+1592842958,amazon-ebs,artifact,0,string,AMIs were created:\neu-west-1: ami-08baad85f1d0c14c7\n
+1592842958,amazon-ebs,artifact,0,files-count,0
+1592842958,amazon-ebs,artifact,0,end
+1592842958,,ui,say,--> amazon-ebs: AMIs were created:\neu-west-1: ami-08baad85f1d0c14c7\n
