@@ -31,7 +31,12 @@
         },
         "run_tags": {
             "Name": "packer-build-image"
-        }
+        },
+        "tags": {
+            "OWNER_TEAM": "NETWORK",
+            "STACK": "NETWORK",
+            "BUILT_BY": "PACKER"
+      }
     }],
 
     "provisioners": [{
