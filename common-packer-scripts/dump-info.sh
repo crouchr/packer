@@ -12,6 +12,12 @@ sudo cat /etc/group
 echo "Users:"
 sudo cat /etc/passwd
 
+echo "resolv.conf:"
+sudo cat /etc/resolv.conf
+
+echo "hosts:"
+sudo cat /etc/hosts
+
 # Show all files
 echo "==================================================="
 sudo tree /etc/chef
