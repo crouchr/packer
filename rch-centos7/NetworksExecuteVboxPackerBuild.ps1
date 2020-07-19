@@ -23,10 +23,12 @@ Write-Host "  VarsFiles      : $VarsFiles"
 
 ################################################################
 $BoxFile = "rch-centos7-v$Env:BOX_VERSION.box"
+$MetadataFilename = "rch-centos7-metadata.json"
+$Json = Get-Content 'stack_vars/rch-centos7-vars.json' | Out-String | ConvertFrom-Json
 $BoxUrl="https://richardcrouch.s3-eu-west-1.amazonaws.com/boxes/rch-centos7/$BoxFile"
-$PackerBinary = "/usr/local/bin/packer"
 ################################################################
 
+$PackerBinary = "/usr/local/bin/packer"
 & $PackerBinary version
 $PSversion = $PSVersionTable.PSVersion.Major
 Write-Host "PowerShell version : $PSversion"
@@ -46,7 +48,6 @@ Write-Host "Env: Jenkins BUILD_DISPLAY_NAME : $Env:BUILD_DISPLAY_NAME"
 Write-Host "Env: NOTES : $Env:NOTES"
 
 # Read ISO filename from vars file to add to metadata.json
-$Json = Get-Content 'stack_vars/rch-centos7-vars.json' | Out-String | ConvertFrom-Json
 $IsoFilename = $Json.iso_filename
 
 # ISO 8601 format
@@ -126,7 +127,6 @@ $MetadataFile=$MetadataFile.Replace("<box_url>",$BoxUrl)
 #$MetadataFile=$MetadataFile.Replace("<creation_date>",$BuildDate)
 
 # Dump metadata json file to console
-$MetadataFilename = "rch-centos7-metadata.json"
 Write-Host "VBox-format $MetadataFilename file contesnts :"
 $MetadataFile
 
