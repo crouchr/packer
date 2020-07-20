@@ -7,5 +7,5 @@
   "iso_checksum_type": "sha1",
   "ssh_user": "root",
   "ssh_password": "vagrant",
-  "disk_size": 20000
+  "disk_size": "20000"
 }
