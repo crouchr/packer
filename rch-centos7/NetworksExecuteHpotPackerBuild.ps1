@@ -1,9 +1,7 @@
 ﻿# Richard Crouch modified script to use for VirtualBox builds
 # Added $BoxVersion and $BoxDescription as calling parameters as well as generation of metaadata.json
 # This script is called from Jenkins
-# This script is NOT identical to the NVM one, but is similar
-# This has been copied from NetworksExecuteVboxPackerBuild.ps1 - parameterise them and merge them at some point
-# Mainly adding 'docker' to various files etc.
+# This is specifically for building CentOS7 honeypot
 
 param (
   [Parameter(Mandatory)]
@@ -17,17 +15,17 @@ param (
 # Exit on first error
 $ErrorActionPreference = "Stop"
 
-Write-Host "Running NetworksExecuteVboxDockerPackerBuild.ps1 script..."
+Write-Host "Running NetworksExecuteHpotPackerBuild.ps1 script..."
 Write-Host "Parameters:"
 Write-Host "  PackerBuilder  : $PackerBuilder"
 Write-Host "  PackerTemplate : $PackerTemplate"
 Write-Host "  VarsFiles      : $VarsFiles"
 
 ################################################################
-$BoxFile = "rch-centos7-docker-v$Env:BOX_VERSION.box"
-$MetadataFilename = "rch-centos7-docker-metadata.json"
-$Json = Get-Content 'stack_vars/rch-centos7-docker-vars.json' | Out-String | ConvertFrom-Json
-$BoxUrl="https://richardcrouch.s3-eu-west-1.amazonaws.com/boxes/rch-centos7-docker/$BoxFile"
+$BoxFile = "rch-hpot-v$Env:BOX_VERSION.box"
+$MetadataFilename = "rch-hpot-metadata.json"
+$Json = Get-Content 'stack_vars/rch-hpot-vars.json' | Out-String | ConvertFrom-Json
+$BoxUrl="https://richardcrouch.s3-eu-west-1.amazonaws.com/boxes/rch-hpot/$BoxFile"
 ################################################################
 
 $PackerBinary = "/usr/local/bin/packer"

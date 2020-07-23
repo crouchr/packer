@@ -127,7 +127,7 @@ $MetadataFile=$MetadataFile.Replace("<box_url>",$BoxUrl)
 #$MetadataFile=$MetadataFile.Replace("<creation_date>",$BuildDate)
 
 # Dump metadata json file to console
-Write-Host "VBox-format $MetadataFilename file contesnts :"
+Write-Host "VBox-format $MetadataFilename file contents :"
 $MetadataFile
 
 # Save to file so can be sent to S3 and collected as an artifact
