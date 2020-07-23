@@ -3,7 +3,7 @@
   "template": "RCH_HPOT_VIRTUALBOX",
   "virtualbox_output_directory": "packer/packer_cache",
   "iso_filename": "CentOS-7.0-1406-x86_64-Minimal.iso",
-  "iso_checksum": "c68e9aebfd0d901f538c46b4642ce2303622c6db",
+  "iso_checksum": "495a7d50eb7633c4667fbfc5e817bf244697c627",
   "iso_checksum_type": "sha1",
   "ssh_user": "root",
   "ssh_password": "vagrant",
