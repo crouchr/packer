@@ -87,7 +87,7 @@ $validateargs = @('validate')
 
 #packer build -var 'app_name_cmd_var=apache' apache.json
 $args = @('build')
-$args += "--only=$PackerBuilder"
+#$args += "--only=$PackerBuilder"
 $args += "--force"
 $args += "-var-file=box-vars.json"  # pass the box version and description via var-file
 
