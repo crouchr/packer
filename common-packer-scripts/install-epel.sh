@@ -1,5 +1,7 @@
 #!/bin/bash -eux
 # This is used by honeypot so do NOT run yum update - want it unpatched
+# There is a problem at the moment
+# joe, ncdu and dkms all come from epel so this script is not ready for use
 
 # Add the EPEL repo
 #sudo yum install -y epel-release

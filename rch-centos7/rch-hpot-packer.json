@@ -4,7 +4,7 @@
     {
       "boot_command": [
         "<tab>",
-        " ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/rch-centos7-ks.cfg ",
+        " ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/rch-hpot-ks.cfg ",
         "<enter>"
       ],
       "boot_wait": "15s",
@@ -72,7 +72,7 @@
   "provisioners": [
     {
       "scripts": [
-        "{{template_dir}}/../common-packer-scripts/install-epel.sh",
+        "{{template_dir}}/../common-packer-scripts/yum-update-all.sh",
         "{{template_dir}}/packer-scripts/set-hostname-centos7.sh"
       ],
       "type": "shell"
