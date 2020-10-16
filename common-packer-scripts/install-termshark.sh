@@ -3,5 +3,3 @@
 
 echo "Installing Termshark..."
 sudo snap install termshark
-
-
