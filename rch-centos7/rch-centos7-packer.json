@@ -27,8 +27,8 @@
       "http_directory": "http",
       "iso_checksum": "{{ user `iso_checksum_type` }}:{{ user `iso_checksum` }}",
       "iso_urls": [
-        "http://web.ermin/isos/{{ user `iso_filename` }}",
-        "http://mozart.ee.ic.ac.uk/CentOS/7/isos/x86_64/{{ user `iso_filename` }}"
+        "http://192.168.1.102/isos/{{ user `iso_filename` }}",
+        "http://anorien.csc.warwick.ac.uk/mirrors/centos/7/isos/x86_64//{{ user `iso_filename` }}"
       ],
       "name": "{{ user `template` }}",
       "output_directory": "{{ user `virtualbox_output_directory` }}",
@@ -52,7 +52,7 @@
         ]
       ],
       "virtualbox_version_file": ".vbox_version",
-      "vm_name": "centos-7.8-x86_64"
+      "vm_name": "centos-7.9-x86_64"
     }
   ],
   "description": "RCH Base CentOS7 Server packer template - VirtualBox",
