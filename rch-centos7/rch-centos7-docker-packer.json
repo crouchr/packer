@@ -53,7 +53,7 @@
       ],
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
-      "ssh_wait_timeout": "1h",
+      "ssh_wait_timeout": "20m",
       "virtualbox_version_file" : ".vbox_version"
     }
   ],
