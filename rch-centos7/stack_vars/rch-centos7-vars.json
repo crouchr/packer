@@ -3,7 +3,7 @@
   "template": "RCH_CentOS7_VIRTUALBOX",
   "virtualbox_output_directory": "packer/packer_cache",
   "iso_filename": "CentOS-7-x86_64-Minimal-2009.iso",
-  "iso_checksum": "07b94e6b1a0b0260b94c83d6bb76b26bf7a310dc78d7a9c7432809fb9bc6194a\"",
+  "iso_checksum": "9d452fe09a71394df437fd82e3fb263f02878f98",
   "iso_checksum_type": "sha1",
   "ssh_user": "root",
   "ssh_password": "vagrant",
