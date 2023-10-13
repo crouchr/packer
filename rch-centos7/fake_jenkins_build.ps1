@@ -1,4 +1,4 @@
-# Use this is the Jenkins build job is failing
+# Use this if the Jenkins build job is failing
 
 # Fake the build parameters that Jenkins would ask for
 $Env:BOX_VERSION = '1.0.0-local'
