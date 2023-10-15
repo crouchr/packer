@@ -23,6 +23,6 @@ Write-Host "Env:NODE_NAME                       : $Env:NODE_NAME"
 # So change directory to the 'current' directory like any proper OS and continue...
 Set-Location -Path $PSScriptRoot
 & .\NetworksExecuteVboxPackerBuild.ps1 `
-  -PackerBuilder "CentOS7" `
+  -PackerBuilder "RCH_CentOS7_VIRTUALBOX" `
   -PackerTemplate "rch-centos7-packer.json" `
   -VarsFiles "stack_vars/rch-centos7-vars.json"
