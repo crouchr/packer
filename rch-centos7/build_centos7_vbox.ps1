@@ -22,7 +22,7 @@ Write-Host "Env:NODE_NAME                       : $Env:NODE_NAME"
 # PowerShell treats the cwd as the directory in which PowerShell itself is found
 # So change directory to the 'current' directory like any proper OS and continue...
 Set-Location -Path $PSScriptRoot
-& .\NetworksExecuteHpotPackerBuild.ps1 `
+& .\NetworksExecuteVboxPackerBuild.ps1 `
   -PackerBuilder "CentOS7" `
   -PackerTemplate "rch-centos7-packer.json" `
   -VarsFiles "stack_vars/rch-centos7-vars.json"
