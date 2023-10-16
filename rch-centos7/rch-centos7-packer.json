@@ -19,7 +19,7 @@
         "{{ user `box_version` }}"
       ],
       "guest_additions_mode": "upload",
-      "guest_additions_sha256": "72c5956c8b7be0a639036083be79169a8765df37e3d11b385c816e3662eb98d7",
+      "guest_additions_sha256": "a88d947b0055ae0f08962fa1b5788247272903b6bca3f1a9ad0cb6bc8706ecf8",
       "guest_additions_url": "http://web.ermin/isos/VBoxGuestAdditions_{{ .Version }}.iso",
       "guest_os_type": "RedHat_64",
       "hard_drive_interface": "sata",
