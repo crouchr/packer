@@ -2,7 +2,7 @@
   "vm_name": "",
   "template": "RCH_CentOS7_VIRTUALBOX",
   "virtualbox_output_directory": "packer/packer_cache",
-  "iso_filename": "CentOS-7-x86_64-Minimal-2009.iso",
+  "iso_filename": "CentOS-7-x86_64-Minimal-2207-02.iso",
   "iso_checksum": "cc0e2b85baaa9194190c8d30c680a2282370a3cd",
   "iso_checksum_type": "sha1",
   "ssh_user": "root",
