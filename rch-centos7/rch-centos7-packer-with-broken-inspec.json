@@ -113,6 +113,11 @@
       "type": "shell"
     },
     {
+      "pause_before": "90s",
+      "profile": "../inspec/centos7",
+      "type": "inspec"
+    },
+    {
       "expect_disconnect": true,
       "script": "{{template_dir}}/../common-packer-scripts/shrink_disk.sh",
       "type": "shell"
