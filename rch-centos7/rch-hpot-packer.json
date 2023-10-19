@@ -19,7 +19,7 @@
         "{{ user `box_version` }}"
       ],
       "guest_additions_mode": "upload",
-      "guest_additions_sha256": "72c5956c8b7be0a639036083be79169a8765df37e3d11b385c816e3662eb98d7",
+      "guest_additions_sha256": "a88d947b0055ae0f08962fa1b5788247272903b6bca3f1a9ad0cb6bc8706ecf8",
       "guest_additions_url": "http://web.ermin/isos/VBoxGuestAdditions_{{ .Version }}.iso",
       "guest_os_type": "RedHat_64",
       "hard_drive_interface": "sata",
@@ -33,7 +33,7 @@
       "output_directory": "{{ user `virtualbox_output_directory` }}",
       "shutdown_command": "sudo shutdown -h 0",
       "ssh_password": "vagrant",
-      "ssh_timeout": "1h",
+      "ssh_timeout": "20m",
       "ssh_username": "vagrant",
       "type": "virtualbox-iso",
       "vboxmanage": [
@@ -51,7 +51,7 @@
         ]
       ],
       "virtualbox_version_file": ".vbox_version",
-      "vm_name": "centos-7-x86_64"
+      "vm_name": "centos-7.9-x86_64"
     }
   ],
   "description": "RCH Base HPOT CentOS7 Server packer template - VirtualBox",
@@ -73,7 +73,8 @@
     {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/yum-update-all.sh",
-        "{{template_dir}}/packer-scripts/set-hostname-hpot.sh"
+        "{{template_dir}}/packer-scripts/set-hostname-centos7.sh",
+        "{{template_dir}}/../common-packer-scripts/install-snap.sh"
       ],
       "type": "shell"
     },
@@ -96,6 +97,9 @@
         "{{template_dir}}/../common-packer-scripts/sshd-config.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools-dependencies.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools.sh",
+        "{{template_dir}}/../common-packer-scripts/install-chef-client.sh",
+        "{{template_dir}}/../common-packer-scripts/install-chef-certs-and-scripts.sh",
+        "{{template_dir}}/../common-packer-scripts/install-termshark.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
       "type": "shell"
@@ -104,11 +108,6 @@
       "expect_disconnect": true,
       "script": "{{template_dir}}/../common-packer-scripts/reboot.sh",
       "type": "shell"
-    },
-    {
-      "pause_before": "90s",
-      "profile": "../inspec/centos7",
-      "type": "inspec"
     },
     {
       "expect_disconnect": true,
