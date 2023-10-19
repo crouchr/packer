@@ -6,5 +6,3 @@
 echo "reboot.sh : Reboot will take 60 seconds, please wait..."
 sudo reboot
 sleep 60
-
-#sleep 3600

@@ -2,6 +2,8 @@
 
 USER=crouchr
 
+echo 'Running install-user-ssh-keys.sh...'
+
 #sudo wget --no-check-certificate \
 #   http://web.ermin/public-keys/rch-nvm-sshkey.pub \
 #   -O /home/${USER}/.ssh/authorized_keys

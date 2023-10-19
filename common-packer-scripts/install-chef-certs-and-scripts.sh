@@ -3,6 +3,8 @@
 # do this after install-chef-client.sh
 # Install credentials for Hosted Chef
 
+echo 'Running install-chef-certs-and-scripts...'
+
 # config
 # ------
 sudo wget --no-check-certificate \

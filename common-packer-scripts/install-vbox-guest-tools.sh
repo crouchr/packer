@@ -1,6 +1,8 @@
 #!/bin/bash -eux
 # Ref : https://github.com/gwagner/packer-centos/blob/master/provisioners/install-vmware-guest-additions.sh
 
+echo 'Running install-vbox-guest-tools.sh...'
+
 # Mount Disk Image
 cd /tmp
 sudo mkdir /tmp/isomount
