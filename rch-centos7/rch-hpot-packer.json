@@ -73,8 +73,7 @@
     {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/yum-update-all.sh",
-        "{{template_dir}}/packer-scripts/set-hostname-centos7.sh",
-        "{{template_dir}}/../common-packer-scripts/install-snap.sh"
+        "{{template_dir}}/packer-scripts/set-hostname-hpot.sh"
       ],
       "type": "shell"
     },
@@ -91,6 +90,7 @@
     {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/install-tools-packages.sh",
+        "{{template_dir}}/../common-packer-scripts/install-go.sh",
         "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key.sh",
         "{{template_dir}}/../common-packer-scripts/add-users.sh",
         "{{template_dir}}/../common-packer-scripts/install-user-ssh-keys.sh",
@@ -100,7 +100,14 @@
         "{{template_dir}}/../common-packer-scripts/install-chef-client.sh",
         "{{template_dir}}/../common-packer-scripts/install-chef-certs-and-scripts.sh",
         "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
+        "{{template_dir}}/../common-packer-scripts/install-cloud-init.sh",
+        "{{template_dir}}/../common-packer-scripts/install-filebeats.sh",
+        "{{template_dir}}/../common-packer-scripts/install-telegraf.sh",
+        "{{template_dir}}/../common-packer-scripts/install-ossec-agent.sh",
+        "{{template_dir}}/../common-packer-scripts/install-sec.sh",
+        "{{template_dir}}/../common-packer-scripts/install-clamav.sh",
         "{{template_dir}}/../common-packer-scripts/install-termshark.sh",
+        "{{template_dir}}/../common-packer-scripts/install-nmap.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
       "type": "shell"

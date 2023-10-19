@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This is obsolete - only use if fail to get Foreman to work
 echo "Installing Spacewalk client..."
 
 echo "EARLY EXIT : IGNORE THIS DUE TO BUG"

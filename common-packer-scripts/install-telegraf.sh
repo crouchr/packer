@@ -1,8 +1,9 @@
 #!/bin/bash -eux
-# Install telgraf on node - Chef will be used to configure it
+# Install telegraf on node - Chef will be used to configure it
 # Put influxdb on another node
-
 # https://www.digitalocean.com/community/tutorials/how-to-monitor-system-metrics-with-the-tick-stack-on-centos-7
+
+echo "Installing telegraf..."
 
 sudo wget --no-check-certificate \
    http://web.ermin.lan/br2020-packages/influxdata.repo \
