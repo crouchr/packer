@@ -105,6 +105,7 @@
         "{{template_dir}}/../common-packer-scripts/install-telegraf.sh",
         "{{template_dir}}/../common-packer-scripts/install-ossec-agent.sh",
         "{{template_dir}}/../common-packer-scripts/install-sec.sh",
+        "{{template_dir}}/../common-packer-scripts/install-modsecurity.sh",
         "{{template_dir}}/../common-packer-scripts/install-clamav.sh",
         "{{template_dir}}/../common-packer-scripts/install-termshark.sh",
         "{{template_dir}}/../common-packer-scripts/install-nmap.sh",

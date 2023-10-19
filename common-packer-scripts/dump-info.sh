@@ -27,5 +27,9 @@ echo "==================================================="
 sudo tree /home/vagrant
 echo "==================================================="
 
+# Show disk space
+sudo df -h
+
 # List all the installed packages
+echo 'Installed packages'
 sudo yum list installed

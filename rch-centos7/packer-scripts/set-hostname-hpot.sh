@@ -1,4 +1,4 @@
-# FIXME : need to parameterise this
+# FIXME : need to parameterize this
 # A reboot is needed after this command
-sudo hostnamectl set-hostname hpot
-
+# This is just the generic VBOX hostname - Chef customises it later
+sudo hostnamectl set-hostname hpot-pre-chef
