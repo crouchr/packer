@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Go with OSSEC first
 # https://documentation.wazuh.com/3.12/installation-guide/installing-wazuh-agent/linux/centos6-or-greater/wazuh_agent_package_centos6_or_greater.html#wazuh-agent-package-centos6-or-greater
 # There is a VM with the Wazuh server on it - I have downloaded it but no more
 
