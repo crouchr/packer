@@ -2,4 +2,4 @@
 
 echo "Installing Nmap..."
 
-sudo yum -y nmap
+sudo yum install -y nmap
