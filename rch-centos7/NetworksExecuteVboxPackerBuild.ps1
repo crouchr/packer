@@ -16,7 +16,7 @@ param (
 $ErrorActionPreference = "Stop"
 
 Write-Host "Running NetworksExecuteVboxPackerBuild.ps1 script..."
-Write-Host "Parameters:"
+Write-Host "Parameters passed from Jenkins:"
 Write-Host "  PackerBuilder  : $PackerBuilder"
 Write-Host "  PackerTemplate : $PackerTemplate"
 Write-Host "  VarsFiles      : $VarsFiles"
