@@ -15,7 +15,7 @@ param (
 # Exit on first error
 $ErrorActionPreference = "Stop"
 
-Write-Host "Running NetworksExecuteHpotPackerBuild.ps1 script..."
+Write-Host "Running HpotPackerBuild.ps1 script..."
 Write-Host "Parameters passed from Jenkins:"
 Write-Host "  PackerBuilder  : $PackerBuilder"
 Write-Host "  PackerTemplate : $PackerTemplate"
