@@ -110,7 +110,7 @@
         "{{template_dir}}/../common-packer-scripts/install-termshark.sh",
         "{{template_dir}}/../common-packer-scripts/install-nmap.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh",
-        "{{template_dir}}/../packer-scripts/rch-hpot-smoke-checks.sh"
+        "{{template_dir}}/packer-scripts/rch-hpot-smoke-checks.sh"
       ],
       "type": "shell"
     },
