@@ -118,7 +118,7 @@
       "script": "{{template_dir}}/../common-packer-scripts/reboot.sh",
       "type": "shell"
     },
-       {
+    {
       "scripts": [
         "{{template_dir}}/../packer-scripts/rch-hpot-smoke-checks.sh"
       ],
