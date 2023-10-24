@@ -93,6 +93,7 @@
         "{{template_dir}}/../common-packer-scripts/install-go.sh",
         "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key.sh",
         "{{template_dir}}/../common-packer-scripts/add-users.sh",
+        "{{template_dir}}/../common-packer-scripts/add-jenkins.sh",
         "{{template_dir}}/../common-packer-scripts/install-user-ssh-keys.sh",
         "{{template_dir}}/../common-packer-scripts/sshd-config.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools-dependencies.sh",
