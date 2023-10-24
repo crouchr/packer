@@ -1,4 +1,5 @@
 #!/bin/bash -eux
+# Needed on web-server : Add jenkins into apache group so it can upload files
 
 USER=jenkins
 sudo adduser ${USER}
