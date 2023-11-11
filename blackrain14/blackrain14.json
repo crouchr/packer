@@ -3,7 +3,9 @@
   "builders": [{
     "type": "virtualbox-iso",
     "guest_os_type": "Linux26_64",
-    "iso_url": "http://mirrors.slackware.com/slackware/slackware-iso/slackware64-14.2-iso/slackware64-14.2-install-dvd.iso",
+    "iso_urls": [
+        "/home/jenkins/isos/slackware-14.2-install-dvd.iso"
+      ],
     "iso_checksum": "522db1d2845aaab22078530c67f858c1",
     "iso_checksum_type": "md5",
     "ssh_username": "root",
