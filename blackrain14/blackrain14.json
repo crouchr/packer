@@ -14,8 +14,6 @@
     "shutdown_command": "shutdown -h now",
     "headless": true,
     "hard_drive_interface": "sata",
-    "disk_size": "20000",
-    "ssh_timeout": "10m",
     "export_opts": [
       "--manifest",
       "--vsys", "0",
