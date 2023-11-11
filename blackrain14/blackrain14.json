@@ -20,7 +20,7 @@
     "export_opts": [
       "--manifest",
       "--vsys", "0",
-      "--description", "BlackRain 14.2 (64-bit) base box",
+      "--description", "BlackRain 14.2 (64-bit) Sensor base box",
       "--version", "0.1.0"
     ],
     "boot_command": [
