@@ -64,7 +64,7 @@
   "provisioners": [
     {
       "type": "shell",
-      "script": "../packer-scripts/vagrantize.sh"
+      "script": "packer-scripts/vagrantize.sh"
     },
     {
       "destination": "/home/vagrant/BOX_README.md",
@@ -73,12 +73,12 @@
     },
     {
       "expect_disconnect": true,
-      "script": "../packer-scripts/reboot.sh",
+      "script": "packer-scripts/reboot.sh",
       "type": "shell"
     },
     {
       "expect_disconnect": true,
-      "script": "../packer-scripts/shrink_disk.sh",
+      "script": "packer-scripts/shrink_disk.sh",
       "type": "shell"
     }
   ],

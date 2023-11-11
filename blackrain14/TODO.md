@@ -1,6 +1,8 @@
 # TODO.md
-Make this (and all my boxes) build with the latest packer (1.9) - this is a legacy format (.json)
-
+- Add ability to set a box version number
+- Add metafile.json
+- Make this script run the slackpkg update and patch ? 
+- Make this (and all my boxes) build with the latest packer (1.9) - this is a legacy format (.json)
 
 ```commandline
 [crouchr@dolphin blackrain14]$ /usr/bin/bash /home/crouchr/PycharmProjects/packer/blackrain14/go_build_box.sh
