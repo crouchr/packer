@@ -11,6 +11,7 @@
     "ssh_username": "root",
     "ssh_password": "vagrant",
     "shutdown_command": "shutdown -h now",
+    "headless": true,
     "hard_drive_interface": "sata",
     "export_opts": [
       "--manifest",
