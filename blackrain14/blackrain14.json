@@ -1,5 +1,6 @@
 {
-  "description": "A slackware 64-bit 14.2 installation with Virtualbox tools installed",
+  "_comment": "Here is how you add a comment",
+  "description": "A Slackware 64-bit 14.2 installation with Virtualbox tools installed",
   "builders": [{
     "type": "virtualbox-iso",
     "guest_os_type": "Linux26_64",
@@ -13,10 +14,11 @@
     "shutdown_command": "shutdown -h now",
     "headless": true,
     "hard_drive_interface": "sata",
+    "disk_size": "20000",
     "export_opts": [
       "--manifest",
       "--vsys", "0",
-      "--description", "Blackrain 14.2 base box",
+      "--description", "BlackRain 14.2 (64-bit) base box",
       "--version", "0.1.0"
     ],
     "boot_command": [
@@ -85,5 +87,11 @@
       "type": "shell"
     }
   ],
-  "post-processors": ["vagrant"]
+  "post-processors": [
+    {
+      "compression_level": 9,
+      "keep_input_artifact": true,
+      "output": "blackrain14.box",
+      "type": "vagrant"
+    }
 }

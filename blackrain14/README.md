@@ -4,3 +4,14 @@ This Box is then uses with other jobs to then configure the Box as a full implem
 
 Note : This box is defined in the legacy JSON format
 
+The step in the packer file where the Slackware package sets is defined is shown below ?:
+"<wait>e
+<spacebar>f
+<spacebar>kk
+<spacebar>t
+<spacebar>t
+<spacebar>x
+<spacebar>x
+<spacebar>x
+<spacebar>y
+<spacebar><enter>",
