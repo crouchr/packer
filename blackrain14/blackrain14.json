@@ -7,7 +7,7 @@
     "iso_urls": [
         "/home/jenkins/isos/slackware-14.2-install-dvd.iso"
       ],
-    "iso_checksum": "522db1d2845aaab22078530c67f858c1",
+    "iso_checksum": "84c10fb0cf77b41cbfa862ae3f4ce906",
     "iso_checksum_type": "md5",
     "ssh_username": "root",
     "ssh_password": "vagrant",
