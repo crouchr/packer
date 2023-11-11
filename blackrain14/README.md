@@ -1,5 +1,7 @@
 This repo contains the scripts required to build the base Blackrain Slackware14.2 Vagrant Box
 
+This Box is essentially an applicance and so needs every piece of unused package removed
+
 This Box is then uses with other jobs to then configure the Box as a full implementation.
 
 Note : This box is defined in the legacy JSON format
@@ -17,4 +19,4 @@ The step in the packer file where the Slackware package sets is defined is shown
 <spacebar><enter>",
 
 
-Packages will have been built on another Slackware node
+Packages will have been built on another Slackware node - called blackrain-builder (A Vagrant machine)
