@@ -7,17 +7,18 @@
     "iso_urls": [
         "/home/jenkins/isos/slackware-14.2-install-dvd.iso"
       ],
-    "iso_checksum": "84c10fb0cf77b41cbfa862ae3f4ce906",
+    "iso_checksum": "522db1d2845aaab22078530c67f858c1",
     "iso_checksum_type": "md5",
     "ssh_username": "root",
     "ssh_password": "vagrant",
     "shutdown_command": "shutdown -h now",
     "headless": true,
     "hard_drive_interface": "sata",
+    "disk_size": "20000",
     "export_opts": [
       "--manifest",
       "--vsys", "0",
-      "--description", "BlackRain 14.2 (64-bit) Sensor base box",
+      "--description", "BlackRain 14.2 (64-bit) base box",
       "--version", "0.1.0"
     ],
     "boot_command": [
@@ -95,13 +96,12 @@
       "type": "shell"
     }
   ],
-  "post-processors":
-  [
+  "post-processors": [
     {
       "compression_level": 9,
       "keep_input_artifact": true,
       "output": "blackrain14.box",
       "type": "vagrant"
     }
-  ]
+    ]
 }
