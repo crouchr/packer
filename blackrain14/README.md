@@ -15,3 +15,6 @@ The step in the packer file where the Slackware package sets is defined is shown
 <spacebar>x
 <spacebar>y
 <spacebar><enter>",
+
+
+Packages will have been built on another Slackware node

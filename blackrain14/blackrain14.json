@@ -77,6 +77,15 @@
       "type": "file"
     },
     {
+      "destination": "/etc/motd",
+      "source": "motd",
+      "type": "file"
+    },
+    {
+      "type": "shell",
+      "script": "packer-scripts/dump-info.sh"
+    },
+    {
       "expect_disconnect": true,
       "script": "packer-scripts/reboot.sh",
       "type": "shell"
