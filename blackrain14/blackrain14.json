@@ -15,7 +15,6 @@
     "headless": true,
     "hard_drive_interface": "sata",
     "disk_size": "20000",
-    "ram":"1024",
     "ssh_timeout": "10m",
     "export_opts": [
       "--manifest",
