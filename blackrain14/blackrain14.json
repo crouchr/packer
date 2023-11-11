@@ -97,12 +97,13 @@
       "type": "shell"
     }
   ],
-  "post-processors": [
+  "post-processors":
+  [
     {
       "compression_level": 9,
       "keep_input_artifact": true,
       "output": "blackrain14.box",
       "type": "vagrant"
     }
-    ]
+  ]
 }
