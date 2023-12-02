@@ -83,6 +83,10 @@
     },
     {
       "type": "shell",
+      "script": "packer-scripts/install_packages.sh"
+    },
+    {
+      "type": "shell",
       "script": "packer-scripts/dump-info.sh"
     },
     {
@@ -100,7 +104,7 @@
     {
       "compression_level": 9,
       "keep_input_artifact": true,
-      "output": "blackrain14.box",
+      "output": "blackrain-base.box",
       "type": "vagrant"
     }
     ]

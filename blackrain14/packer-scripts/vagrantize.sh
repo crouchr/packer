@@ -11,6 +11,7 @@ cd /mnt
 ./VBoxLinuxAdditions.run
 cd /
 umount /mnt
+
 # Set up the vagrant user and give him full access
 groupadd vagrant
 useradd -d /home/vagrant -s /bin/bash -g vagrant vagrant
