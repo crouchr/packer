@@ -104,7 +104,7 @@
     {
       "compression_level": 9,
       "keep_input_artifact": true,
-      "output": "blackrain-base.box",
+      "output": "blackrain14-base.box",
       "type": "vagrant"
     }
     ]
