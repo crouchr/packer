@@ -1,75 +1,87 @@
 {
   "_comment": "Here is how you add a comment",
-  "description": "A Slackware 64-bit 14.2 installation with Virtualbox tools installed",
-  "builders": [{
-    "type": "virtualbox-iso",
-    "guest_os_type": "Linux26_64",
-    "iso_urls": [
+  "builders": [
+    {
+      "boot_command": [
+        "<wait><enter><wait5>",
+        "<wait><enter>",
+        "<wait>root<enter>",
+        "<wait>fdisk /dev/sda<enter>",
+        "<wait>o<enter>n<enter>p<enter>1<enter><enter><enter>w<enter>",
+        "<wait>setup<enter>",
+        "<wait>t<enter><enter>f<enter><enter><wait10><enter>",
+        "<wait>1<enter>a<enter><wait10>",
+        "<wait>e<spacebar>f<spacebar>kk<spacebar>t<spacebar>t<spacebar>x<spacebar>x<spacebar>x<spacebar>y<spacebar><enter>",
+        "<wait>f<enter>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10>",
+        "<wait><enter>",
+        "<wait><enter>",
+        "<wait><enter>",
+        "<wait><enter>",
+        "<wait>n",
+        "<wait>M<enter>",
+        "<wait5><enter>",
+        "<wait5>n",
+        "<wait>y",
+        "<wait>slackware<enter>",
+        "<wait>example.org<enter>",
+        "<wait>d<enter><enter>y",
+        "<wait><enter>",
+        "<wait>n",
+        "<wait>y<enter>",
+        "<wait>ggg<enter>",
+        "<wait>y",
+        "<wait>vagrant<enter>",
+        "<wait>vagrant<enter>",
+        "<wait>vagrant<enter>",
+        "<wait><enter><enter>",
+        "<wait>e<wait><enter><wait><enter>",
+        "<wait>reboot<enter>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10>",
+        "root<enter>",
+        "<wait>vagrant<enter>",
+        "echo PermitRootLogin yes >> /etc/ssh/sshd_config<enter>",
+        "/etc/rc.d/rc.sshd restart<enter>"
+      ],
+      "disk_size": "20000",
+      "export_opts": [
+        "--manifest",
+        "--vsys",
+        "0",
+        "--description",
+        "BlackRain 14.2 (64-bit) base box",
+        "--version",
+        "0.1.0"
+      ],
+      "guest_os_type": "Linux26_64",
+      "hard_drive_interface": "sata",
+      "headless": true,
+      "iso_checksum": "md5:84c10fb0cf77b41cbfa862ae3f4ce906",
+      "iso_urls": [
         "/home/jenkins/isos/slackware-14.2-install-dvd.iso"
       ],
-    "iso_checksum": "84c10fb0cf77b41cbfa862ae3f4ce906",
-    "iso_checksum_type": "md5",
-    "ssh_username": "root",
-    "ssh_password": "vagrant",
-    "shutdown_command": "shutdown -h now",
-    "headless": true,
-    "hard_drive_interface": "sata",
-    "disk_size": "20000",
-    "export_opts": [
-      "--manifest",
-      "--vsys", "0",
-      "--description", "BlackRain 14.2 (64-bit) base box",
-      "--version", "0.1.0"
-    ],
-    "boot_command": [
-      "<wait><enter><wait5>",
-      "<wait><enter>",
-      "<wait>root<enter>",
-      "<wait>fdisk /dev/sda<enter>",
-      "<wait>o<enter>n<enter>p<enter>1<enter><enter><enter>w<enter>",
-      "<wait>setup<enter>",
-      "<wait>t<enter><enter>f<enter><enter><wait10><enter>",
-      "<wait>1<enter>a<enter><wait10>",
-      "<wait>e<spacebar>f<spacebar>kk<spacebar>t<spacebar>t<spacebar>x<spacebar>x<spacebar>x<spacebar>y<spacebar><enter>",
-      "<wait>f<enter>",
-      "<wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10>",
-      "<wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10>",
-      "<wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10>",
-      "<wait><enter>",
-      "<wait><enter>",
-      "<wait><enter>",
-      "<wait><enter>",
-      "<wait>n",
-      "<wait>M<enter>",
-      "<wait5><enter>",
-      "<wait5>n",
-      "<wait>y",
-      "<wait>slackware<enter>",
-      "<wait>example.org<enter>",
-      "<wait>d<enter><enter>y",
-      "<wait><enter>",
-      "<wait>n",
-      "<wait>y<enter>",
-      "<wait>ggg<enter>",
-      "<wait>y",
-      "<wait>vagrant<enter>",
-      "<wait>vagrant<enter>",
-      "<wait>vagrant<enter>",
-      "<wait><enter><enter>",
-      "<wait>e<wait><enter><wait><enter>",
-      "<wait>reboot<enter>",
-      "<wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10>",
-      "<wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10>",
-      "root<enter>",
-      "<wait>vagrant<enter>",
-      "echo PermitRootLogin yes >> /etc/ssh/sshd_config<enter>",
-      "/etc/rc.d/rc.sshd restart<enter>"
-    ]
-  }],
+      "shutdown_command": "shutdown -h now",
+      "ssh_password": "vagrant",
+      "ssh_username": "root",
+      "type": "virtualbox-iso"
+    }
+  ],
+  "description": "A Slackware 64-bit 14.2 installation with Virtualbox tools installed",
+  "post-processors": [
+    {
+      "compression_level": 9,
+      "keep_input_artifact": true,
+      "output": "blackrain14-base.box",
+      "type": "vagrant"
+    }
+  ],
   "provisioners": [
     {
-      "type": "shell",
-      "script": "packer-scripts/vagrantize.sh"
+      "script": "packer-scripts/vagrantize.sh",
+      "type": "shell"
     },
     {
       "destination": "/home/vagrant/BOX_README.md",
@@ -82,12 +94,12 @@
       "type": "file"
     },
     {
-      "type": "shell",
-      "script": "packer-scripts/install_packages.sh"
+      "script": "packer-scripts/install_packages.sh",
+      "type": "shell"
     },
     {
-      "type": "shell",
-      "script": "packer-scripts/dump-info.sh"
+      "script": "packer-scripts/dump-info.sh",
+      "type": "shell"
     },
     {
       "expect_disconnect": true,
@@ -99,13 +111,6 @@
       "script": "packer-scripts/shrink_disk.sh",
       "type": "shell"
     }
-  ],
-  "post-processors": [
-    {
-      "compression_level": 9,
-      "keep_input_artifact": true,
-      "output": "blackrain14-base.box",
-      "type": "vagrant"
-    }
-    ]
+  ]
 }
+
