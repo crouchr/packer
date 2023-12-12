@@ -2,4 +2,4 @@
 
 echo "Installing Argus..."
 
-sudo yum -y argus argus-clients
+sudo yum -y install argus argus-clients
