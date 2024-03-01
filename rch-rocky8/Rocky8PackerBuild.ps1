@@ -24,7 +24,7 @@ Write-Host "  VarsFiles      : $VarsFiles"
 ################################################################
 $BoxFile = "rch-rocky8-v$Env:BOX_VERSION.box"
 $MetadataFilename = "rch-rocky8-metadata.json"
-$Json = Get-Content 'stack_vars/rch-rocky8-vars.json' | Out-String | ConvertFrom-Json
+$Json = Get-Content 'stack_vars/rch-rocky8-docker-vars.json' | Out-String | ConvertFrom-Json
 $BoxUrl="https://richardcrouch.s3-eu-west-1.amazonaws.com/boxes/rch-rocky8/$BoxFile"
 ################################################################
 
