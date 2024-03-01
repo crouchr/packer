@@ -34,11 +34,11 @@
       "disk_size": "{{ user `disk_size` }}",
       "output_directory": "{{ user `virtualbox_output_directory` }}",
       "guest_os_type": "RedHat_64",
-      "guest_additions_url": "http://web.ermin/isos/VBoxGuestAdditions_{{ .Version }}.iso",
+      "guest_additions_url": "/home/jenkins/isos/VBoxGuestAdditions_{{ .Version }}.iso",
       "guest_additions_sha256": "72c5956c8b7be0a639036083be79169a8765df37e3d11b385c816e3662eb98d7",
       "guest_additions_mode": "upload",
       "iso_urls":[
-        "http://192.168.1.102/isos/{{ user `iso_filename` }}"
+        "/home/jenkins/isos/{{ user `iso_filename` }}"
       ],
       "iso_checksum": "{{ user `iso_checksum` }}",
       "iso_checksum_type": "{{ user `iso_checksum_type` }}",
