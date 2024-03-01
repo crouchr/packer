@@ -1,8 +1,8 @@
 {
   "vm_name": "",
-  "template": "RCH_CentOS7_DOCKER_VIRTUALBOX",
+  "template": "RCH_ROCKY8_DOCKER_VIRTUALBOX",
   "virtualbox_output_directory": "packer/packer_cache",
-  "iso_filename": "CentOS-7-x86_64-Minimal-2207-02.iso",
+  "iso_filename": "Rocky-8.9-x86_64-minimal.iso",
   "iso_checksum": "bf8284dad10fea431ad368269afc083a45a8a355",
   "iso_checksum_type": "sha1",
   "ssh_user": "root",
