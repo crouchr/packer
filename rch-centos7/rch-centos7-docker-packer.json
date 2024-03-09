@@ -100,7 +100,6 @@
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools-dependencies.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools.sh",
         "{{template_dir}}/../common-packer-scripts/install-chef-client.sh",
-        "{{template_dir}}/../common-packer-scripts/install-chef-certs-and-scripts.sh",
         "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
         "{{template_dir}}/../common-packer-scripts/install-mariadb.sh",
         "{{template_dir}}/../common-packer-scripts/install-java.sh",
