@@ -51,7 +51,7 @@
         ]
       ],
       "virtualbox_version_file": ".vbox_version",
-      "vm_name": "rch-tradr7-docker-8.9-x86_64"
+      "vm_name": "rch-tradr7-docker-7.9-x86_64"
     }
   ],
   "description": "Tradr7 packer template - VirtualBox",
