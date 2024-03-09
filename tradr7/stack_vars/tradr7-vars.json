@@ -1,0 +1,12 @@
+{
+  "vm_name": "",
+  "template": "RCH_ROCKY8_DOCKER_VIRTUALBOX",
+  "virtualbox_output_directory": "packer/packer_cache",
+  "iso_filename": "Rocky-8.9-x86_64-minimal.iso",
+  "iso_checksum": "4a4663d44d058979a370174f9a59726e6cd6cd32",
+  "iso_checksum_type": "sha1",
+  "ssh_user": "root",
+  "ssh_password": "vagrant",
+  "disk_size": "20000",
+  "headless": "true"
+}

@@ -1,0 +1,117 @@
+{
+  "_comment": "Here is a comment",
+  "builders": [
+    {
+      "boot_command": [
+        "<tab>",
+        " ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/rch-rocky8-ks.cfg ",
+        "<enter>"
+      ],
+      "boot_wait": "15s",
+      "disk_size": "{{ user `disk_size` }}",
+      "export_opts": [
+        "--manifest",
+        "--vsys",
+        "0",
+        "--description",
+        "{{ user `box_description` }}",
+        "--version",
+        "{{ user `box_version` }}"
+      ],
+      "guest_additions_mode": "upload",
+      "guest_additions_sha256": "a88d947b0055ae0f08962fa1b5788247272903b6bca3f1a9ad0cb6bc8706ecf8",
+      "guest_additions_url": "/home/jenkins/isos/VBoxGuestAdditions_{{ .Version }}.iso",
+      "guest_os_type": "RedHat_64",
+      "hard_drive_interface": "sata",
+      "headless": "{{ user `headless` }}",
+      "http_directory": "http",
+      "iso_checksum": "{{ user `iso_checksum_type` }}:{{ user `iso_checksum` }}",
+      "iso_urls": [
+        "/home/jenkins/isos/{{ user `iso_filename` }}"
+      ],
+      "name": "{{ user `template` }}",
+      "output_directory": "{{ user `virtualbox_output_directory` }}",
+      "shutdown_command": "sudo shutdown -h 0",
+      "ssh_password": "vagrant",
+      "ssh_timeout": "30m",
+      "ssh_username": "vagrant",
+      "type": "virtualbox-iso",
+      "vboxmanage": [
+        [
+          "modifyvm",
+          "{{ .Name }}",
+          "--memory",
+          "2048"
+        ],
+        [
+          "modifyvm",
+          "{{ .Name }}",
+          "--cpus",
+          "2"
+        ]
+      ],
+      "virtualbox_version_file": ".vbox_version",
+      "vm_name": "rch-tradr7-docker-8.9-x86_64"
+    }
+  ],
+  "description": "Tradr7 packer template - VirtualBox",
+  "min_packer_version": "1.9.0",
+  "post-processors": [
+    {
+      "compression_level": 9,
+      "keep_input_artifact": true,
+      "output": "tradr7-v{{ user `box_version` }}.box",
+      "type": "vagrant"
+    },
+    {
+      "output": "packer_built_images.json",
+      "strip_path": true,
+      "type": "manifest"
+    }
+  ],
+  "provisioners": [
+    {
+      "scripts": [
+        "{{template_dir}}/../common-packer-scripts/yum-update-all.sh",
+        "{{template_dir}}/packer-scripts/set-hostname-tradr7-docker.sh",
+        "{{template_dir}}/../common-packer-scripts/install-snap.sh"
+      ],
+      "type": "shell"
+    },
+    {
+      "destination": "/home/vagrant/BOX_README.md",
+      "source": "BOX_README.md",
+      "type": "file"
+    },
+    {
+      "expect_disconnect": true,
+      "script": "{{template_dir}}/../common-packer-scripts/reboot.sh",
+      "type": "shell"
+    },
+    {
+      "scripts": [
+        "{{template_dir}}/../common-packer-scripts/install-tools-packages.sh",
+        "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key.sh",
+        "{{template_dir}}/../common-packer-scripts/add-users.sh",
+        "{{template_dir}}/../common-packer-scripts/add-jenkins.sh",
+        "{{template_dir}}/../common-packer-scripts/install-user-ssh-keys.sh",
+        "{{template_dir}}/../common-packer-scripts/install-jenkins-ssh-keys.sh",
+        "{{template_dir}}/../common-packer-scripts/sshd-config.sh",
+        "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools-dependencies.sh",
+        "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools.sh",
+        "{{template_dir}}/../common-packer-scripts/dump-info.sh"
+      ],
+      "type": "shell"
+    },
+    {
+      "expect_disconnect": true,
+      "script": "{{template_dir}}/../common-packer-scripts/reboot.sh",
+      "type": "shell"
+    },
+    {
+      "expect_disconnect": true,
+      "script": "{{template_dir}}/../common-packer-scripts/shrink_disk.sh",
+      "type": "shell"
+    }
+  ]
+}
