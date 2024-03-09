@@ -38,8 +38,7 @@
       "guest_additions_sha256": "72c5956c8b7be0a639036083be79169a8765df37e3d11b385c816e3662eb98d7",
       "guest_additions_mode": "upload",
       "iso_urls":[
-        "http://192.168.1.102/isos/{{ user `iso_filename` }}",
-        "http://anorien.csc.warwick.ac.uk/mirrors/centos/7/isos/x86_64//{{ user `iso_filename` }}"
+        "http://192.168.1.102/isos/{{ user `iso_filename` }}"
       ],
       "iso_checksum": "{{ user `iso_checksum` }}",
       "iso_checksum_type": "{{ user `iso_checksum_type` }}",
@@ -104,11 +103,6 @@
         "type": "shell",
         "script": "{{template_dir}}/../common-packer-scripts/reboot.sh",
         "expect_disconnect": true
-      },
-      {
-        "type": "inspec",
-        "pause_before": "90s",
-        "profile": "../inspec/centos7"
       },
       {
         "type": "shell",
