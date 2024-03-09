@@ -89,6 +89,11 @@
       "type": "shell"
     },
     {
+      "type": "file",
+      "source": "files/test_file.ini",
+      "destination": "/tmp/test_file.ini"
+    },
+    {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/install-tools-packages.sh",
         "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key.sh",
