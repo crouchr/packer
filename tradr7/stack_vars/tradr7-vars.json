@@ -1,6 +1,6 @@
 {
   "vm_name": "",
-  "template": "RCH_TRADR7_VIRTUALBOX",
+  "template": "TRADR7_VIRTUALBOX",
   "virtualbox_output_directory": "packer/packer_cache",
   "iso_filename": "CentOS-7-x86_64-Minimal-2207-02.iso",
   "iso_checksum": "bf8284dad10fea431ad368269afc083a45a8a355",
