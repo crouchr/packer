@@ -79,3 +79,4 @@ fabric.properties
 # Log files (if you are creating logs in debug mode, uncomment this)
 # *.log
 
+/rch-centos7/packages/jython-installer-2.7.3.jar
