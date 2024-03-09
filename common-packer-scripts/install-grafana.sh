@@ -1,6 +1,6 @@
 #!/bin/bash -eux
 
-echo "Installing Grafana ..."
+echo "Installing Grafana..."
 
 # https://www.fosslinux.com/8328/how-to-install-and-configure-grafana-on-centos-7.htm
 
