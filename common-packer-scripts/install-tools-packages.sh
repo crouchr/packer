@@ -5,7 +5,7 @@
 
 echo 'Running install-tools-packages.sh...'
 
-sudo yum install -y yum-utils git wget lsof net-tools htop tcpdump traceroute tcpflow bind-utils jq
+sudo yum install -y yum-utils git wget lsof net-tools htop bind-utils jq
 
 # Add packages I personally like to use
 sudo yum install -y joe shadow-utils tree ncdu nano

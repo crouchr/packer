@@ -1,4 +1,5 @@
 # FIXME : need to parameterise this
 # A reboot is needed after this command
-sudo hostnamectl set-hostname tradr7-basebox
+sudo hostnamectl set-hostname tradr7-base
+
 
