@@ -18,7 +18,11 @@ sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 EOF
 
 sudo yum -y install grafana
-mkdir -p /etc/grafana
+sudo mkdir -p /etc/grafana
 
 # grafana.ini previously copied into VBOX /tmp dir using file provisioner
-cp /tmp/grafana.ini /etc/grafana/grafana.ini
+sudo cp /tmp/grafana.ini /etc/grafana/grafana.ini
+
+echo "Starting Grafana..."
+sudo systemctl enable grafana-server
+sudo systemctl start grafana-server
