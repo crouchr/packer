@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash -eux
 # Install Chef Client
 
 #CHEF_CLIENT_VERSION=16.2.73 - known to work

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash -eux
 echo "Installing Docker CE and tooling..."
 
 # Install packages
@@ -16,7 +16,7 @@ sudo mkdir -p /etc/docker
 # sudo wget --no-check-certificate \
 #   http://web.ermin.lan/br2020-packages/daemon.json \
 #   -O /etc/docker/daemon.json
-sudo cp /tmp/daemon.json /etc/dockr/daemon.json
+sudo cp /tmp/daemon.json /etc/docker/daemon.json
 
 
 # Start Docker
