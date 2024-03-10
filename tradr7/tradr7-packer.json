@@ -100,11 +100,6 @@
     },
     {
       "type": "file",
-      "source": "files/grafana.ini",
-      "destination": "/tmp/grafana.ini"
-    },
-    {
-      "type": "file",
       "source": "files/vagrant.pub",
       "destination": "/tmp/vagrant.pub"
     },
