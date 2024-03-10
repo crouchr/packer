@@ -109,6 +109,11 @@
       "destination": "/tmp/php.ini"
     },
     {
+      "type": "file",
+      "source": "files/daemon.json",
+      "destination": "/tmp/daemon.json"
+    },
+    {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/install-tools-packages.sh",
         "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key-no-web.sh",
@@ -118,6 +123,7 @@
         "{{template_dir}}/../common-packer-scripts/install-grafana.sh",
         "{{template_dir}}/../common-packer-scripts/install-apache.sh",
         "{{template_dir}}/../common-packer-scripts/install-mariadb.sh",
+        "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
       "type": "shell"
