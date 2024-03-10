@@ -104,6 +104,11 @@
       "destination": "/tmp/grafana.ini"
     },
     {
+      "type": "file",
+      "source": "files/php.ini",
+      "destination": "/tmp/php.ini"
+    },
+    {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/install-tools-packages.sh",
         "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key-no-web.sh",
