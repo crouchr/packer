@@ -112,10 +112,6 @@
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/install-tools-packages.sh",
         "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key-no-web.sh",
-        "{{template_dir}}/../common-packer-scripts/add-users.sh",
-        "{{template_dir}}/../common-packer-scripts/add-jenkins.sh",
-        "{{template_dir}}/../common-packer-scripts/install-user-ssh-keys.sh",
-        "{{template_dir}}/../common-packer-scripts/install-jenkins-ssh-keys.sh",
         "{{template_dir}}/../common-packer-scripts/sshd-config.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools-dependencies.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools.sh",
