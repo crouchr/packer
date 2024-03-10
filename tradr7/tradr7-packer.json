@@ -104,9 +104,14 @@
       "destination": "/tmp/grafana.ini"
     },
     {
+      "type": "file",
+      "source": "files/vagrant.pub",
+      "destination": "/tmp/vagrant.pub"
+    },
+    {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/install-tools-packages.sh",
-        "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key.sh",
+        "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key-no-web.sh",
         "{{template_dir}}/../common-packer-scripts/add-users.sh",
         "{{template_dir}}/../common-packer-scripts/add-jenkins.sh",
         "{{template_dir}}/../common-packer-scripts/install-user-ssh-keys.sh",
@@ -114,9 +119,6 @@
         "{{template_dir}}/../common-packer-scripts/sshd-config.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools-dependencies.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools.sh",
-        "{{template_dir}}/../common-packer-scripts/install-grafana.sh",
-        "{{template_dir}}/../common-packer-scripts/install-mariadb.sh",
-        "{{template_dir}}/../common-packer-scripts/install-apache.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
       "type": "shell"
