@@ -90,8 +90,18 @@
     },
     {
       "type": "file",
-      "source": "files/test_file.ini",
-      "destination": "/tmp/test_file.ini"
+      "source": "files/grafana.ini",
+      "destination": "/tmp/grafana.ini"
+    },
+    {
+      "type": "file",
+      "source": "files/motd",
+      "destination": "/tmp/motd"
+    },
+    {
+      "type": "file",
+      "source": "files/grafana.ini",
+      "destination": "/tmp/grafana.ini"
     },
     {
       "scripts": [
@@ -104,12 +114,14 @@
         "{{template_dir}}/../common-packer-scripts/sshd-config.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools-dependencies.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools.sh",
+        "{{template_dir}}/../common-packer-scripts/install-grafana.sh",
         "{{template_dir}}/../common-packer-scripts/install-mariadb.sh",
         "{{template_dir}}/../common-packer-scripts/install-apache.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
       "type": "shell"
     },
+
     {
       "expect_disconnect": true,
       "script": "{{template_dir}}/../common-packer-scripts/reboot.sh",

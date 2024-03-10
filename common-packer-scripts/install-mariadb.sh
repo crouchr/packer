@@ -7,3 +7,6 @@ sudo echo -e "[mariadb]\nname=MariaDB Repository\nbaseurl=http://yum.mariadb.org
 
 # MariaDB 10.x
 sudo yum -y install MariaDB-server MariaDB-client MariaDB-devel
+#echo "Starting MariaDB..."
+#systemctl enable mariadb
+#systemctl start mariadb

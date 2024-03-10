@@ -16,9 +16,9 @@ gpgkey=https://packages.grafana.com/gpg.key
 sslverify=1
 sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 EOF
-yum -y install grafana
+
+sudo yum -y install grafana
 mkdir -p /etc/grafana
 
-#cp /vagrant/config/grafana.ini /etc/grafana/grafana.ini
-
-
+# grafana.ini previously copied into VBOX /tmp dir using file provisioner
+cp /tmp/grafana.ini /etc/grafana/grafana.ini
