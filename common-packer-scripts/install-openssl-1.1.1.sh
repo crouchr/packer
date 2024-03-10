@@ -10,7 +10,8 @@ cd openssl-1.1.1k
 ./config --prefix=/usr --openssldir=/etc/ssl --libdir=lib no-shared zlib-dynamic
 make
 sudo make install
-sudo echo "export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64" >> /etc/profile.d/openssl.sh
+sudo cp /tmp/openssl.sh /etc/profile.d/openssl.sh
 source /etc/profile.d/openssl.sh
 openssl version
 
+#sudo echo "export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64" >> /etc/profile.d/openssl.sh
