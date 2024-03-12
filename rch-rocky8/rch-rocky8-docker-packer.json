@@ -7,7 +7,7 @@
         " ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/rch-rocky8-ks.cfg ",
         "<enter>"
       ],
-      "boot_wait": "15s",
+      "boot_wait": "30s",
       "disk_size": "{{ user `disk_size` }}",
       "export_opts": [
         "--manifest",
@@ -41,7 +41,7 @@
           "modifyvm",
           "{{ .Name }}",
           "--memory",
-          "2048"
+          "3072"
         ],
         [
           "modifyvm",
