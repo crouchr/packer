@@ -4,7 +4,7 @@
     {
       "boot_command": [
         "<tab>",
-        " ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/rch-rocky8-ks.cfg ",
+        " ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/another-rocky8-ks.cfg ",
         "<enter>"
       ],
       "boot_wait": "15s",
