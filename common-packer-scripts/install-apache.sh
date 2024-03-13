@@ -12,8 +12,6 @@ sudo yum -y install php php-common php-mysql php-pdo php-intl php-gd php-xml php
 sudo cp /tmp/php.ini /etc/php.ini
 
 echo "Starting httpd..."
-sudo systemctl enable httpd.service
-sudo systemctl start httpd.service
+#sudo systemctl enable httpd.service
+#sudo systemctl start httpd.service
 
-
-# sudo echo "date.timezone = Europe/London" >> /etc/php.ini
