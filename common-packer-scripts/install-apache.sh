@@ -11,6 +11,7 @@ sudo yum -y install php php-common php-mysql php-pdo php-intl php-gd php-xml php
 # php.ini previously copied into VBOX /tmp dir using file provisioner
 sudo cp /tmp/php.ini /etc/php.ini
 
-echo "Starting httpd..."
-sudo systemctl enable httpd.service
-sudo systemctl start httpd.service
+# Currently causing a failure in Packer so commented out - only needed for Web-based UI
+# echo "Starting httpd..."
+# sudo systemctl enable httpd.service
+# sudo systemctl start httpd.service
