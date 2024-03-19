@@ -19,6 +19,7 @@ python3.9 --version
 
 # override built-in Python3
 sudo ln -s /usr/local/bin/python3.9 /bin/python3 -f
+python3 --version
 
 #LDFLAGS="-Wl,-rpath=/usr/local/openssl/lib" ./configure --with-openssl=/usr/local/openssl --enable-optimizations
 #LDFLAGS="-Wl,-rpath=/usr/lib64/opensslocal/openssl/lib" ./configure --enable-optimizations
