@@ -2,6 +2,8 @@
 
 echo "Installing Python 3.9.17 ..."
 
+# Uninstall inbuilt Python 3.6 ?
+
 # Install Python 3.9.17
 sudo rm -rf /opt/python3
 sudo mkdir -p /opt/python3
@@ -14,6 +16,9 @@ sudo make altinstall
 
 # smoke test
 python3.9 --version
+
+# override built-in Python3
+sudo ln -s /usr/local/bin/python3.9 /bin/python3 -f
 
 #LDFLAGS="-Wl,-rpath=/usr/local/openssl/lib" ./configure --with-openssl=/usr/local/openssl --enable-optimizations
 #LDFLAGS="-Wl,-rpath=/usr/lib64/opensslocal/openssl/lib" ./configure --enable-optimizations
