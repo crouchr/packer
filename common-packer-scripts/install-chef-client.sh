@@ -10,7 +10,6 @@ USER=vagrant
 
 # Install latest version of Chef Client - speeds up chef solo provisioning of Box
 sudo curl -L https://www.chef.io/chef/install.sh | sudo bash -s -- -v ${CHEF_CLIENT_VERSION}
-# sudo curl -L https://omnitruck.cinc.sh/install.sh | sudo bash -s -- -v 18
 
 sudo mkdir -p /home/${USER}/.chef
 sudo chown ${USER}:${USER} /home/${USER}/.chef
