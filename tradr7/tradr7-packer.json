@@ -100,21 +100,6 @@
     },
     {
       "type": "file",
-      "source": "files/grafana.ini",
-      "destination": "/tmp/grafana.ini"
-    },
-    {
-      "type": "file",
-      "source": "files/php.ini",
-      "destination": "/tmp/php.ini"
-    },
-    {
-      "type": "file",
-      "source": "files/openssl.sh",
-      "destination": "/tmp/openssl.sh"
-    },
-    {
-      "type": "file",
       "source": "files/daemon.json",
       "destination": "/tmp/daemon.json"
     },
