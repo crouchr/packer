@@ -119,6 +119,11 @@
       "destination": "/tmp/daemon.json"
     },
     {
+      "type": "file",
+      "source": "files/jython-installer-2.7.3.jar",
+      "destination": "/tmp/jython-installer-2.7.3.jar"
+    },
+    {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/install-tools-packages.sh",
         "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key-no-web.sh",
@@ -129,6 +134,7 @@
         "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
         "{{template_dir}}/../common-packer-scripts/install-x-windows.sh",
         "{{template_dir}}/../common-packer-scripts/install-java-11.sh",
+        "{{template_dir}}/../common-packer-scripts/install-jython.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
       "type": "shell"
