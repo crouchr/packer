@@ -2,7 +2,7 @@
 # Added $BoxVersion and $BoxDescription as calling parameters as well as generation of metadata.json
 # This script is called from Jenkins
 # This script is NOT identical to the NVM one, but is similar
-# NOTE ! : The only difference to Centos7DockerPackerBuild.ps1 is this line : $BoxFile = "rch-centos7-v$Env:BOX_VERSION.box"
+# NOTE ! : The only difference to Centos7PackerBuild.ps1 is this line : $BoxFile = "rch-centos7-docker-v$Env:BOX_VERSION.box"
 
 param (
   [Parameter(Mandatory)]
@@ -16,14 +16,14 @@ param (
 # Exit on first error
 $ErrorActionPreference = "Stop"
 
-Write-Host "Running Centos7PackerBuild.ps1 script..."
+Write-Host "Running Centos7DockerPackerBuild.ps1 script..."
 Write-Host "Parameters passed from Jenkins:"
 Write-Host "  PackerBuilder  : $PackerBuilder"
 Write-Host "  PackerTemplate : $PackerTemplate"
 Write-Host "  VarsFiles      : $VarsFiles"
 
 ################################################################
-$BoxFile = "rch-centos7-v$Env:BOX_VERSION.box"
+$BoxFile = "rch-centos7-docker-v$Env:BOX_VERSION.box"
 $MetadataFilename = "rch-centos7-metadata.json"
 $Json = Get-Content 'stack_vars/rch-centos7-vars.json' | Out-String | ConvertFrom-Json
 $BoxUrl="https://richardcrouch.s3-eu-west-1.amazonaws.com/boxes/rch-centos7/$BoxFile"

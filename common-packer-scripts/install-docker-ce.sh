@@ -16,8 +16,10 @@ sudo mkdir -p /etc/docker
 # sudo wget --no-check-certificate \
 #   http://web.ermin.lan/br2020-packages/daemon.json \
 #   -O /etc/docker/daemon.json
+sudo wget --no-check-certificate \
+   http://web.ermin.lan/br2020-packages/daemon.json \
+   -O /tmp/daemon.json
 sudo cp /tmp/daemon.json /etc/docker/daemon.json
-
 
 # Start Docker
 sudo systemctl start docker
