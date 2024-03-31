@@ -25,6 +25,7 @@ if {$force_conservative} {
 set timeout -1
 spawn java -jar jython-installer.jar
 match_max 100000
+
 expect -exact "Please select your language \[E/g\] >>> "
 send -- "\r"
 expect -exact "Do you want to read the license agreement now ? \[y/N\] >>> "
@@ -34,13 +35,16 @@ send -- "\r"
 expect -exact "Please select the installation type \[ 1 /2/3/9\] >>> "
 send -- "2\r"
 expect -exact "Do you want to install additional parts ? \[y/N\] >>> "
-send -- "\r"
+send -- "N\r"
+expect -exact "Do you want to exclude parts from the installation ? \[y/N\] >>> "
+send -- "N\r"
 expect -exact "Please enter the target directory >>> "
 send -- "/opt/jython-2.7.3\r"
 expect -exact "Unable to find directory /opt/jython-2.7.3, create it ? \[Y/n\] >>> "
-send -- "\r"
+send -- "Y\r"
 expect -exact "Please confirm copying of files to directory /opt/jython-2.7.3 \[Y/n\] >>> "
-send -- "\r"
+send -- "Y\r"
 expect -exact "Do you want to show the contents of README ? \[y/N\] >>> "
-send -- "\r"
+send -- "N\r"
+
 expect eof

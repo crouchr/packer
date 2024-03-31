@@ -111,7 +111,7 @@
     {
       "type": "file",
       "source": "files/jython-installer-2.7.3.jar",
-      "destination": "/tmp/jython-installer-2.7.3.jar"
+      "destination": "/tmp/jython-installer.jar"
     },
     {
       "type": "file",
