@@ -2,25 +2,11 @@
 
 echo "Installing Jython..."
 
-# Do the install here once I know what it is
-cd /tmp
-java -jar jython-installer-2.7.3.jar <<END
-E
-N
-Y
-2
-N
-N
-/home/vagrant/bin/jython
-Y
-Y
-N
-END
+# Use expect to drive the installer
+sudo yum -y install expect
 
-#./myscript.sh <<END
-#my name
-#my age
-#END
+# Run expect to answer the questions in the interactive installer script
+sudo ./install-jython.exp
 
 echo "# >> Added during Packer build" >> ${HOME}/.bashrc
 echo  "export PATH=$PATH:/home/vagrant/bin/jython/bin" >> ${HOME}/.bashrc

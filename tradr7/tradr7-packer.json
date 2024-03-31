@@ -119,6 +119,11 @@
       "destination": "/home/vagrant/calculator.jy"
     },
     {
+      "type": "file",
+      "source": "files/install-jython.exp",
+      "destination": "/tmp/install-jython.exp"
+    },
+    {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/install-tools-packages.sh",
         "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key-no-web.sh",

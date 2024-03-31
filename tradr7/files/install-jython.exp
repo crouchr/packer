@@ -1,0 +1,25 @@
+#!/usr/bin/expect
+
+set timeout 40
+
+spawn "java -jar jython-installer-2.7.3.jar"
+
+expect "Please select your language [E/g] >>>" { send "E\r" }
+
+expect "Do you want to read the license agreement now ? [y/N] >>>" { send "N\r" }
+
+expect "Do you accept the license agreement ? [Y/n] >>>" { send "Y\r" }
+
+expect "Please select the installation type [ 1 /2/3/9] >>>" { send "3\r" }
+
+expect "Do you want to install additional parts ? [y/N] >>>" { send "N\r" }
+
+expect "Please enter the target directory >>>" { send "/home/vagrant/jython\r" }
+
+expect "Unable to find directory /home/vagrant/jython, create it ? [Y/n] >>>" { send "Y\r" }
+
+expect "Please confirm copying of files to directory /home/vagrant/jython [Y/n] >>>" { send "Y\r" }
+
+expect "Do you want to show the contents of README ? [y/N] >>>" { send "N\r" }
+
+interact
