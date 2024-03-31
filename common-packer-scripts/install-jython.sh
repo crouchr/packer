@@ -4,7 +4,7 @@ echo "Installing Jython..."
 pwd     # This displayed /home/vagrant
 
 # smoke check that java is installed
-java --version
+# java --version
 
 # Use expect to drive the installer
 sudo yum -y install expect
