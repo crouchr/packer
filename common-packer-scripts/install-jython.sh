@@ -6,6 +6,7 @@ echo "Installing Jython..."
 sudo yum -y install expect
 
 # Run expect to answer the questions in the interactive installer script
+# see https://www.thegeekstuff.com/2010/10/expect-examples/
 sudo ./install-jython.exp
 
 echo "# >> Added during Packer build" >> ${HOME}/.bashrc
