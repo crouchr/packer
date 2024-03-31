@@ -3,6 +3,7 @@
 
 echo "Installing X Windows..."
 sudo yum -y groupinstall "X Window System"
+sudo yum -y install xorg-x11-apps
 
 echo "Installing MATE desktop..." # what about fluxbox ?
 sudo yum -y groupinstall "MATE Desktop"
