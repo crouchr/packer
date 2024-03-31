@@ -115,8 +115,8 @@
     },
     {
       "type": "file",
-      "source": "files/calculator.jy",
-      "destination": "/home/vagrant/calculator.jy"
+      "source": "files/calculator.py",
+      "destination": "/home/vagrant/calculator.py"
     },
     {
       "type": "file",
