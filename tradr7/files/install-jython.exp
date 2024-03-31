@@ -2,7 +2,7 @@
 
 set timeout 40
 
-spawn "java -jar jython-installer-2.7.3.jar"
+spawn "java -jar /home/vagrant/jython-installer-2.7.3.jar"
 
 expect "Please select your language [E/g] >>>" { send "E\r" }
 
