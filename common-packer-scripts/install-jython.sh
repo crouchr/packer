@@ -7,3 +7,5 @@ echo "Installing Jython..."
 
 # Do the install here once I know what it is
 
+export PATH=$PATH:/home/vagrant/bin/jython/bin
+echo $PATH

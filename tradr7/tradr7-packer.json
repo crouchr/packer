@@ -95,6 +95,11 @@
     },
     {
       "type": "file",
+      "source": "files/sshd_config",
+      "destination": "/etc/ssh/sshd_config"
+    },
+    {
+      "type": "file",
       "source": "files/vagrant.pub",
       "destination": "/tmp/vagrant.pub"
     },
@@ -109,10 +114,14 @@
       "destination": "/tmp/jython-installer-2.7.3.jar"
     },
     {
+      "type": "file",
+      "source": "files/calculator.jy",
+      "destination": "/home/vagrant/calculator.jy"
+    },
+    {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/install-tools-packages.sh",
         "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key-no-web.sh",
-        "{{template_dir}}/../common-packer-scripts/sshd-config.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools-dependencies.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools.sh",
         "{{template_dir}}/../common-packer-scripts/install-chef-client.sh",
