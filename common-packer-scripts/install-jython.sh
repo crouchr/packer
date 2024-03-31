@@ -1,14 +1,18 @@
 #!/bin/bash -eux
 
 echo "Installing Jython..."
+pwd
 
 # Use expect to drive the installer
 sudo yum -y install expect
 
 # Run expect to answer the questions in the interactive installer script
 # see https://www.thegeekstuff.com/2010/10/expect-examples/
-cd /tmp
-sudo chmod +x install-jython.exp
+
+sudo cp /tmp/jython-installer-2.7.3.jar /home/vagrant/jython-installer-2.7.3.jar
+sudo cp /tmp/install-jython.exp /home/vagrant/install-jython.exp
+
+sudo chmod +x /home/vagrant/install-jython.exp
 sudo ./install-jython.exp
 
 echo "# >> Added during Packer build" >> ${HOME}/.bashrc
