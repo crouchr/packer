@@ -12,11 +12,6 @@ sudo yum -y install xorg-x11-apps
 echo "Installing Fluxbox Window Manager..."
 sudo yum -y install fluxbox
 
-# Fluxbox
-#echo "Enable GDM..."
-#sudo systemctl enable gdm
-#sudo systemctl start gdm
-
 # MATE
 # echo "Enable LightDM..."
 # sudo systemctl enable lightdm
