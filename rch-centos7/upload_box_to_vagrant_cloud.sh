@@ -12,7 +12,7 @@ VAGRANT_CLOUD_TOKEN=$4
 BOX_NAME="${BOX_DIR}-v${BOX_VERSION}".box
 
 # Static
-AWS_PROFILE="developmentaws"
+# AWS_PROFILE="developmentaws"
 
 echo "AWS_PROFILE         : ${AWS_PROFILE}"
 echo "BOX_DIR             : ${BOX_DIR}"
