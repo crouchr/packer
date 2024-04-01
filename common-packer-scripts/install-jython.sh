@@ -21,7 +21,7 @@ sudo ./install-jython.exp
 ls -laF /home/vagrant
 
 echo "# >> Added during Packer build" >> ${HOME}/.bashrc
-echo  "export PATH=$PATH:/home/vagrant/bin/jython/bin" >> ${HOME}/.bashrc
+echo  "export PATH=$PATH:/opt/jython-2.7.3/bin" >> ${HOME}/.bashrc
 echo "# << End of block added during Packer build" >> ${HOME}/.bashrc
-
 echo $PATH
+

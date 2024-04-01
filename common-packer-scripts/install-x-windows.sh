@@ -11,6 +11,7 @@ sudo yum -y install xorg-x11-apps
 
 echo "Installing Fluxbox Window Manager..."
 sudo yum -y install fluxbox
+sudo yum -y install xterm
 
 # MATE
 # echo "Enable LightDM..."
