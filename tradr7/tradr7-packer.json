@@ -132,8 +132,6 @@
         "{{template_dir}}/../common-packer-scripts/install-java-11.sh",
         "{{template_dir}}/../common-packer-scripts/install-jython.sh",
         "{{template_dir}}/../common-packer-scripts/configure-sshd.sh",
-        "{{template_dir}}/../common-packer-scripts/install-chef-client.sh",
-        "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
         "{{template_dir}}/../common-packer-scripts/install-x-windows.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
