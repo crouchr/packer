@@ -110,6 +110,11 @@
     },
     {
       "type": "file",
+      "source": "files/grafana.ini",
+      "destination": "/tmp/grafana.ini"
+    },
+    {
+      "type": "file",
       "source": "files/jython-installer-2.7.3.jar",
       "destination": "/tmp/jython-installer.jar"
     },
