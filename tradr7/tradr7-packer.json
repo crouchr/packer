@@ -130,6 +130,11 @@
     },
     {
       "type": "file",
+      "source": "files/chef-workstation-24.2.1058-1.el7.x86_64.rpm",
+      "destination": "/tmp/chef-workstation-24.2.1058-1.el7.x86_64.rpm"
+    },
+    {
+      "type": "file",
       "source": "files/client.rb",
       "destination": "/tmp/client.rb"
     },
@@ -152,7 +157,7 @@
         "{{template_dir}}/../common-packer-scripts/install-java-11.sh",
         "{{template_dir}}/../common-packer-scripts/install-jython.sh",
         "{{template_dir}}/../common-packer-scripts/configure-sshd.sh",
-        "{{template_dir}}/../common-packer-scripts/install-chef-client.sh",
+        "{{template_dir}}/../common-packer-scripts/install-chef-workstation.sh",
         "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
         "{{template_dir}}/../common-packer-scripts/install-mariadb.sh",
         "{{template_dir}}/../common-packer-scripts/install-grafana.sh",
