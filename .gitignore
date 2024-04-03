@@ -80,3 +80,5 @@ fabric.properties
 # *.log
 
 /rch-centos7/packages/jython-installer-2.7.3.jar
+/tradr7/files/crouchr.pem
+/tradr7/files/ermin-validator.pem
