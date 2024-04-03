@@ -11,12 +11,12 @@ USER=vagrant
 sudo curl -L https://www.chef.io/chef/install.sh | sudo bash -s -- -v ${CHEF_CLIENT_VERSION}
 
 # why do I need this directory ?
-sudo mkdir -p /home/${USER}/.chef
-sudo chown ${USER}:${USER} /home/${USER}/.chef
+#sudo mkdir -p /home/${USER}/.chef
+# sudo chown ${USER}:${USER} /home/${USER}/.chef
 
 # why do I need this directory ?
-sudo mkdir -p /home/${USER}/chef-repo
-sudo chown ${USER}:${USER} /home/${USER}/chef-repo
+# sudo mkdir -p /home/${USER}/chef-repo
+# sudo chown ${USER}:${USER} /home/${USER}/chef-repo
 
 sudo mkdir -p /etc/chef
 sudo chown ${USER}:${USER} /etc/chef
