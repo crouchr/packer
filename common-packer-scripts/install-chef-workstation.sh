@@ -27,7 +27,7 @@ sudo mkdir /var/log/chef
 sudo touch /var/log/chef/client.log
 
 # files too big for repo - store on Slackware 15 web-server
-sudo curl -o /tmp/chef-workstation-24.2.1058-1.el7.x86_64.rpm http://packer.ermin.lan/centos7-packages/chef-workstation-24.2.1058-1.el7.x86_64.rpm
+sudo curl -o /tmp/chef-workstation-24.2.1058-1.el7.x86_64.rpm http://ansible-packer.ermin.lan/centos7-packages/chef-workstation-24.2.1058-1.el7.x86_64.rpm
 
 # files that must not be stored in public repo - store on Slackware 15 web-server
 sudo curl -o /tmp/crouchr.pem http://ansible-packer.ermin.lan/chef-pems/crouchr.pem
