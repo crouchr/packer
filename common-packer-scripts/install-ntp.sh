@@ -2,7 +2,7 @@
 
 echo "Installing NTPd..."
 
-# Need accurate time
+# Need accurate time or Chef knife won't allow bootstrapping
 sudo yum -y install ntp   # yes, its ntp not ntpd
 
 echo "Starting NTPd..."
