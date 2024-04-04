@@ -33,7 +33,7 @@
       "output_directory": "{{ user `virtualbox_output_directory` }}",
       "shutdown_command": "sudo shutdown -h 0",
       "ssh_password": "vagrant",
-      "ssh_timeout": "30m",
+      "ssh_timeout": "40m",
       "ssh_username": "vagrant",
       "type": "virtualbox-iso",
       "vboxmanage": [
