@@ -22,7 +22,8 @@ USER=vagrant
 # sudo chown ${USER}:${USER} /home/${USER}/chef-repo
 
 sudo mkdir -p /etc/chef
-sudo chown ${USER}:${USER} /etc/chef
+sudo mkdir -p /etc/chef/trusted_certs
+sudo chown -R ${USER}:${USER} /etc/chef
 
 # Chef client log file
 sudo mkdir /var/log/chef
@@ -34,16 +35,19 @@ sudo curl -o /tmp/chef-workstation-24.2.1058-1.el7.x86_64.rpm http://192.168.1.4
 # files that must not be stored in public repo - store on Slackware 15 web-server
 sudo curl -o /tmp/client.pem http://192.168.1.4/chef-pems/crouchr.pem
 sudo curl -o /tmp/ermin-validator.pem http://192.168.1.4/chef-pems/ermin-validator.pem
+sudo curl -o /tmp/chef.crt http://192.168.1.4/chef-pems/chef.crt
 
 cat /tmp/client.pem
 cat /tmp/ermin-validator.pem
 
 # Chef files previously copied into VBOX /tmp dir using file provisioner
+# /etc/chef/client.rb replaced knife.rb
 sudo cp /tmp/client.rb /etc/chef/client.rb
 
-# install config files
+# install certificates files
 sudo cp /tmp/client.pem /etc/chef/client.pem
 sudo cp /tmp/ermin-validator.pem /etc/chef/ermin-validator.pem
+sudo cp /tmp/chef.crt /etc/chef/trusted_certs/chef.crt
 
 # install Chef Workstation
 sudo yum -y localinstall /tmp/chef-workstation-24.2.1058-1.el7.x86_64.rpm
