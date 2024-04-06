@@ -157,6 +157,7 @@
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools.sh",
         "{{template_dir}}/../common-packer-scripts/install-java-11.sh",
         "{{template_dir}}/../common-packer-scripts/install-elk.sh",
+        "{{template_dir}}/../common-packer-scripts/install-ossec-agent.sh",
         "{{template_dir}}/../common-packer-scripts/install-protonmail.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
