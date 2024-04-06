@@ -5,13 +5,9 @@
 
 # CHEF_CLIENT_VERSION=18.4.12   # use same as VCC
 
-echo 'Running install-chef-workstation.sh to install Opscode Chef WorkstationC...'
+echo 'Running install-chef-workstation.sh to install Opscode Chef Workstation...'
 
 USER=vagrant
-
-# Install latest version of Chef Client - speeds up chef solo provisioning of Box
-# sudo curl -L https://www.chef.io/chef/install.sh | sudo bash -s -- -v ${CHEF_CLIENT_VERSION}
-
 
 # why do I need this directory ?
 #sudo mkdir -p /home/${USER}/.chef
@@ -38,17 +34,10 @@ sudo curl -o /tmp/vagrant.pem http://192.168.1.4/chef-pems/vagrant.pem
 sudo curl -o /tmp/ermin-validator.pem http://192.168.1.4/chef-pems/ermin-validator.pem
 sudo curl -o /tmp/chef.crt http://192.168.1.4/chef-pems/chef.crt
 
-# cat /tmp/client.pem
-# cat /tmp/ermin-validator.pem
-
-# Chef files previously copied into VBOX /tmp dir using file provisioner
-# /etc/chef/client.rb replaced knife.rb
-# sudo cp /tmp/client.rb /etc/chef/client.rb
-
-# install certificates files
-sudo cp /tmp/vagrant.pem /etc/chef/client.pem
+sudo cp /tmp/client.rb /etc/chef/client.rb
+sudo cp /tmp/crouchr.pem /etc/chef/crouchr.pem
+sudo cp /tmp/vagrant.pem /etc/chef/vagrant.pem
 sudo cp /tmp/ermin-validator.pem /etc/chef/ermin-validator.pem
-sudo cp /tmp/chef.crt /etc/chef/trusted_certs/chef.crt
 
 # install Chef Workstation
 sudo yum -y localinstall /tmp/chef-workstation-24.2.1058-1.el7.x86_64.rpm
