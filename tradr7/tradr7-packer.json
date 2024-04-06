@@ -140,7 +140,7 @@
     },
     {
       "type": "file",
-      "source": "fileslogstash.conf",
+      "source": "files/logstash.conf",
       "destination": "/tmp/logstash.conf"
     },
     {
