@@ -3,7 +3,7 @@
 
 # FIXME : hostname of ansible-packer node breaks so have to use IP
 
-# CHEF_CLIENT_VERSION=18.4.12   # use same as VCC
+CHEF_CLIENT_VERSION=18.4.12   # use same as VCC
 
 echo 'Running install-chef-client.sh to install Opscode Chef Client...'
 
