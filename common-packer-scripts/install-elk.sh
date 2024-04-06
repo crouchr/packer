@@ -6,8 +6,6 @@ set -e	# bomb out if any problem
 echo
 echo "Started setup.sh for provisioning ELK 7.9 on this node"
 
-yum update -y --disableplugin=fastestmirror
-
 # only need to install Java if not already installed
 #yum -y install java-1.8.0-openjdk.x86_64
 
