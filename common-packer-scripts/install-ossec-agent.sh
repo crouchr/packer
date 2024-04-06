@@ -11,7 +11,7 @@ sudo yum install -y inotify- bind-utils
 #wget -q -O - https://updates.atomicorp.com/installers/atomic | sudo bash
 
 
-wget -O /tmp/ossec.2.9.3.tar.gz  http://192.168.1.4/centos-packages/ossec.2.9.3.tar.gz
+wget -O /tmp/ossec.2.9.3.tar.gz  http://192.168.1.4/centos7-packages/ossec.2.9.3.tar.gz
 cd /tmp
 tar xfvz ossec.2.9.3.tar.gz
 
