@@ -1,5 +1,7 @@
 #!/bin/bash -eux
 
+# dependency : expect
+
 echo "Installing Jython..."
 pwd     # This displayed /home/vagrant
 

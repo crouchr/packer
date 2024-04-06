@@ -19,9 +19,9 @@ wget -O /tmp/kibana-oss-7.9.2-x86_64.rpm http://192.168.1.4/centos-packages/kiba
 #rpm -ivh /tmp/elasticsearch-7.9.2-x86_64.rpm
 #yum -y localinstall elasticsearch-7.9.2-x86_64.rpm
 
-rpm -ivh /tmp/elasticsearch-oss-7.9.2-x86_64.rpm
-rpm -ivh /tmp/logstash-oss-7.9.2.rpm
-rpm -ivh /tmp/kibana-oss-7.9.2-x86_64.rpm
+sudo yum -y localinstall /tmp/elasticsearch-oss-7.9.2-x86_64.rpm
+sudo yum -y localinstall /tmp/logstash-oss-7.9.2.rpm
+sudo yum -y localinstall /tmp/kibana-oss-7.9.2-x86_64.rpm
 
 echo 'Copy ELK configuration files...'
 # cp /vagrant/config/ip_to_honeypot_name_mapping.csv /tmp/
