@@ -9,6 +9,10 @@ echo "Started setup.sh for provisioning ELK 7.9 on this node"
 # only need to install Java if not already installed
 #yum -y install java-1.8.0-openjdk.x86_64
 
+sudo mkdir -p /etc/logstash/conf.d
+sudo mkdir -p /etc/elasticsearch
+sudo mkdir -p /etc/kibana
+
 # ELK
 wget -O /tmp/elasticsearch-oss-7.9.2-x86_64.rpm http://192.168.1.4/centos7-packages/elasticsearch-oss-7.9.2-x86_64.rpm
 wget -O /tmp/logstash-oss-7.9.2.rpm http://192.168.1.4/centos7-packages/logstash-oss-7.9.2.rpm
