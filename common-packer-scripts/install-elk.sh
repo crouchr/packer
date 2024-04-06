@@ -10,7 +10,7 @@ echo "Started setup.sh for provisioning ELK 7.9 on this node"
 #yum -y install java-1.8.0-openjdk.x86_64
 
 # ELK
-wget -O /tmp/elasticsearch-7.9.2-x86_64.rpm http://192.168.1.4/centos7-packages/elasticsearch-7.9.2-x86_64.rpm
+wget -O /tmp/elasticsearch-oss-7.9.2-x86_64.rpmrpm http://192.168.1.4/centos7-packages/elasticsearch-oss-7.9.2-x86_64.rpm
 wget -O /tmp/logstash-oss-7.9.2.rpm http://192.168.1.4/centos7-packages/logstash-oss-7.9.2.rpm
 wget -O /tmp/kibana-oss-7.9.2-x86_64.rpm http://192.168.1.4/centos7-packages/kibana-oss-7.9.2-x86_64.rpm
 
