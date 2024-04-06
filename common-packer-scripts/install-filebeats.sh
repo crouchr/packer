@@ -3,6 +3,6 @@
 
 echo "Installing Elastic Filebeats..."
 
-curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.17.14-x86_64.rpm
-sudo rpm -vi filebeat-7.17.14-x86_64.rpm
+curl -L -O http://192.168.1.4/centos7-packages/filebeat-oss-7.9.2-x86_64.rpm
+sudo yum localinstall -y filebeat-oss-7.9.2-x86_64.rpm
 
