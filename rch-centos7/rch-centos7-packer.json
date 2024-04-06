@@ -88,6 +88,11 @@
       "type": "shell"
     },
     {
+      "type": "file",
+      "source": "files/client.rb",
+      "destination": "/tmp/client.rb"
+    },
+    {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/install-tools-packages.sh",
         "{{template_dir}}/../common-packer-scripts/install-go.sh",
