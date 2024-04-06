@@ -135,17 +135,17 @@
     },
     {
       "type": "file",
-      "source": "files/elk/elasticsearch.yml",
+      "source": "files/elasticsearch.yml",
       "destination": "/tmp/elasticsearch.yml"
     },
     {
       "type": "file",
-      "source": "files/elk/logstash.conf",
+      "source": "fileslogstash.conf",
       "destination": "/tmp/logstash.conf"
     },
     {
       "type": "file",
-      "source": "files/elk/kibana.yml",
+      "source": "files/kibana.yml",
       "destination": "/tmp/kibana.yml"
     },
     {
