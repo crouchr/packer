@@ -6,9 +6,6 @@ pwd     # This displayed /home/vagrant
 # smoke check that java is installed
 java --version
 
-# Use expect to drive the installer
-sudo yum -y install expect
-
 # Run expect to answer the questions in the interactive installer script
 # see https://www.thegeekstuff.com/2010/10/expect-examples/
 
