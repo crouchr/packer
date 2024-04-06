@@ -27,9 +27,9 @@ sudo yum -y localinstall /tmp/kibana-oss-7.9.2-x86_64.rpm
 
 echo 'Copy ELK configuration files...'
 # cp /vagrant/config/ip_to_honeypot_name_mapping.csv /tmp/
-cp /tmp/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
-cp /tmp/logstash.conf /etc/logstash/conf.d/logstash.conf
-cp /tmp/kibana.yml /etc/kibana/kibana.yml
+sudo cp /tmp/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
+sudo cp /tmp/logstash.conf /etc/logstash/conf.d/logstash.conf
+sudo cp /tmp/kibana.yml /etc/kibana/kibana.yml
 
 # Telegraf
 #wget https://dl.influxdata.com/telegraf/releases/telegraf-1.8.3-1.x86_64.rpm
