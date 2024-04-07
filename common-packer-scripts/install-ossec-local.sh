@@ -15,8 +15,8 @@ cd /tmp
 tar xfvz ossec.2.9.3.tar.gz
 cd ossec-hids-2.9.3
 
+# An expect script is used to perform a basic installation
 sudo cp /tmp/install-ossec-local.exp /home/vagrant/install-ossec-local.exp
-
 sudo chmod +x /home/vagrant/install-ossec-local.exp
 sudo ./install-ossec-local.exp
 
