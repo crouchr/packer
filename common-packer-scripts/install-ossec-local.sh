@@ -27,5 +27,5 @@ sudo systemctl enable ossec.service
 sudo systemctl start ossec.service
 sudo systemctl status ossec.service
 
-echo "Finished setup.sh OK for provisioning OSSEC agent v2.9.3 on this node"
+echo "Finished setup.sh OK for provisioning OSSEC (local) v2.9.3 on this node"
 echo
