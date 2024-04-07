@@ -20,6 +20,9 @@ sudo cp /tmp/install-ossec-local.exp /home/vagrant/install-ossec-local.exp
 sudo chmod +x /home/vagrant/install-ossec-local.exp
 sudo ./install-ossec-local.exp
 
+# override the default config file
+sudo cp /tmp/ossec.conf /var/ossec/etc/ossec.conf
+
 sudo systemctl enable ossec.service
 sudo systemctl start ossec.service
 sudo systemctl status ossec.service

@@ -135,6 +135,11 @@
     },
     {
       "type": "file",
+      "source": "files/ossec.conf",
+      "destination": "/tmp/ossec.conf"
+    },
+    {
+      "type": "file",
       "source": "files/client.rb",
       "destination": "/tmp/client.rb"
     },
