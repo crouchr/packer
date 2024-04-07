@@ -12,7 +12,7 @@ sudo yum install -y inotify- bind-utils
 #wget -q -O - https://updates.atomicorp.com/installers/atomic | sudo bash
 
 wget -O /tmp/ossec.2.9.3.tar.gz  http://192.168.1.4/centos7-packages/ossec.2.9.3.tar.gz
-cd /tmp
+cd /tmp   # BEWARE !
 tar xfvz ossec.2.9.3.tar.gz
 cd ossec-hids-2.9.3
 
@@ -20,6 +20,8 @@ cd ossec-hids-2.9.3
 sudo cp /tmp/install-ossec-local.exp /home/vagrant/install-ossec-local.exp
 sudo chmod +x /home/vagrant/install-ossec-local.exp
 sudo chown vagrant:vagrant /home/vagrant/install-ossec-local.exp
+
+cd /home/vagrant
 pwd
 ls -laF
 sudo ./install-ossec-local.exp
