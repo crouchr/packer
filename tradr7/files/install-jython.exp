@@ -23,6 +23,7 @@ if {$force_conservative} {
 }
 
 set timeout -1
+
 spawn java -jar jython-installer.jar
 match_max 100000
 

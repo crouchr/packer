@@ -1,0 +1,49 @@
+#!/usr/bin/expect
+#
+
+set force_conservative 0  ;     # set to 1 to force conservative mode even if
+                          ;     # script wasn't run conservatively originally
+if {$force_conservative} {
+    set send_slow {1 .1}
+    proc send {ignore arg} {
+        sleep .1
+        exp_send -s -- $arg
+    }
+}
+
+set timeout -1
+
+spawn /tmp/ossec-hids-2.9.3/install.sh
+match_max 100000
+
+expect -exact "(en\/br\/cn\/de\/el\/es\/fr\/hu\/it\/jp\/nl\/pl\/ru\/sr\/tr) \[en\]: "
+send -- "en\r"
+
+expect "Press ENTER to continue or Ctrl-C to abort"
+send -- "en\r"
+
+expect "What kind of installation do you want (server, agent, local, hybrid or help)"
+send -- "local\r"
+
+expect "Choose where to install the OSSEC HIDS"
+send -- "\r"
+
+expect "Do you want e-mail notification"
+send -- "n\r"
+
+expect "Do you want to run the integrity check daemon"
+send -- "y\r"
+
+expect "Do you want to run the rootkit detection engine"
+send -- "y\r"
+
+expect "Do you want to enable active response"
+send -- "n\r"
+
+expect "Press ENTER to continue"
+send -- "\r"
+
+expect "Press ENTER to finish (maybe more information below)"
+send -- "\r"
+
+expect eof
