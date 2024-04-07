@@ -19,6 +19,7 @@ cd ossec-hids-2.9.3
 # An expect script is used to perform a basic installation
 sudo cp /tmp/install-ossec-local.exp /home/vagrant/install-ossec-local.exp
 sudo chmod +x /home/vagrant/install-ossec-local.exp
+sudo chown vagrant:vagrant /home/vagrant/install-ossec-local.exp
 pwd
 ls -laF
 sudo ./install-ossec-local.exp
