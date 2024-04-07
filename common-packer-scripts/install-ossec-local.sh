@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-# FIXME  : needs to bomb out if a failure
+#!/bin/bash -eux
 
 # Do not run this yet - it prompts for answers
 # https://www.vultr.com/docs/how-to-install-ossec-hids-on-a-centos-7-server/
