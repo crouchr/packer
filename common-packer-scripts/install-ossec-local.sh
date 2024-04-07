@@ -29,6 +29,9 @@ sudo ./install-ossec-local.exp
 # override the default config file
 sudo cp /tmp/ossec.conf /var/ossec/etc/ossec.conf
 
+
+# sudo /var/ossec/bin/ossec-control enable client-syslog
+
 sudo systemctl enable ossec.service
 sudo systemctl start ossec.service
 sudo systemctl status ossec.service
