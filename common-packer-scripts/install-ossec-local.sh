@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# FIXME  : needs to bomb out if a failure
+
 # Do not run this yet - it prompts for answers
 # https://www.vultr.com/docs/how-to-install-ossec-hids-on-a-centos-7-server/
 # https://linuxadmin.io/ossec-install-centos-7/
@@ -18,7 +20,8 @@ cd ossec-hids-2.9.3
 # An expect script is used to perform a basic installation
 sudo cp /tmp/install-ossec-local.exp /home/vagrant/install-ossec-local.exp
 sudo chmod +x /home/vagrant/install-ossec-local.exp
-sudo ./install-ossec-local.exp
+sudo ./home/vagrant/install-ossec-local.exp
+# sudo ./install-ossec-local.exp
 
 # override the default config file
 sudo cp /tmp/ossec.conf /var/ossec/etc/ossec.conf
