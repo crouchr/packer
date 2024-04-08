@@ -100,7 +100,7 @@
         "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
         "{{template_dir}}/../common-packer-scripts/install-argus.sh",
         "{{template_dir}}/../common-packer-scripts/install-snort.sh",
-        "{{template_dir}}/../common-packer-scripts/install-filebeats.sh",
+        "{{template_dir}}/../common-packer-scripts/install-filebeat.sh",
         "{{template_dir}}/../common-packer-scripts/install-telegraf.sh",
         "{{template_dir}}/../common-packer-scripts/install-sec.sh",
         "{{template_dir}}/../common-packer-scripts/install-clamav.sh",
