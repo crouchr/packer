@@ -46,5 +46,8 @@ sudo systemctl start elasticsearch.service
 sudo systemctl start logstash.service
 sudo systemctl start kibana.service
 
+echo "Display the elastic indices..."
+curl localhost:9200/_cat/indices?v
+
 echo "Finished setup.sh OK for provisioning ELK 7.9 on this node"
 echo
