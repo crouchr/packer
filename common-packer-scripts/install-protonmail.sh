@@ -4,6 +4,8 @@
 
 echo "Installing Protonmail Bridge..."
 
+sudo yum -y install screen
+
 # Run expect to answer the questions in the interactive installer script
 # see https://www.thegeekstuff.com/2010/10/expect-examples/
 wget -O /tmp/pass-1.5-2.el7.noarch.rpm http://192.168.1.4/centos7-packages/pass-1.5-2.el7.noarch.rpm
@@ -12,7 +14,8 @@ wget -O /tmp/protonmail-bridge-3.10.0-1.x86_64.rpm http://192.168.1.4/centos7-pa
 sudo yum -y localinstall /tmp/pass-1.5-2.el7.noarch.rpm
 sudo yum -y localinstall /tmp/protonmail-bridge-3.10.0-1.x86_64.rpm
 
-#sudo cp /tmp/install-jython.exp /home/vagrant/install-jython.exp
+sudo cp /tmp/protonmail.sh /home/vagrant/protonmail.sh
+sudo cp /tmp/protonmail.service /home/vagrant/protonmail.service
 
 #sudo chmod +x /home/vagrant/install-jython.exp
 #sudo ./install-jython.exp

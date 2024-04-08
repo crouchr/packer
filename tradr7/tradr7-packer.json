@@ -159,13 +159,23 @@
       "destination": "/tmp/kibana.yml"
     },
     {
+      "type": "file",
+      "source": "files/protonmail.sh",
+      "destination": "/tmp/protonmail.sh"
+    },
+    {
+      "type": "file",
+      "source": "files/protonmail.service",
+      "destination": "/tmp/protonmail.service"
+    },
+    {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/install-ntp.sh",
         "{{template_dir}}/../common-packer-scripts/install-tools-packages.sh",
         "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key-no-web.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools-dependencies.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools.sh",
-        "{{template_dir}}/../common-packer-scripts/install-ossec-local.sh",
+        "{{template_dir}}/../common-packer-scripts/install-protonmail.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
       "type": "shell"
