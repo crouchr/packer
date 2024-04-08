@@ -23,7 +23,7 @@ filebeat.inputs:
 
   # Unique ID among all inputs, an ID is required.
   # FIXME : Chef needs to override this
-  id: my-xw6600-id
+  id: my-tradr7-id
 
   # Change to true to enable this input configuration.
   enabled: true
