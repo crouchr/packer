@@ -150,23 +150,13 @@
     },
     {
       "type": "file",
-      "source": "files/logstash.conf",
-      "destination": "/tmp/logstash.conf"
+      "source": "files/ossec-logstash.conf",
+      "destination": "/tmp/ossec-logstash.conf"
     },
     {
       "type": "file",
       "source": "files/kibana.yml",
       "destination": "/tmp/kibana.yml"
-    },
-    {
-      "type": "file",
-      "source": "files/protonmail.sh",
-      "destination": "/tmp/protonmail.sh"
-    },
-    {
-      "type": "file",
-      "source": "files/protonmail.service",
-      "destination": "/tmp/protonmail.service"
     },
     {
       "scripts": [
@@ -175,9 +165,17 @@
         "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key-no-web.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools-dependencies.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools.sh",
+        "{{template_dir}}/../common-packer-scripts/install-chef-workstation.sh",
+        "{{template_dir}}/../common-packer-scripts/install-java-11.sh",
+        "{{template_dir}}/../common-packer-scripts/install-jython.sh",
+        "{{template_dir}}/../common-packer-scripts/install-elk.sh",
+        "{{template_dir}}/../common-packer-scripts/configure-sshd.sh",
+        "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
+        "{{template_dir}}/../common-packer-scripts/install-mariadb.sh",
+        "{{template_dir}}/../common-packer-scripts/install-grafana.sh",
+        "{{template_dir}}/../common-packer-scripts/install-x-windows.sh",
         "{{template_dir}}/../common-packer-scripts/install-filebeat.sh",
-        "{{template_dir}}/../common-packer-scripts/install-syslog-ng.sh",
-        "{{template_dir}}/../common-packer-scripts/install-protonmail.sh",
+        "{{template_dir}}/../common-packer-scripts/install-ossec-local.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
       "type": "shell"
