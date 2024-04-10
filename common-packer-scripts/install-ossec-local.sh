@@ -7,6 +7,8 @@
 echo 'Installing OSSEC (local) v2.9.3...'
 
 sudo yum install -y inotify- bind-utils
+# keep installation files 'tidied away'
+sudo mkdir -p /home/vagrant/installer
 
 # Add Yum repo configuration
 #wget -q -O - https://updates.atomicorp.com/installers/atomic | sudo bash
@@ -17,14 +19,14 @@ tar xfvz ossec.2.9.3.tar.gz
 cd ossec-hids-2.9.3
 
 # An expect script is used to perform a basic installation
-sudo cp /tmp/install-ossec-local.exp /home/vagrant/install-ossec-local.exp
-sudo chmod +x /home/vagrant/install-ossec-local.exp
-sudo chown vagrant:vagrant /home/vagrant/install-ossec-local.exp
+sudo cp /tmp/install-ossec-local.exp /home/vagrant/installer/install-ossec-local.exp
+sudo chmod +x /home/vagrant/installer/install-ossec-local.exp
+sudo chown vagrant:vagrant /home/vagrant/installer/install-ossec-local.exp
 
 cd /home/vagrant
 pwd
 ls -laF
-sudo ./install-ossec-local.exp
+sudo ./installer/install-ossec-local.exp
 
 # override the default config file
 sudo cp /tmp/ossec.conf /var/ossec/etc/ossec.conf
