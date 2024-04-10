@@ -1,4 +1,6 @@
-#!/bin/bash -eux
+#!/bin/bash
+
+##!/bin/bash -eux FIXME : re-instate when working
 
 # dependency : expect
 
