@@ -1,6 +1,7 @@
-#!/bin/bash -eux
+#!/bin/bash
 
-echo 'Installing Osiris...'
+##!/bin/bash -eux
+echo 'Installing Osiris v4.2.3...'
 
 sudo yum install -y openssl-devel
 
@@ -8,7 +9,7 @@ sudo yum install -y openssl-devel
 # sudo mkdir -p /home/vagrant/installer
 
 wget -O /tmp/osiris-4.2.3.tar.gz  http://192.168.1.4/source-code/osiris-4.2.3.tar.gz
-cd /tmp     # BEWARE - a directory change !
+# cd /tmp     # BEWARE - a directory change !
 # tar xfvz osiris-4.2.3.tar.gz
 # cd osiris-4.2.3
 
