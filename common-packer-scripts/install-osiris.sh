@@ -2,7 +2,7 @@
 
 echo 'Installing Osiris...'
 
-# sudo yum install -y inotify- bind-utils
+sudo yum install -y openssl-devel
 
 # keep installation files 'tidied away'
 # sudo mkdir -p /home/vagrant/installer
