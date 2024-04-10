@@ -10,6 +10,8 @@ java --version
 
 # Run expect to answer the questions in the interactive installer script
 # see https://www.thegeekstuff.com/2010/10/expect-examples/
+
+# keep installation files 'tidied away'
 sudo mkdir -p /home/vagrant/installer
 
 sudo cp /tmp/jython-installer.jar /home/vagrant/installer/jython-installer.jar

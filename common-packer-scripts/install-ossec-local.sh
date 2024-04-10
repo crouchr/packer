@@ -7,6 +7,7 @@
 echo 'Installing OSSEC (local) v2.9.3...'
 
 sudo yum install -y inotify- bind-utils
+
 # keep installation files 'tidied away'
 sudo mkdir -p /home/vagrant/installer
 
