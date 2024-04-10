@@ -24,7 +24,7 @@ if {$force_conservative} {
 
 set timeout -1
 
-spawn java -jar /home/vagrant/installer/jython-installer.jar
+spawn java -jar jython-installer.jar
 match_max 100000
 
 expect -exact "Please select your language \[E/g\] >>> "
