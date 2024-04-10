@@ -27,7 +27,7 @@ sudo chown vagrant:vagrant /home/vagrant/installer/install-ossec-local.exp
 cd /home/vagrant
 pwd
 ls -laF
-sudo ./installer/install-ossec-local.exp
+sudo ./home/vagrant/installer/install-ossec-local.exp
 
 # override the default config file
 sudo cp /tmp/ossec.conf /var/ossec/etc/ossec.conf

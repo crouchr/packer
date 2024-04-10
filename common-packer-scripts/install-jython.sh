@@ -20,7 +20,7 @@ sudo cp /tmp/jython-installer.jar /home/vagrant/installer/jython-installer.jar
 sudo cp /tmp/install-jython.exp /home/vagrant/installer/install-jython.exp
 
 sudo chmod +x /home/vagrant/installer/install-jython.exp
-sudo ./installer/install-jython.exp
+sudo ./home/vagrant/installer/install-jython.exp
 
 ls -laF /home/vagrant
 
