@@ -9,8 +9,8 @@ sudo echo -e "[mariadb]\nname=MariaDB Repository\nbaseurl=http://yum.mariadb.org
 sudo yum -y install MariaDB-server MariaDB-client MariaDB-devel
 
 # Copy configuration files across
-sudo cp /tmp/client.cnf /etc/mycnf.d/client.cnf
-sudo cp /tmp/server.cnf /etc/mycnf.d/server.cnf
+sudo cp /tmp/client.cnf /etc/my.cnf.d/client.cnf
+sudo cp /tmp/server.cnf /etc/my.cnf.d/server.cnf
 
 echo "Starting MariaDB..."
 sudo systemctl enable mariadb
