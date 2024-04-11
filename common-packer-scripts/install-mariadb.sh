@@ -20,5 +20,6 @@ sudo systemctl start mariadb
 sudo cp /tmp/configure-mariadb.exp /home/vagrant/configure-mariadb.exp
 sudo chmod +x /home/vagrant/configure-mariadb.exp
 sudo chown vagrant:vagrant /home/vagrant/configure-mariadb.exp
+sudo ./configure-mariadb.exp
 
 echo "Finished installing MariaDB SQL Database System v10.4"
