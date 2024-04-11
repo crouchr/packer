@@ -13,8 +13,8 @@ if {$force_conservative} {
 
 set timeout -1
 
-spawn /tmp/osiris-4.3.3-release/install.sh
-match_max 100000
+# spawn /tmp/osiris-4.3.3-release/install.sh
+# match_max 100000
 
 # expect -exact "(en\/br\/cn\/de\/el\/es\/fr\/hu\/it\/jp\/nl\/pl\/ru\/sr\/tr) \[en\]: "
 # send -- "en\r"
