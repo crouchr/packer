@@ -1,0 +1,40 @@
+#!/usr/bin/expect
+# This must be run with root/sudo
+
+set force_conservative 0  ;     # set to 1 to force conservative mode even if
+                          ;     # script wasn't run conservatively originally
+if {$force_conservative} {
+    set send_slow {1 .1}
+    proc send {ignore arg} {
+        sleep .1
+        exp_send -s -- $arg
+    }
+}
+
+set timeout -1
+
+spawn mariadb-secure-installation
+match_max 100000
+
+expect -exact "Enter current password for root (enter for none)"
+send -- "\r"
+
+expect "Switch to unix_socket authentication"
+send -- "n\r"
+
+expect "Change the root password"
+send -- "n\r"
+
+expect "Remove anonymous users"
+send -- "Y\r"
+
+expect "Disallow root login remotely"
+send -- "Y\r"
+
+expect "Remove test database and access to it"
+send -- "Y\r"
+
+expect "Reload privilege tables now"
+send -- "Y\r"
+
+expect eof

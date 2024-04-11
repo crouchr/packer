@@ -140,6 +140,11 @@
     },
     {
       "type": "file",
+      "source": "files/configure-mariadb.exp",
+      "destination": "/tmp/configure-mariadb.exp"
+    },
+    {
+      "type": "file",
       "source": "files/install-ossec-local.exp",
       "destination": "/tmp/install-ossec-local.exp"
     },
@@ -182,7 +187,6 @@
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools.sh",
         "{{template_dir}}/../common-packer-scripts/install-motd.sh",
         "{{template_dir}}/../common-packer-scripts/install-chef-workstation.sh",
-        "{{template_dir}}/../common-packer-scripts/build-osiris.sh",
         "{{template_dir}}/../common-packer-scripts/install-java-11.sh",
         "{{template_dir}}/../common-packer-scripts/install-jython.sh",
         "{{template_dir}}/../common-packer-scripts/install-elk.sh",

@@ -16,4 +16,9 @@ echo "Starting MariaDB..."
 sudo systemctl enable mariadb
 sudo systemctl start mariadb
 
+# An expect script is used to perform a basic installation
+sudo cp /tmp/configure-mariadb.exp /home/vagrant/configure-mariadb.exp
+sudo chmod +x /home/vagrant/configure-mariadb.exp
+sudo chown vagrant:vagrant /home/vagrant/configure-mariadb.exp
+
 echo "Finished installing MariaDB SQL Database System v10.4"
