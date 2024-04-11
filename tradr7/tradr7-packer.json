@@ -110,6 +110,16 @@
     },
     {
       "type": "file",
+      "source": "files/client.cnf",
+      "destination": "/tmp/client.cnf"
+    },
+    {
+      "type": "file",
+      "source": "files/server.cnf",
+      "destination": "/tmp/server.cnf"
+    },
+    {
+      "type": "file",
       "source": "files/grafana.ini",
       "destination": "/tmp/grafana.ini"
     },
@@ -172,6 +182,7 @@
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools.sh",
         "{{template_dir}}/../common-packer-scripts/install-motd.sh",
         "{{template_dir}}/../common-packer-scripts/install-chef-workstation.sh",
+        "{{template_dir}}/../common-packer-scripts/build-osiris.sh",
         "{{template_dir}}/../common-packer-scripts/install-java-11.sh",
         "{{template_dir}}/../common-packer-scripts/install-jython.sh",
         "{{template_dir}}/../common-packer-scripts/install-elk.sh",
@@ -182,7 +193,6 @@
         "{{template_dir}}/../common-packer-scripts/install-x-windows.sh",
         "{{template_dir}}/../common-packer-scripts/install-filebeat.sh",
         "{{template_dir}}/../common-packer-scripts/install-ossec-local.sh",
-        "{{template_dir}}/../common-packer-scripts/install-osiris.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
       "type": "shell"
