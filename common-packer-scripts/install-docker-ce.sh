@@ -10,6 +10,7 @@ sudo yum install -y docker-compose
 
 # Allow vagrant user to run docker
 sudo usermod -aG docker vagrant
+sudo usermod -aG docker $(whoami)
 
 # Allow use of unauthenticated access to my private Docker v2 Registry hostname registry
 sudo mkdir -p /etc/docker

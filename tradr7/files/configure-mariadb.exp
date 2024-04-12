@@ -23,7 +23,13 @@ expect "Switch to unix_socket authentication"
 send -- "n\r"
 
 expect "Change the root password"
-send -- "n\r"
+send -- "Y\r"
+
+expect "New password:"
+send -- "secretsql\r"
+
+expect "Re-enter new password:"
+send -- "secretsql\r"
 
 expect "Remove anonymous users"
 send -- "Y\r"
