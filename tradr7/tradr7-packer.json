@@ -150,13 +150,13 @@
     },
     {
       "type": "file",
-      "source": "files/install-osiris.exp",
-      "destination": "/tmp/install-osiris.exp"
+      "source": "files/ossec.conf",
+      "destination": "/tmp/ossec.conf"
     },
     {
       "type": "file",
-      "source": "files/ossec.conf",
-      "destination": "/tmp/ossec.conf"
+      "source": "files/install-osiris.exp",
+      "destination": "/tmp/install-osiris.exp"
     },
     {
       "type": "file",
