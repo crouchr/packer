@@ -73,7 +73,8 @@
     {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/yum-update-all.sh",
-        "{{template_dir}}/packer-scripts/set-hostname-hpot.sh"
+        "{{template_dir}}/packer-scripts/set-hostname-hpot.sh",
+        "{{template_dir}}/../common-packer-scripts/install-ntp.sh"
       ],
       "type": "shell"
     },
@@ -88,9 +89,28 @@
       "type": "shell"
     },
     {
+      "type": "file",
+      "source": "files/vagrant.pub",
+      "destination": "/tmp/vagrant.pub"
+    },
+    {
+      "type": "file",
+      "source": "files/sshd_config",
+      "destination": "/tmp/sshd_config"
+    },
+    {
+      "type": "file",
+      "source": "files/install-ossec-local.exp",
+      "destination": "/tmp/install-ossec-local.exp"
+    },
+    {
+      "type": "file",
+      "source": "files/ossec.conf",
+      "destination": "/tmp/ossec.conf"
+    },
+    {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/install-tools-packages.sh",
-        "{{template_dir}}/../common-packer-scripts/install-go.sh",
         "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key.sh",
         "{{template_dir}}/../common-packer-scripts/add-users.sh",
         "{{template_dir}}/../common-packer-scripts/install-user-ssh-keys.sh",
@@ -101,11 +121,11 @@
         "{{template_dir}}/../common-packer-scripts/install-argus.sh",
         "{{template_dir}}/../common-packer-scripts/install-snort.sh",
         "{{template_dir}}/../common-packer-scripts/install-filebeat.sh",
-        "{{template_dir}}/../common-packer-scripts/install-telegraf.sh",
         "{{template_dir}}/../common-packer-scripts/install-sec.sh",
         "{{template_dir}}/../common-packer-scripts/install-clamav.sh",
         "{{template_dir}}/../common-packer-scripts/install-termshark.sh",
         "{{template_dir}}/../common-packer-scripts/install-nmap.sh",
+        "{{template_dir}}/../common-packer-scripts/install-ossec-local.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh",
         "{{template_dir}}/packer-scripts/rch-hpot-smoke-checks.sh"
       ],
