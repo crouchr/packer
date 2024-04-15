@@ -23,6 +23,7 @@ sudo mkdir -p /etc/grafana
 # grafana.ini previously copied into VBOX /tmp dir using file provisioner
 sudo cp /tmp/grafana.ini /etc/grafana/grafana.ini
 
-echo "Starting Grafana..."
-sudo systemctl enable grafana-server
-sudo systemctl start grafana-server
+# Start Grafana in the Vagrant file
+# echo "Starting Grafana..."
+# sudo systemctl enable grafana-server
+# sudo systemctl start grafana-server
