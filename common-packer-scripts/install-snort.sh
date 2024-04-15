@@ -25,7 +25,7 @@ sudo touch /etc/snort/rules/white_list.rules
 sudo touch /etc/snort/rules/black_list.rules
 sudo touch /etc/snort/rules/local.rules
 
-# install Community rules
+# Install Community rules
 sudo wget https://www.snort.org/rules/community -O ~/community.tar.gz
 sudo tar -xvf ~/community.tar.gz -C ~/
 sudo cp ~/community-rules/* /etc/snort/rules
