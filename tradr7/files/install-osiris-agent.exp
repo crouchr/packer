@@ -1,5 +1,5 @@
 #!/usr/bin/expect
-#
+# install Osiris Agent
 
 set force_conservative 0  ;     # set to 1 to force conservative mode even if
                           ;     # script wasn't run conservatively originally
@@ -13,7 +13,7 @@ if {$force_conservative} {
 
 set timeout -1
 
-# spawn /tmp/osiris-4.3.3-release/install.sh
+# spawn /tmp/osiris-4.2.3-release/install.sh
 # match_max 100000
 
 # expect -exact "(en\/br\/cn\/de\/el\/es\/fr\/hu\/it\/jp\/nl\/pl\/ru\/sr\/tr) \[en\]: "
