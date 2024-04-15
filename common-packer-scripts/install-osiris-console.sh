@@ -8,7 +8,7 @@ tar xfvz osiris-console-4.2.3-release-x86_64-Linux-3.10.0-1160.114.2.el7.x86_64.
 # cd osiris-console-4.2.3
 
 # An expect script is used to perform a basic installation
-sudo cp /tmp/install-osiris-console.exp /tmp/install-osiris-console.exp
+# sudo cp /tmp/install-osiris-console.exp /tmp/install-osiris-console.exp
 sudo chmod +x /tmp/install-osiris-console.exp
 sudo chown vagrant:vagrant /tmp/install-osiris-console.exp
 
