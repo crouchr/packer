@@ -158,3 +158,187 @@ allow = 192.168.1.191
 
 osiris-4.2.3-release: q
 [vagrant@itg-services tmp]$ 
+
+
+Configure management console to scan itself
+===========================================
+[vagrant@itg-services tmp]$ osiris
+Osiris Shell Interface - version 4.2.3-release
+ >>> authenticating to (127.0.0.1)
+
+User: admin
+Password: 
+
+connected to management console, code version (4.2.3-release).
+hello.
+
+osiris-4.2.3-release: new-host
+
+[ new host ]
+
+  > name this host []:  local
+  > hostname/IP address []: 127.0.0.1
+  > description []: agent installed on management console
+  > agent port [2265]: 
+  > enable log files for this host? (yes/no) [no]: no
+
+Scan Databases:
+
+    => keep archives of scan databases?  Enabling this option means that the
+       database generated with each scan is saved, even if there are no changes
+       detected.  Because of disk space, this option is not recommended
+       unless your security policy requires it. (yes/no) [no]: no
+
+    => auto-accept changes?  Enabling this option means that detected
+       changes are reported only once, and the baseline database is
+       automatically set when changes are detected. (yes/no) [yes]: yes
+
+    => purge database store?  Enabling this option means that none
+       of the scan databases are saved.  That is, whenever the baseline 
+       database is set, the previous one is deleted. (yes/no): [yes]: yes
+
+Notifications:
+
+    => enable email notification for this host? (yes/no) [no]: no
+    => send notification on scheduled scans failures? (yes/no) [no]: no
+    => send scan notification, even when no changes detected  (yes/no) [no]: no
+    => send notification when agent has lost session key  (yes/no) [no]: no
+    => notification email (default uses mhost address) []: 
+
+Scheduling:
+
+  > configure scan scheduling information? (yes/no) [no]: yes
+
+    [ scheduling information for local ]
+
+    Scheduling information consists of a start time and a frequency value.
+    The frequency is a specified number of minutes between each scan, starting
+    from the start time.  The default is the current time.  Specify the start
+    time in the following format: mm/dd/yyyy HH:MM
+
+    enter the start date and time 
+    using 'mm/dd/yyyy HH:MM' format: [Tue Apr 16 12:17:07 2024] 04/16/2024 04:00
+    does this look correct ==> (Tue Apr 16 04:00:00 2024) ? (y/n) y
+    enter scan frequency in minutes: [1440] 
+
+  > enable this host? (yes/no) [yes]: yes
+
+host                  => local
+hostname/IP address   => 127.0.0.1
+description           => agent installed on management console
+agent port            => 2265
+host type             => generic
+log enabled           => no
+archive scans         => no
+auto accept           => yes
+purge databases       => yes
+notifications enabled => no
+notifications always  => no
+notify on rekey       => no
+notify on scan fail   => no
+notify email          => (management config)
+scans starting on     => Tue Apr 16 04:00:00 2024
+scan frequency        => daily (every 1440 minutes).
+enabled               => yes
+
+Is this correct (y/n)? y
+ >>> new host (local) has been created.
+Initialize this host? (yes/no): yes
+
+Initializing a host will push over a configuration, start
+a scan, and set the created database to be the
+trusted database.
+
+Are you sure you want to initialize this host (yes/no): yes
+
+OS Name: Linux
+OS Version: 3.10.0-1160.114.2.e
+
+use the default configuration for this OS? (yes/no): yes
+ >>> configuration (default.linux) has been pushed.
+ >>> scanning process was started on host: local
+osiris-4.2.3-release: enable local
+ >>> host local is now enabled.
+osiris-4.2.3-release: hosts
+
+  [ name ]             [ description ]                 [ enabled ]    
+
+  local                agent installed on management       yes
+
+total: 1
+
+osiris-4.2.3-release: host local
+local is alive.
+osiris-4.2.3-release[local]: status
+
+[ current status of host: local ]
+
+     current time: Tue Apr 16 12:22:42 2024
+         up since: Tue Apr 16 12:03:04 2024
+
+ last config push: Tue Apr 16 12:21:18 2024
+ configuration id: c8ce9c09
+
+     agent status: idle.
+    config status: current config is valid.
+   osiris version: 4.2.3-release
+               OS: Linux 3.10.0-1160.114.2.e
+
+osiris-4.2.3-release[local]: status
+
+[ current status of host: local ]
+
+     current time: Tue Apr 16 12:23:11 2024
+         up since: Tue Apr 16 12:03:04 2024
+
+ last config push: Tue Apr 16 12:21:18 2024
+ configuration id: c8ce9c09
+
+     agent status: idle.
+    config status: current config is valid.
+   osiris version: 4.2.3-release
+               OS: Linux 3.10.0-1160.114.2.e
+
+osiris-4.2.3-release[local]: details
+
+[ host details for: (local) ]
+
+  enabled          : yes
+  hostname/IP      : 127.0.0.1
+  configs          : 0
+  databases        : 1
+  host type        : generic
+  log files        : no
+  archive scans    : no
+  auto accept      : yes
+  purge databases  : yes
+  notify enabled   : no
+  notify always    : no
+  notify on rekey  : no
+  notify scan fail : no
+  notify email     : (management config)
+  scans start      : Tue Apr 16 04:00:00 2024
+  scan period      : every 1440 minutes
+  base DB          : 1
+  agent port       : 2265
+  description      : agent installed on management console
+
+osiris-4.2.3-release[local]: scan
+ >>> scanning process was started on host: local
+osiris-4.2.3-release[local]: status
+
+[ current status of host: local ]
+
+     current time: Tue Apr 16 12:24:30 2024
+         up since: Tue Apr 16 12:03:04 2024
+
+ last config push: Tue Apr 16 12:24:23 2024
+ configuration id: c8ce9c09
+
+     agent status: idle.
+    config status: current config is valid.
+   osiris version: 4.2.3-release
+               OS: Linux 3.10.0-1160.114.2.e
+
+osiris-4.2.3-release[local]: 
+
