@@ -32,9 +32,9 @@ sudo cp /tmp/kibana.yml /etc/kibana/kibana.yml
 
 # Start in the Vagrant file
 echo "Enable ELK services..."
+sudo systemctl enable kibana.service
 sudo systemctl enable elasticsearch.service
 sudo systemctl enable logstash.service
-sudo systemctl enable kibana.service
 
 echo "Start ELK services..."
 # sudo systemctl start elasticsearch.service
