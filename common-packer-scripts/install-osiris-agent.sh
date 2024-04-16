@@ -8,24 +8,15 @@ tar xfvz osiris-agent-4.2.3-release-x86_64-Linux-3.10.0-1160.114.2.el7.x86_64.ta
 # cd osiris-agent-4.2.3-release
 
 # An expect script is used to perform a basic installation
-# sudo cp /tmp/install-osiris-agent.exp /tmp/install-osiris-agent.exp
-sudo chmod +x /tmp/install-osiris-agent.exp
-sudo chown vagrant:vagrant /tmp/install-osiris-agent.exp
-
+sudo cp /tmp/install-osiris-agent.exp /tmp/osiris-agent-4.2.3-release/install-osiris-agent.exp
+sudo chmod +x /tmp/osiris-agent-4.2.3-release/install-osiris-agent.exp
+sudo chown vagrant:vagrant /tmp/osiris-agent-4.2.3-release/install-osiris-agent.exp
+cd /tmp/osiris-agent-4.2.3-release
 pwd
 ls -laF
 
 # Perform the installation using 'expect' script
-# sudo ./install-osiris-agent.exp
-
-# override the default config file
-# sudo cp /tmp/ossec.conf /var/ossec/etc/ossec.conf
-# sudo /var/ossec/bin/ossec-control enable client-syslog
-
-
-# sudo systemctl enable ossec.service
-# sudo systemctl start ossec.service
-# sudo systemctl status ossec.service
+sudo ./install-osiris-agent.exp
 
 cd /home/vagrant
 

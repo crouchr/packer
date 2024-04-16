@@ -1,7 +1,7 @@
 #!/usr/bin/expect
-# install Osiris Management Console
+# Install Osiris Management Console
 
-set force_conservative 0  ;     # set to 1 to force conservative mode even if
+set force_conservative 1  ;     # set to 1 to force conservative mode even if
                           ;     # script wasn't run conservatively originally
 if {$force_conservative} {
     set send_slow {1 .1}
@@ -13,37 +13,29 @@ if {$force_conservative} {
 
 set timeout -1
 
-spawn /tmp/osiris-console-4.2.3-release/install.sh
+spawn ./install.sh
 match_max 100000
 
-# expect -exact "(en\/br\/cn\/de\/el\/es\/fr\/hu\/it\/jp\/nl\/pl\/ru\/sr\/tr) \[en\]: "
-# send -- "en\r"
+expect "Continue with installation"
+send -- "y\r"
 
-# expect "Press ENTER to continue or Ctrl-C to abort"
-# send -- "en\r"
+expect "Install osiris agent"
+send -- "y\r"
 
-# expect "What kind of installation do you want (server, agent, local, hybrid or help)"
-# send -- "local\r"
+expect "Install management console"
+send -- "y\r"
 
-# expect "Choose where to install the OSSEC HIDS"
-# send -- "\r"
+expect "Install CLI"
+send -- "y\r"
 
-# expect "Do you want e-mail notification"
-# send -- "n\r"
+expect "Installation directory for binaries"
+send -- "\r"
 
-# expect "Do you want to run the integrity check daemon"
-# send -- "y\r"
+expect "Start management console now"
+send -- "n\r"
 
-# expect "Do you want to run the rootkit detection engine"
-# send -- "y\r"
-
-# expect "Do you want to enable active response"
-# send -- "n\r"
-
-# expect "Press ENTER to continue"
-# send -- "\r"
-
-# expect "Press ENTER to finish (maybe more information below)"
-# send -- "\r"
+expect "Start scan agent now"
+send -- "n\r"
 
 expect eof
+
