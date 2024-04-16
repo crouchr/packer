@@ -24,6 +24,7 @@ sudo mkdir -p /etc/grafana
 sudo cp /tmp/grafana.ini /etc/grafana/grafana.ini
 
 # Start Grafana in the Vagrant file
-# echo "Starting Grafana..."
-# sudo systemctl enable grafana-server
+echo "Starting Grafana..."
+sudo systemctl enable grafana-server
+
 # sudo systemctl start grafana-server

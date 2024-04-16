@@ -31,12 +31,12 @@ sudo cp /tmp/kibana.yml /etc/kibana/kibana.yml
 #cp /vagrant/telegraf.conf /etc/telegraf/telegraf.conf
 
 # Start in the Vagrant file
-# echo "Enable ELK services..."
-# sudo systemctl enable elasticsearch.service
-# sudo systemctl enable logstash.service
-# sudo systemctl enable kibana.service
+echo "Enable ELK services..."
+sudo systemctl enable elasticsearch.service
+sudo systemctl enable logstash.service
+sudo systemctl enable kibana.service
 
-# echo "Start ELK services..."
+echo "Start ELK services..."
 # sudo systemctl start elasticsearch.service
 # sudo systemctl start logstash.service
 # sudo systemctl start kibana.service
