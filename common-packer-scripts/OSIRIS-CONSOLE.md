@@ -61,3 +61,100 @@ Documentation is included with this source and available online at:
 (c) 2006 - Brian Wotring
 
 [vagrant@itg-iceberg osiris-console-4.2.3-release]$ 
+
+
+
+Configuration steps
+===================
+[vagrant@itg-services tmp]$ osiris
+Osiris Shell Interface - version 4.2.3-release
+ >>> authenticating to (127.0.0.1)
+
+User: admin
+Password: 
+
+connected to management console, code version (4.2.3-release).
+hello.
+
+WARNING: your password is empty, use the 'passwd' command
+to set your password.
+
+osiris-4.2.3-release: passwd admin
+Password: 
+ >>> user: (admin) updated.
+current login was edited, you must re-authenticate.
+ >>> authenticating to (127.0.0.1)
+
+Password: 
+
+connected to management console, code version (4.2.3-release).
+hello.
+
+osiris-4.2.3-release: edit-mhost
+
+[ edit management host (127.0.0.1) ]
+
+  > syslog facility [DAEMON]: 
+  > control port [2266]: 
+  > http control port [0]: 
+  > notify email (default for hosts) []: 
+  > notification smtp host [127.0.0.1]: 
+  > notification smtp port [25]: 
+
+  > authorized hosts:
+
+   127.0.0.1
+
+  Modify authorization list (y/n)? [n] y
+
+    s) show current listing.
+    a) add a new authorized host.
+    r) remove authorized host.
+    q) quit
+
+    > a
+    > authorized hostname/IP (*=wildcard): 192.168.1.191
+
+    s) show current listing.
+    a) add a new authorized host.
+    r) remove authorized host.
+    q) quit
+
+    > q
+
+[ management config (127.0.0.1) ]
+
+syslog_facility = DAEMON
+control_port = 2266
+http_port = 0
+http_host = 
+notify_email = 
+notify_app = 
+notify_smtp_host = 127.0.0.1
+notify_smtp_port = 25
+hosts_directory = 
+allow = 127.0.0.1
+allow = 192.168.1.191
+
+
+Is this correct (y/n)? y
+ >>> management host configuration has been saved.
+osiris-4.2.3-release: mhost-config
+
+[ management config (127.0.0.1) ]
+
+syslog_facility = DAEMON
+control_port = 2266
+http_port = 0
+http_host =
+notify_email =
+notify_app =
+notify_smtp_host = 127.0.0.1
+notify_smtp_port = 25
+hosts_directory =
+allow = 127.0.0.1
+allow = 192.168.1.191
+
+
+osiris-4.2.3-release: q
+[vagrant@itg-services tmp]$ 
