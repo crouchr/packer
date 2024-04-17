@@ -95,6 +95,11 @@
     },
     {
       "type": "file",
+      "source": "files/syslog-ng.conf",
+      "destination": "/tmp/syslog-ng.conf"
+    },
+    {
+      "type": "file",
       "source": "files/sshd_config",
       "destination": "/tmp/sshd_config"
     },
