@@ -8,7 +8,7 @@ echo "Started setup.sh for provisioning syslog-ng on this node"
 #sudo cp /tmp/syslog-ng.conf /etc/syslog-ng.conf
 
 echo "Stop rsyslog..."
-sudo systemctl stop syslog
+sudo systemctl stop rsyslog
 
 echo "Uninstall rsyslog..."
 sudo yum -y erase rsyslog
