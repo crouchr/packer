@@ -25,6 +25,9 @@ sudo cp /tmp/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 sudo cp /tmp/ossec-logstash.conf /etc/logstash/conf.d/ossec-logstash.conf
 sudo cp /tmp/kibana.yml /etc/kibana/kibana.yml
 
+# Create the kibana log file to be used by syslog-ng
+sudo touch /var/log/kibana.log
+
 # Telegraf
 #wget https://dl.influxdata.com/telegraf/releases/telegraf-1.8.3-1.x86_64.rpm
 #yum -y localinstall telegraf-1.8.3-1.x86_64.rpm
