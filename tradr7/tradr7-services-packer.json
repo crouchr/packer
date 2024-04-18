@@ -150,6 +150,11 @@
     },
     {
       "type": "file",
+      "source": "files/filebeat.yml",
+      "destination": "/tmp/filebeat.yml"
+    },
+    {
+      "type": "file",
       "source": "files/ossec-logstash.conf",
       "destination": "/tmp/ossec-logstash.conf"
     },

@@ -1,5 +1,7 @@
 ###################### Filebeat Configuration Example #########################
-
+#
+# This file copied during Packer build
+#
 # This file is an example configuration file highlighting only the most common
 # options. The filebeat.reference.yml file from the same directory contains all the
 # supported options with more comments. You can use it as a reference.
@@ -32,8 +34,8 @@ filebeat.inputs:
   paths:
     - /var/ossec/logs/alerts/ossec.json
     - /var/log/kibana.log
-    #- /var/log/syslog
-    #- /var/log/messages
+    - /var/log/syslog
+    - /var/log/messages
     # - /var/log/*.log
 
     #- c:\programdata\elasticsearch\logs\*
