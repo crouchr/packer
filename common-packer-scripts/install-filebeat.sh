@@ -9,5 +9,8 @@ sudo yum localinstall -y filebeat-oss-7.9.2-x86_64.rpm
 
 sudo cp /tmp/filebeat.yml /etc/filebeat/filebeat.yml
 
-echo "The following filebeat modules are available..."
+echo "Start Filebeat service"
+sudo systemctl start filebeat
+
+echo "The following Filebeat modules are available..."
 sudo filebeat modules list
