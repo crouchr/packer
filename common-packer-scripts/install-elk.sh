@@ -23,6 +23,7 @@ echo 'Copy ELK configuration files...'
 # cp /vagrant/config/ip_to_honeypot_name_mapping.csv /tmp/
 sudo cp /tmp/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 sudo cp /tmp/ossec-logstash.conf /etc/logstash/conf.d/ossec-logstash.conf
+sudo cp /tmp/logstash.service /etc/systemd/system/logstash.service
 sudo cp /tmp/kibana.yml /etc/kibana/kibana.yml
 
 # Create the kibana log file to be used by syslog-ng

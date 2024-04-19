@@ -160,6 +160,11 @@
     },
     {
       "type": "file",
+      "source": "files/logstash.service",
+      "destination": "/tmp/logstash.service"
+    },
+    {
+      "type": "file",
       "source": "files/kibana.yml",
       "destination": "/tmp/kibana.yml"
     },
