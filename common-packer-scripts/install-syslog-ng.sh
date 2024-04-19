@@ -14,7 +14,7 @@ echo "Installing syslog-ng..."
 sudo yum -y install syslog-ng
 
 echo "Configuring syslog-ng..."
-sudo cp /tmp/syslog-ng.conf /etc/syslog-ng.conf
+sudo cp /tmp/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf
 
 echo "Enable syslog-ng services..."
 sudo systemctl enable syslog-ng
