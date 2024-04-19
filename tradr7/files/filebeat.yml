@@ -21,7 +21,7 @@ filebeat.inputs:
 # Below are the input specific configurations.
 
 # filestream is an input for collecting log messages from files.
-- type: filestream
+- type: log
 
   # Unique ID among all inputs, an ID is required.
   # FIXME : Chef needs to override this
