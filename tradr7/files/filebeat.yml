@@ -34,9 +34,9 @@ filebeat.inputs:
   paths:
     # - /var/ossec/logs/alerts/ossec.json
     - /var/ossec/logs/ossec.log
-    - /var/log/kibana.log
     - /var/log/syslog
     - /var/log/messages
+    # - /var/log/kibana.log
     # - /var/log/*.log
 
     #- c:\programdata\elasticsearch\logs\*
