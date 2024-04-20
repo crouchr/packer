@@ -155,8 +155,8 @@
     },
     {
       "type": "file",
-      "source": "files/logstash-standard.conf",
-      "destination": "/tmp/logstash-standard.conf"
+      "source": "files/logstash-syslog.conf",
+      "destination": "/tmp/logstash-syslog.conf"
     },
     {
       "type": "file",
