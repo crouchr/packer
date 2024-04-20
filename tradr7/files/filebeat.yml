@@ -32,14 +32,10 @@ filebeat.inputs:
 
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
-    - /var/ossec/logs/alerts/alerts.log
-    - /var/log/syslog
     - /var/log/messages
-    # - /var/ossec/logs/ossec.log
-    # - /var/log/kibana.log
+    - /var/ossec/logs/alerts/alerts.log
+    # - /var/log/syslog
     # - /var/log/*.log
-
-    #- c:\programdata\elasticsearch\logs\*
 
   # Exclude lines. A list of regular expressions to match. It drops the lines that are
   # matching any regular expression from the list.

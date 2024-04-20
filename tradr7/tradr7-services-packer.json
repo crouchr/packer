@@ -155,8 +155,13 @@
     },
     {
       "type": "file",
-      "source": "files/ossec-logstash.conf",
-      "destination": "/tmp/ossec-logstash.conf"
+      "source": "files/logstash-standard.conf",
+      "destination": "/tmp/logstash-standard.conf"
+    },
+    {
+      "type": "file",
+      "source": "files/logstash-json.conf",
+      "destination": "/tmp/logstash-json.conf"
     },
     {
       "type": "file",

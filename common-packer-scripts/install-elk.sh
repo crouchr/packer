@@ -22,7 +22,8 @@ sudo yum -y localinstall /tmp/kibana-oss-7.9.2-x86_64.rpm
 echo 'Copy ELK configuration files...'
 # cp /vagrant/config/ip_to_honeypot_name_mapping.csv /tmp/
 sudo cp /tmp/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
-sudo cp /tmp/ossec-logstash.conf /etc/logstash/conf.d/ossec-logstash.conf
+sudo cp /tmp/logstash-standard.conf /etc/logstash/conf.d/logstash-standard.conf
+sudo cp /tmp/logstash-json.conf /etc/logstash/conf.d/logstash-json.conf
 sudo cp /tmp/logstash.service /etc/systemd/system/logstash.service
 sudo cp /tmp/kibana.yml /etc/kibana/kibana.yml
 
