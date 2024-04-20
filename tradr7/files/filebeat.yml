@@ -32,10 +32,10 @@ filebeat.inputs:
 
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
-    # - /var/ossec/logs/alerts/ossec.json
-    - /var/ossec/logs/ossec.log
+    - /var/ossec/logs/alerts/alerts.log
     - /var/log/syslog
     - /var/log/messages
+    # - /var/ossec/logs/ossec.log
     # - /var/log/kibana.log
     # - /var/log/*.log
 
