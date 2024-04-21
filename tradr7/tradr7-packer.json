@@ -150,13 +150,13 @@
     },
     {
       "type": "file",
-      "source": "files/install-ossec-local.exp",
-      "destination": "/tmp/install-ossec-local.exp"
+      "source": "files/install-ossec-2-local.exp",
+      "destination": "/tmp/install-ossec-2-local.exp"
     },
     {
       "type": "file",
-      "source": "files/ossec.conf",
-      "destination": "/tmp/ossec.conf"
+      "source": "files/ossec-2.conf",
+      "destination": "/tmp/ossec-2.conf"
     },
     {
       "type": "file",
@@ -170,18 +170,8 @@
     },
     {
       "type": "file",
-      "source": "files/elasticsearch.yml",
-      "destination": "/tmp/elasticsearch.yml"
-    },
-    {
-      "type": "file",
-      "source": "files/ossec-logstash.conf",
-      "destination": "/tmp/ossec-logstash.conf"
-    },
-    {
-      "type": "file",
-      "source": "files/kibana.yml",
-      "destination": "/tmp/kibana.yml"
+      "source": "files/filebeat-tradr.yml",
+      "destination": "/tmp/filebeat.yml"
     },
     {
       "scripts": [
@@ -201,7 +191,7 @@
         "{{template_dir}}/../common-packer-scripts/install-mariadb.sh",
         "{{template_dir}}/../common-packer-scripts/install-x-windows.sh",
         "{{template_dir}}/../common-packer-scripts/install-filebeat.sh",
-        "{{template_dir}}/../common-packer-scripts/install-ossec-local.sh",
+        "{{template_dir}}/../common-packer-scripts/install-ossec-2-local.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
       "type": "shell"

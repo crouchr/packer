@@ -125,13 +125,13 @@
     },
     {
       "type": "file",
-      "source": "files/install-ossec-local.exp",
-      "destination": "/tmp/install-ossec-local.exp"
+      "source": "files/install-ossec-2-local.exp",
+      "destination": "/tmp/install-ossec-2-local.exp"
     },
     {
       "type": "file",
-      "source": "files/ossec.conf",
-      "destination": "/tmp/ossec.conf"
+      "source": "files/ossec-2.conf",
+      "destination": "/tmp/ossec-2.conf"
     },
     {
       "type": "file",
@@ -150,7 +150,7 @@
     },
     {
       "type": "file",
-      "source": "files/filebeat.yml",
+      "source": "files/filebeat-services.yml",
       "destination": "/tmp/filebeat.yml"
     },
     {
