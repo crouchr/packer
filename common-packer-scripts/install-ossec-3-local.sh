@@ -8,7 +8,7 @@
 
 echo 'Installing OSSEC (local) v3.7.0...'
 
-sudo yum install -y inotify bind-utils
+sudo yum install -y inotify bind-utils pcre2-devel
 
 # keep installation files 'tidied away'
 sudo mkdir -p /home/vagrant/installer
