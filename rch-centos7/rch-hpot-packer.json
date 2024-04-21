@@ -95,7 +95,7 @@
     },
     {
       "type": "file",
-      "source": "files/syslog-ng.conf",
+      "source": "files/syslog-ng-hpot.conf",
       "destination": "/tmp/syslog-ng.conf"
     },
     {
