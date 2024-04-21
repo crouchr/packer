@@ -100,13 +100,13 @@
     },
     {
       "type": "file",
-      "source": "files/sshd_config",
-      "destination": "/tmp/sshd_config"
+      "source": "files/vagrant.pub",
+      "destination": "/tmp/vagrant.pub"
     },
     {
       "type": "file",
-      "source": "files/vagrant.pub",
-      "destination": "/tmp/vagrant.pub"
+      "source": "files/sshd_config",
+      "destination": "/tmp/sshd_config"
     },
     {
       "type": "file",

@@ -90,6 +90,16 @@
     },
     {
       "type": "file",
+      "source": "files/motd-hpot",
+      "destination": "/tmp/motd"
+    },
+    {
+      "type": "file",
+      "source": "files/syslog-ng.conf",
+      "destination": "/tmp/syslog-ng.conf"
+    },
+    {
+      "type": "file",
       "source": "files/vagrant.pub",
       "destination": "/tmp/vagrant.pub"
     },
@@ -110,6 +120,8 @@
     },
     {
       "scripts": [
+        "{{template_dir}}/../common-packer-scripts/install-ntp.sh",
+        "{{template_dir}}/../common-packer-scripts/install-syslog-ng.sh",
         "{{template_dir}}/../common-packer-scripts/install-tools-packages.sh",
         "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key.sh",
         "{{template_dir}}/../common-packer-scripts/sshd-config.sh",
