@@ -1,5 +1,7 @@
 ###################### Filebeat Configuration Example #########################
-
+#
+# This file copied during Packer build
+#
 # This file is an example configuration file highlighting only the most common
 # options. The filebeat.reference.yml file from the same directory contains all the
 # supported options with more comments. You can use it as a reference.
@@ -19,7 +21,7 @@ filebeat.inputs:
 # Below are the input specific configurations.
 
 # filestream is an input for collecting log messages from files.
-- type: filestream
+- type: log
 
   # Unique ID among all inputs, an ID is required.
   # FIXME : Chef needs to override this
@@ -30,12 +32,10 @@ filebeat.inputs:
 
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
-    - /var/ossec/logs/alerts/ossec.json
-    # - /var/log/*.log
-    # - /var/log/syslog
+    - /var/ossec/logs/alerts/alerts.json
     # - /var/log/messages
-
-    #- c:\programdata\elasticsearch\logs\*
+    # - /var/log/syslog
+    # - /var/log/*.log
 
   # Exclude lines. A list of regular expressions to match. It drops the lines that are
   # matching any regular expression from the list.
@@ -157,8 +157,7 @@ setup.kibana:
 # ------------------------------ Logstash Output -------------------------------
 output.logstash:
   # The Logstash hosts
-  #hosts: ["localhost:5044"]
-  hosts: ["elk.ermin.lan:5044"]
+  hosts: ["elk.ermin.lan"]
 
   # Optional SSL. By default is off.
   # List of root certificates for HTTPS server verifications

@@ -14,7 +14,7 @@ sudo mkdir -p /home/vagrant/installer
 # Add Yum repo configuration
 #wget -q -O - https://updates.atomicorp.com/installers/atomic | sudo bash
 
-wget -O /tmp/ossec.2.9.3.tar.gz  http://192.168.1.4/centos7-packages/ossec.2.9.3.tar.gz
+wget -O /tmp/ossec.2.9.3.tar.gz  http://192.168.1.4/source-code/ossec.2.9.3.tar.gz
 cd /tmp     # BEWARE - a directory change !
 tar xfvz ossec.2.9.3.tar.gz
 cd ossec-hids-2.9.3
@@ -30,7 +30,7 @@ ls -laF
 sudo ./install-ossec-2-local.exp
 
 # override the default config file
-sudo cp /tmp/ossec-2.conf /var/ossec/etc/ossec.conf
+sudo cp /tmp/ossec.conf /var/ossec/etc/ossec.conf
 
 
 # sudo /var/ossec/bin/ossec-control enable client-syslog
