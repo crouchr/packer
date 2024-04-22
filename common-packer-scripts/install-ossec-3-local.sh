@@ -25,6 +25,9 @@ sudo cp /tmp/install-ossec-local.exp /home/vagrant/install-ossec-local.exp
 sudo chmod +x /home/vagrant/install-ossec-local.exp
 sudo chown vagrant:vagrant /home/vagrant/install-ossec-local.exp
 
+cd /home/vagrant
+pwd
+ls -laF
 export PCRE2_SYSTEM=yes
 sudo ./install-ossec-local.exp
 
