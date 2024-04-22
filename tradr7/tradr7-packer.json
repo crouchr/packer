@@ -191,7 +191,7 @@
         "{{template_dir}}/../common-packer-scripts/install-x-windows.sh",
         "{{template_dir}}/../common-packer-scripts/install-filebeat.sh",
         "{{template_dir}}/../common-packer-scripts/install-osiris-agent.sh",
-        "{{template_dir}}/../common-packer-scripts/install-ossec-2-local.sh",
+        "{{template_dir}}/../common-packer-scripts/install-ossec-3-local.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
       "type": "shell"
