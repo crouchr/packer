@@ -28,7 +28,7 @@ sudo chown vagrant:vagrant /home/vagrant/install-ossec-local.exp
 cd /home/vagrant
 pwd
 ls -laF
-export PCRE2_SYSTEM=yes
+export PCRE2_SYSTEM=yes         # not needed in Ossec 2, can also add SQL env var here to build in Mysql support
 sudo ./install-ossec-local.exp
 
 # override the default config file
