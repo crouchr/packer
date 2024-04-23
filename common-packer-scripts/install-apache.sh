@@ -9,9 +9,9 @@ sudo yum install -y dnsmasq bind-utils lynx
 sudo yum -y install php php-common php-mysql php-pdo php-intl php-gd php-xml php-mbstring
 
 # php.ini previously copied into VBOX /tmp dir using file provisioner
-sudo cp /tmp/php.ini /etc/php.ini
+# sudo cp /tmp/php.ini /etc/php.ini
 
 # Currently causing a failure in Packer so commented out - only needed for Web-based UI
-echo "Starting httpd..."
-sudo systemctl enable httpd.service
-sudo systemctl start httpd.service
+# echo "Starting httpd..."
+# sudo systemctl enable httpd.service
+# sudo systemctl start httpd.service
