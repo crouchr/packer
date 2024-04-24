@@ -90,7 +90,7 @@
     },
     {
       "type": "file",
-      "source": "files/motd",
+      "source": "files/motd-tradr",
       "destination": "/tmp/motd"
     },
     {

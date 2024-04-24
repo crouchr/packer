@@ -91,7 +91,7 @@
     {
       "type": "file",
       "source": "files/motd",
-      "destination": "/tmp/motd"
+      "destination": "/tmp/motd-services"
     },
     {
       "type": "file",

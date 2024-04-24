@@ -12,11 +12,11 @@
  ===========================
  Base OS : CentOS7
 
- User Interface
- ==============
- SSH access : ssh -p 7022 vagrant@127.0.0.1         Password = 'vagrant'
- Grafana Trading Graphs : http://127.0.0.1:7000
- TRADR web front-end : http://127.0.0.1:7080
+ This node runs :
+ - Docker
+ - Filebeat
+ - MariaDB Server
+ - TRADR Application in Docker
 
  For X windows forwarding from another workstation use :
  $ vagrant ssh -- -Y
