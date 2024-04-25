@@ -90,8 +90,8 @@
     },
     {
       "type": "file",
-      "source": "files/motd",
-      "destination": "/tmp/motd-services"
+      "source": "files/motd-services",
+      "destination": "/tmp/motd"
     },
     {
       "type": "file",
