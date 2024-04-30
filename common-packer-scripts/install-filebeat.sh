@@ -10,7 +10,7 @@ sudo yum localinstall -y /tmp/filebeat-oss-7.9.2-x86_64.rpm
 sudo cp /tmp/filebeat.yml /etc/filebeat/filebeat.yml
 
 # FIXME : bug means start it during Vagrant provision - not true ?
-echo "Start Filebeat service"
+echo "Start Filebeat service..."
 sudo /bin/systemctl daemon-reload
 sudo systemctl start filebeat
 
