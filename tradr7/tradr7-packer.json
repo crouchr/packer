@@ -150,12 +150,12 @@
     },
     {
       "type": "file",
-      "source": "files/install-ossec-3-local.exp",
-      "destination": "/tmp/install-ossec-local.exp"
+      "source": "files/install-wazuh-local.exp",
+      "destination": "/tmp/install-wazuh-local.exp"
     },
     {
       "type": "file",
-      "source": "files/ossec-3.conf",
+      "source": "files/wazuh.conf",
       "destination": "/tmp/ossec.conf"
     },
     {
@@ -182,7 +182,7 @@
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools-dependencies.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools.sh",
         "{{template_dir}}/../common-packer-scripts/install-filebeat.sh",
-        "{{template_dir}}/../common-packer-scripts/install-ossec-3-local.sh",
+        "{{template_dir}}/../common-packer-scripts/install-wazuh-local.sh",
         "{{template_dir}}/../common-packer-scripts/install-motd.sh",
         "{{template_dir}}/../common-packer-scripts/install-chef-workstation.sh",
         "{{template_dir}}/../common-packer-scripts/install-java-11.sh",
