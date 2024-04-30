@@ -1,7 +1,7 @@
 #!/usr/bin/expect
 #
 
-set force_conservative 1  ;     # set to 1 to force conservative mode even if
+set force_conservative 0  ;     # set to 1 to force conservative mode even if
                           ;     # script wasn't run conservatively originally
 if {$force_conservative} {
     set send_slow {1 .1}
@@ -22,7 +22,7 @@ send -- "en\r"
 expect "Press ENTER to continue or Ctrl-C to abort"
 send -- "\r"
 
-expect "What kind of installation do you want (server, agent, local, hybrid or help)"
+expect "What kind of installation do you want"
 send -- "local\r"
 
 expect "Choose where to install Wazuh"
