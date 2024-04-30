@@ -1,7 +1,8 @@
 #!/bin/bash -eux
-# This works fine
+# could not create MySQL data source so needs some debugging
+# FIXME : Do not use
 
-echo "Installing Grafana v7.2.2 ..."
+echo "Installing Grafana v9.5 ..."
 
 # https://www.fosslinux.com/8328/how-to-install-and-configure-grafana-on-centos-7.htm
 
@@ -24,8 +25,8 @@ echo "Installing Grafana v7.2.2 ..."
 ### You can start grafana-server by executing
 # sudo /bin/systemctl start grafana-server.service
 
-wget -O /tmp/grafana-7.2.2-1.x86_64.rpm http://192.168.1.4/centos7-packages/grafana-7.2.2-1.x86_64.rpm
-sudo yum -y localinstall /tmp/grafana-7.2.2-1.x86_64.rpm
+wget -O /tmp/grafana-9.5.18-1.x86_64.rpm http://192.168.1.4/centos7-packages/grafana-9.5.18-1.x86_64.rpm
+sudo yum -y localinstall /tmp/grafana-9.5.18-1.x86_64.rpm
 sudo mkdir -p /etc/grafana
 
 # grafana.ini previously copied into VBOX /tmp dir using file provisioner
@@ -33,6 +34,7 @@ sudo cp /tmp/grafana.ini /etc/grafana/grafana.ini
 
 # FIXME : Start Grafana in the Vagrant file - not sure why won't run at this point...
 echo "Starting Grafana..."
-sudo systemctl enable grafana-server
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable grafana-server.service
 
-# sudo systemctl start grafana-server
+# sudo systemctl start grafana-server.service

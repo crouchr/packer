@@ -37,17 +37,18 @@ sudo touch /var/log/kibana.log
 
 # Start in the Vagrant file
 echo "Enable ELK services..."
+sudo /bin/systemctl daemon-reload
 sudo systemctl enable kibana.service
 sudo systemctl enable elasticsearch.service
 sudo systemctl enable logstash.service
 
 echo "Start ELK services..."
-# sudo systemctl start elasticsearch.service
-# sudo systemctl start logstash.service
-# sudo systemctl start kibana.service
+sudo systemctl start elasticsearch.service
+sudo systemctl start logstash.service
+sudo systemctl start kibana.service
 
 # echo "Display the elastic indices..."
-#curl localhost:9200/_cat/indices?v
+curl localhost:9200/_cat/indices?v
 
 echo "Finished setup.sh OK for provisioning ELK 7.9 on this node"
 echo
