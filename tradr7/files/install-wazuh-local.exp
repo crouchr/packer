@@ -20,7 +20,7 @@ expect -exact "(en\/br\/cn\/de\/el\/es\/fr\/hu\/it\/jp\/nl\/pl\/ru\/sr\/tr) \[en
 send -- "en\r"
 
 expect "Press ENTER to continue or Ctrl-C to abort"
-send -- "en\r"
+send -- "\r"
 
 expect "What kind of installation do you want (server, agent, local, hybrid or help)"
 send -- "local\r"
