@@ -17,7 +17,7 @@ echo "Installing Grafana v7.2.2 ..."
 # sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 # EOF
 
-sudo curl -o /tmp/grafana-7.2.2-1.x86_64.rpm http://192.168.1.4/centos7-packages/grafana-7.2.2-1.x86_64.rpm
+wget -O /tmp/grafana-7.2.2-1.x86_64.rpm http://192.168.1.4/centos7-packages/grafana-7.2.2-1.x86_64.rpm
 sudo yum -y localinstall /tmp/grafana-7.2.2-1.x86_64.rpm
 sudo mkdir -p /etc/grafana
 
