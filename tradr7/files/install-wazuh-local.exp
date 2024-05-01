@@ -13,7 +13,7 @@ if {$force_conservative} {
 
 set timeout -1
 
-spawn /tmp/wazuh-3.2.4/install.sh
+spawn /tmp/wazuh-3.3.1/install.sh
 match_max 100000
 
 expect -exact "(en\/br\/cn\/de\/el\/es\/fr\/hu\/it\/jp\/nl\/pl\/ru\/sr\/tr) \[en\]: "
