@@ -1,5 +1,5 @@
 #!/bin/bash -eux
-# This works fine
+# This works fine - this was what the original TRADR used
 
 echo "Installing Grafana v7.2.2 ..."
 
