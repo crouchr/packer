@@ -22,7 +22,7 @@
  $ vagrant ssh -- -Y
  $ xterm
 
- Type 'configure' to access TRADR cli
-
+ Type 'configure' to access the TRADR cli (admin and user versions)
+ Type 'upgrade'   to upgrade the TRADR application
 
 
