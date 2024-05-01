@@ -16,7 +16,8 @@
  - Docker
  - Filebeat
  - MariaDB Server
- - TRADR Application in Docker
+ - Wazuh agent
+ - TRADR Application (in Docker)
 
  For X windows forwarding from another workstation use :
  $ vagrant ssh -- -Y
