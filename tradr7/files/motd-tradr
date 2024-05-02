@@ -29,6 +29,8 @@
  ============
  Type 'cli' to access the TRADR command-line interface (admin_cli and user_cli versions)
  Type 'upgrade' to upgrade the TRADR applications, including the TRADR command-line interface
+ Type 'run_tradr' to run TRADR scanner(s)
+ Type 'help' to display instructions
 
  'Greed is Good' - Gordon Gecko, Wall Street (1987)
 
