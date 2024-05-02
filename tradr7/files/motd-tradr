@@ -8,7 +8,7 @@
  |_____\___\___|_.__/ \___|_|  \__, |
                                 __/ |
                                |___/
- Infrastructure Build v0.1.0
+ Infrastructure Build v1.0.0
  ===========================
  Base OS : CentOS7
 
@@ -16,14 +16,19 @@
  - Docker
  - Filebeat
  - MariaDB Server
- - Wazuh agent
+ - Wazuh HIDS
  - TRADR Application (in Docker)
 
  For X windows forwarding from another workstation use :
  $ vagrant ssh -- -Y
  $ xterm
 
- Type 'configure' to access the TRADR cli (admin and user versions)
- Type 'upgrade'   to upgrade the TRADR application
+ You are currently logged into the TRADR VirtualBox.
 
+ Instructions
+ ============
+ Type 'cli' to access the TRADR command-line interface (admin_cli and user_cli versions)
+ Type 'upgrade' to upgrade the TRADR applications, including the TRADR command-line interface
+
+ 'Greed is Good' - Gordon Gecko, Wall Street (1987)
 
