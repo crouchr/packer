@@ -190,7 +190,7 @@
         "{{template_dir}}/../common-packer-scripts/install-mariadb-client.sh",
         "{{template_dir}}/../common-packer-scripts/install-elk.sh",
         "{{template_dir}}/../common-packer-scripts/configure-sshd.sh",
-        "{{template_dir}}/../common-packer-scripts/install-grafana-10.sh",
+        "{{template_dir}}/../common-packer-scripts/install-grafana-8.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
       "type": "shell"
