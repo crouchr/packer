@@ -23,9 +23,10 @@ Write-Host "  VarsFiles      : $VarsFiles"
 
 ################################################################
 $BoxFile = "tradr7-services-v$Env:BOX_VERSION.box"
-$MetadataFilename = "tradr7-metadata.json"
+$MetadataFilename = "tradr7-services-metadata.json"
 $Json = Get-Content 'stack_vars/tradr7-vars.json' | Out-String | ConvertFrom-Json
-$BoxUrl="https://richardcrouch.s3-eu-west-1.amazonaws.com/boxes/tradr7/$BoxFile"
+# $BoxUrl="https://richardcrouch.s3-eu-west-1.amazonaws.com/boxes/tradr7/$BoxFile"
+$BoxUrl="http://www.tradr.click/boxes/tradr7/$BoxFile"
 ################################################################
 
 $PackerBinary = "/usr/local/bin/packer"

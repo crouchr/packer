@@ -1,4 +1,5 @@
 #!/bin/bash -eux
+# Upload the Box file to my own web-server - gave up on Vagrant Cloud
 
 # Upload the Box file to Vagrant
 # Note the vagrant-cloud plugin needs to be installed for the jenkins user (not root)
@@ -7,12 +8,12 @@
 BOX_DIR=$1
 BOX_VERSION=$2
 BOX_DESCRIPTION=$3
-VAGRANT_CLOUD_TOKEN=$4
+# VAGRANT_CLOUD_TOKEN=$4
 
 # Derived
 BOX_NAME="${BOX_DIR}-v${BOX_VERSION}".box
 # export VAGRANT_LOG="debug"
-export VAGRANT_LOG="info"
+# export VAGRANT_LOG="info"
 
 # export VAGRANT_SERVER_URL='https://app.vagrantup.com/'
 
@@ -24,7 +25,7 @@ echo "BOX_DIR             : ${BOX_DIR}"
 echo "BOX_NAME            : ${BOX_NAME}"
 echo "BOX_VERSION         : ${BOX_VERSION}"
 echo "BOX_DESCRIPTION     : ${BOX_DESCRIPTION}"
-echo "VAGRANT_CLOUD_TOKEN : ${VAGRANT_CLOUD_TOKEN}"
+# echo "VAGRANT_CLOUD_TOKEN : ${VAGRANT_CLOUD_TOKEN}"
 
 # rm ~/.vagrant.d/data/vagrant_login_token
 # vagrant plugin install vagrant-cloud
@@ -52,15 +53,8 @@ echo "VAGRANT_CLOUD_TOKEN : ${VAGRANT_CLOUD_TOKEN}"
 #  --upload-file ${BOX_NAME} \
 #  "${upload_path}"
 
-sudo cp --force ${BOX_NAME} /var/www/htdocs/boxes/tradr/${BOX_NAME}
-sudo cp --force ${BOX_DIR}-metadata.json /var/www/htdocs/boxes/tradr/${BOX_DIR}-metadata.json
-
-
-
-
-
-
-
+sudo cp --force ${BOX_NAME} /var/www/htdocs/boxes/tradr7/${BOX_NAME}
+sudo cp --force ${BOX_DIR}-metadata.json /var/www/htdocs/boxes/tradr7/${BOX_DIR}-metadata.json
 
 # Login
 # vagrant cloud auth login ${VAGRANT_CLOUD_TOKEN}
