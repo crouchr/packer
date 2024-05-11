@@ -39,7 +39,7 @@ echo "VAGRANT_CLOUD_TOKEN : ${VAGRANT_CLOUD_TOKEN}"
   # https://app.vagrantup.com/api/v2/box/myuser/test/version/1.2.3/provider/virtualbox/amd64/upload)
 
 # Requires the jq command
-upload_path=$(echo "$response" | jq .upload_path)
+# upload_path=$(echo "$response" | jq .upload_path)
 
 #curl \
 #  --request PUT \
