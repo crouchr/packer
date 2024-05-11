@@ -45,12 +45,14 @@ echo "VAGRANT_CLOUD_TOKEN : ${VAGRANT_CLOUD_TOKEN}"
 #  --request PUT \
 #  --upload-file ${BOX_NAME} \
 #  "${upload_path}"
-upload_path='http://192.168.1.4/boxes/tradr/'
+#upload_path='http://192.168.1.4/boxes/tradr/'
+#
+#curl \
+#  --request PUT \
+#  --upload-file ${BOX_NAME} \
+#  "${upload_path}"
 
-curl \
-  --request PUT \
-  --upload-file ${BOX_NAME} \
-  "${upload_path}"
+sudo cp ${BOX_NAME} /var/www/htdocs/boxes/tradr/${BOX_NAME}
 
 
 
