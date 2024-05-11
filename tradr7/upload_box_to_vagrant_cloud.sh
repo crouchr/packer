@@ -31,22 +31,26 @@ echo "VAGRANT_CLOUD_TOKEN : ${VAGRANT_CLOUD_TOKEN}"
 
 
 
-response=$(curl \
-  --request GET \
-  --header "Authorization: Bearer $VAGRANT_CLOUD_TOKEN" \
-  https://app.vagrantup.com/api/v2/box/crouchr/${BOX_NAME}/version/${BOX_VERSION}/provider/virtualbox/amd64/upload)
+#response=$(curl \
+#  --request GET \
+#  --header "Authorization: Bearer $VAGRANT_CLOUD_TOKEN" \
+#  https://app.vagrantup.com/api/v2/box/crouchr/${BOX_NAME}/version/${BOX_VERSION}/provider/virtualbox/amd64/upload)
 
   # https://app.vagrantup.com/api/v2/box/myuser/test/version/1.2.3/provider/virtualbox/amd64/upload)
 
 # Requires the jq command
 upload_path=$(echo "$response" | jq .upload_path)
 
+#curl \
+#  --request PUT \
+#  --upload-file ${BOX_NAME} \
+#  "${upload_path}"
+upload_path='http://192.168.1.4/boxes/tradr/'
+
 curl \
   --request PUT \
   --upload-file ${BOX_NAME} \
   "${upload_path}"
-
-
 
 
 
