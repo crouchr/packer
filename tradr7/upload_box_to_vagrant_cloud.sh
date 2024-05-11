@@ -31,8 +31,8 @@ vagrant plugin install vagrant-cloud
 
 # Login
 # vagrant cloud auth login ${VAGRANT_CLOUD_TOKEN}
-# vagrant cloud auth login --token ${VAGRANT_CLOUD_TOKEN}
-vagrant login --token ${VAGRANT_CLOUD_TOKEN}
+vagrant cloud auth login --token ${VAGRANT_CLOUD_TOKEN}
+# vagrant login --token ${VAGRANT_CLOUD_TOKEN}
 
 # Display some basic information
 # vagrant cloud auth whoami ${VAGRANT_CLOUD_TOKEN}
