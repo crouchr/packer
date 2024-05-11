@@ -11,8 +11,10 @@ VAGRANT_CLOUD_TOKEN=$4
 
 # Derived
 BOX_NAME="${BOX_DIR}-v${BOX_VERSION}".box
-export VAGRANT_LOG="debug"
-export VAGRANT_SERVER_URL='https://app.vagrantup.com/'
+# export VAGRANT_LOG="debug"
+export VAGRANT_LOG="info"
+
+# export VAGRANT_SERVER_URL='https://app.vagrantup.com/'
 
 # Static
 # AWS_PROFILE="developmentaws"
