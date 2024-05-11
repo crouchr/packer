@@ -15,7 +15,7 @@ BOX_NAME="${BOX_DIR}-v${BOX_VERSION}".box
 # Static
 # AWS_PROFILE="developmentaws"
 
-echo "AWS_PROFILE         : ${AWS_PROFILE}"
+# echo "AWS_PROFILE         : ${AWS_PROFILE}"
 echo "BOX_DIR             : ${BOX_DIR}"
 echo "BOX_NAME            : ${BOX_NAME}"
 echo "BOX_VERSION         : ${BOX_VERSION}"
