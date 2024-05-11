@@ -11,6 +11,7 @@ VAGRANT_CLOUD_TOKEN=$4
 
 # Derived
 BOX_NAME="${BOX_DIR}-v${BOX_VERSION}".box
+VAGRANT_LOG="debug"
 
 # Static
 # AWS_PROFILE="developmentaws"
