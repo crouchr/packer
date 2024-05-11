@@ -22,6 +22,8 @@ echo "BOX_VERSION         : ${BOX_VERSION}"
 echo "BOX_DESCRIPTION     : ${BOX_DESCRIPTION}"
 echo "VAGRANT_CLOUD_TOKEN : ${VAGRANT_CLOUD_TOKEN}"
 
+vagrant plugin install vagrant-cloud
+
 # Login
 # vagrant cloud auth login ${VAGRANT_CLOUD_TOKEN}
 vagrant cloud auth login --token ${VAGRANT_CLOUD_TOKEN}
