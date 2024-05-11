@@ -52,7 +52,8 @@ echo "VAGRANT_CLOUD_TOKEN : ${VAGRANT_CLOUD_TOKEN}"
 #  --upload-file ${BOX_NAME} \
 #  "${upload_path}"
 
-sudo cp ${BOX_NAME} /var/www/htdocs/boxes/tradr/${BOX_NAME}
+sudo cp --force ${BOX_NAME} /var/www/htdocs/boxes/tradr/${BOX_NAME}
+sudo cp --force ${BOX_DIR} /var/www/htdocs/boxes/tradr/${BOX_DIR}-metadata.json
 
 
 
