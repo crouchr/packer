@@ -11,7 +11,8 @@ VAGRANT_CLOUD_TOKEN=$4
 
 # Derived
 BOX_NAME="${BOX_DIR}-v${BOX_VERSION}".box
-VAGRANT_LOG="debug"
+export VAGRANT_LOG="debug"
+export VAGRANT_SERVER_URL='https://app.vagrantup.com/'
 
 # Static
 # AWS_PROFILE="developmentaws"
@@ -44,8 +45,6 @@ vagrant cloud auth login --token ${VAGRANT_CLOUD_TOKEN}
 #crouchr/${BOX_DIR} ${BOX_VERSION} virtualbox ${BOX_NAME}
 
 
-
-
 # Set variables
 #BOX_NAME="tradr7"
 #BOX_FILE="/home/crouchr/Downloads/tradr7-v1.0.54.box"
@@ -65,10 +64,6 @@ vagrant cloud auth login --token ${VAGRANT_CLOUD_TOKEN}
 #vagrant cloud publish $USERNAME/$BOX_NAME $VERSION --release
 
 # echo "Box $BOX_NAME version $VERSION uploaded successfully to Vagrant Cloud."
-
-
-
-
 
 
 # This is now done using S3 plugin
