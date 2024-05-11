@@ -29,9 +29,35 @@ echo "VAGRANT_CLOUD_TOKEN : ${VAGRANT_CLOUD_TOKEN}"
 rm ~/.vagrant.d/data/vagrant_login_token
 vagrant plugin install vagrant-cloud
 
+
+
+response=$(curl \
+  --request GET \
+  --header "Authorization: Bearer $VAGRANT_CLOUD_TOKEN" \
+  https://app.vagrantup.com/api/v2/box/crouchr/${BOX_NAME}/version/${BOX_VERSION}/provider/virtualbox/amd64/upload)
+
+  # https://app.vagrantup.com/api/v2/box/myuser/test/version/1.2.3/provider/virtualbox/amd64/upload)
+
+# Requires the jq command
+upload_path=$(echo "$response" | jq .upload_path)
+
+curl \
+  --request PUT \
+  --upload-file ${BOX_NAME} \
+  "${upload_path}"
+
+
+
+
+
+
+
+
+
+
 # Login
 # vagrant cloud auth login ${VAGRANT_CLOUD_TOKEN}
-vagrant cloud auth login --token ${VAGRANT_CLOUD_TOKEN}
+# vagrant cloud auth login --token ${VAGRANT_CLOUD_TOKEN}
 # vagrant login --token ${VAGRANT_CLOUD_TOKEN}
 
 # Display some basic information
