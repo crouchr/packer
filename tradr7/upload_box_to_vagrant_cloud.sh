@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/bash -eux
+
 # Upload the Box file to Vagrant
 # Note the vagrant-cloud plugin needs to be installed for the jenkins user (not root)
 # jenkins $ vagrant plugin install vagrant-cloud
@@ -22,20 +23,49 @@ echo "BOX_DESCRIPTION     : ${BOX_DESCRIPTION}"
 echo "VAGRANT_CLOUD_TOKEN : ${VAGRANT_CLOUD_TOKEN}"
 
 # Login
-vagrant cloud auth login ${VAGRANT_CLOUD_TOKEN}
+# vagrant cloud auth login ${VAGRANT_CLOUD_TOKEN}
+vagrant cloud auth login --token ${VAGRANT_CLOUD_TOKEN}
 
 # Display some basic information
 vagrant cloud auth whoami ${VAGRANT_CLOUD_TOKEN}
 
 # Push the file to Vagrant Cloud
-vagrant \
-cloud publish \
---description "${BOX_DESCRIPTION}" \
---short-description "${BOX_DESCRIPTION}" \
---force \
---release \
---box-version ${BOX_VERSION} \
-crouchr/${BOX_DIR} ${BOX_VERSION} virtualbox ${BOX_NAME}
+#vagrant \
+#cloud publish \
+#--description "${BOX_DESCRIPTION}" \
+#--short-description "${BOX_DESCRIPTION}" \
+#--force \
+#--release \
+#--box-version ${BOX_VERSION} \
+#crouchr/${BOX_DIR} ${BOX_VERSION} virtualbox ${BOX_NAME}
+
+
+
+
+# Set variables
+#BOX_NAME="tradr7"
+#BOX_FILE="/home/crouchr/Downloads/tradr7-v1.0.54.box"
+#VERSION="1.0.54"  # Version number
+#USERNAME="crouchr"
+
+# Authenticate with Vagrant Cloud
+# vagrant cloud auth login --username ${USERNAME} --token ${TOKEN}
+
+# Create a new version
+#vagrant cloud version create $USERNAME/$BOX_NAME $VERSION
+
+# Add the box file to the version
+#vagrant cloud box add $USERNAME/$BOX_NAME $VERSION --box-file $BOX_FILE
+
+# Release the version
+#vagrant cloud publish $USERNAME/$BOX_NAME $VERSION --release
+
+# echo "Box $BOX_NAME version $VERSION uploaded successfully to Vagrant Cloud."
+
+
+
+
+
 
 # This is now done using S3 plugin
 #echo
@@ -44,3 +74,5 @@ crouchr/${BOX_DIR} ${BOX_VERSION} virtualbox ${BOX_NAME}
 #echo "Note : This may take several minutes..."
 #aws s3 --profile=${AWS_PROFILE} \
 #cp boxes/${BOX_DIR}/${BOX_VERSION}/virtualbox/${BOX_NAME} s3://richardcrouch/boxes/${BOX_NAME}
+
+
