@@ -7,6 +7,9 @@
 
 
 [client]
+host=127.0.0.1
+user=root
+passw=secretsql
 
 # This group is not read by mysql client library,
 # If you use the same .cnf file for MySQL and MariaDB,
