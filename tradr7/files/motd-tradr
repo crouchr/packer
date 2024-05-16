@@ -8,13 +8,14 @@
  |_____\___\___|_.__/ \___|_|  \__, |
                                 __/ |
                                |___/
- Infrastructure Build v1.0.0
+ Infrastructure Build v1.0.1
  ===========================
  Base OS : CentOS7
 
  This node runs :
  - Docker
  - Filebeat
+ - Syslog NG
  - MariaDB Server
  - Wazuh HIDS
  - TRADR Application (in Docker)
@@ -27,10 +28,11 @@
 
  Instructions
  ============
- Type 'cli' to access the TRADR command-line interface (admin_cli and user_cli versions)
- Type 'upgrade' to upgrade the TRADR applications, including the TRADR command-line interface
- Type 'run_tradr' to run TRADR scanner(s)
+ Type 'cli' to access the TRADR command-line interface (admin_cli and user_cli modes)
  Type 'help_tradr' to display instructions
+ Type 'upgrade' to upgrade the TRADR applications
+ Type 'backup' to backup your TRADR configuration and data
+ Type 'restore' to restore your TRADR configuration and data
+ Type 'version_tradr' to display version information
 
- 'Greed is Good' - Gordon Gecko, Wall Street (1987)
 
