@@ -8,7 +8,7 @@
  |_____\___\___|_.__/ \___|_|  \__, |
                                 __/ |
                                |___/
- Infrastructure Build v1.0.3
+ Infrastructure Build v1.0.4
  ===========================
  Base OS : CentOS7
 
@@ -28,12 +28,15 @@
 
  Instructions
  ============
- Type 'cli' to access the TRADR command-line interface (admin_cli and user_cli modes)
- Type 'run_tradr_daemons' to run the various stock information grabbers
- Type 'run_stocks_scanner' to run the current trade scanner
- Type 'help_tradr' to display instructions
- Type 'upgrade' to upgrade the TRADR applications
- Type 'backup' to backup your TRADR configuration and data
- Type 'restore' to restore your TRADR configuration and data
- Type 'version_tradr' to display version information
+ [1] Iceberg Commands :
+ Type 'run_tradr_daemons' : Run the various stock information grabbers
+ Type 'run_swing_trader'  : Run the Swing Tradr application daemon
+ Type 'help_tradr'        : Display instructions
+ Type 'upgrade'           : Upgrade the TRADR applications
+ Type 'backup'            : Backup your TRADR configuration and data
+ Type 'restore'           : Restore your TRADR configuration and data
+ Type 'version_tradr'     : Display version information
 
+ Type 'cli' to access the TRADR command-line interface (admin_cli and user_cli modes)
+ [2] admin_cli and user_cli commands:
+ install_tradr.sh         : Install the complete TRADR Application
