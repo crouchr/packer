@@ -18,7 +18,7 @@
  - Syslog NG
  - MariaDB Server
  - Wazuh HIDS
- - TRADR Application (in Docker)
+ - TRADR Application (Dockerised)
 
  For X windows forwarding from another workstation use :
  $ vagrant ssh -- -Y
@@ -32,10 +32,9 @@
  Type 'run_tradr_daemons' : Run the various stock information grabbers
  Type 'run_swing_trader'  : Run the Swing Tradr application daemon
  Type 'help_tradr'        : Display instructions
- Type 'upgrade'           : Upgrade the TRADR applications
- Type 'backup'            : Backup your TRADR configuration and data
- Type 'restore'           : Restore your TRADR configuration and data
- Type 'version_tradr'     : Display version information
+ Type 'upgrade'           : Upgrade the TRADR (Dockerised) applications
+ Type 'backup'            : Backup your TRADR SQL configuration and data
+ Type 'restore'           : Restore your TRADR SQL configuration and data
 
  Type 'cli' to access the TRADR command-line interface (admin_cli and user_cli modes)
  [2] admin_cli and user_cli commands:
