@@ -39,3 +39,4 @@
  Type 'cli' to access the TRADR command-line interface (admin_cli and user_cli modes)
  [2] admin_cli and user_cli commands:
  install_tradr.sh         : Install the complete TRADR Application
+
