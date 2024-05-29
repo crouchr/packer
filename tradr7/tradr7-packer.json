@@ -140,6 +140,11 @@
     },
     {
       "type": "file",
+      "source": "files/swing_trader_log_viewer.py",
+      "destination": "/home/vagrant/swing_trader_log_viewer.py"
+    },
+    {
+      "type": "file",
       "source": "files/install-jython.exp",
       "destination": "/tmp/install-jython.exp"
     },
