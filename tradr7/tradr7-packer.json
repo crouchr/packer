@@ -72,6 +72,7 @@
   "provisioners": [
     {
       "scripts": [
+        "{{template_dir}}/../common-packer-scripts/fix_base_repos.sh",
         "{{template_dir}}/../common-packer-scripts/yum-update-all.sh",
         "{{template_dir}}/packer-scripts/set-hostname-tradr7-docker.sh",
         "{{template_dir}}/../common-packer-scripts/install-ntp.sh"
