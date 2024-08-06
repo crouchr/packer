@@ -198,6 +198,7 @@
         "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
         "{{template_dir}}/../common-packer-scripts/install-mariadb.sh",
         "{{template_dir}}/../common-packer-scripts/install-x-windows.sh",
+        "{{template_dir}}/../common-packer-scripts/install-mqtt.sh",
         "{{template_dir}}/../common-packer-scripts/install-osiris-agent.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
