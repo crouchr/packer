@@ -1,4 +1,3 @@
 {
-  "insecure-registries" : ["registry:5000"],
-  "hosts": ["unix:///var/run/docker.sock", "tcp://127.0.0.1:2375"]
+  "insecure-registries" : ["registry:5000"]
 }
