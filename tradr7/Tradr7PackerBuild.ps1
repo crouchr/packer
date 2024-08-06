@@ -30,7 +30,8 @@ $BoxUrl="http://www.tradr.click/boxes/tradr7/$BoxFile"
 ################################################################
 
 # Dump Packer version to output
-$PackerBinary = "/usr/local/bin/packer"
+# $PackerBinary = "/usr/local/bin/packer"
+$PackerBinary = "/usr/bin/packer"
 & $PackerBinary version
 
 $PSversion = $PSVersionTable.PSVersion.Major
