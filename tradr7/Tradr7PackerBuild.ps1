@@ -29,10 +29,16 @@ $Json = Get-Content 'stack_vars/tradr7-vars.json' | Out-String | ConvertFrom-Jso
 $BoxUrl="http://www.tradr.click/boxes/tradr7/$BoxFile"
 ################################################################
 
+# Dump Packer version to output
 $PackerBinary = "/usr/local/bin/packer"
 & $PackerBinary version
+
 $PSversion = $PSVersionTable.PSVersion.Major
 Write-Host "PowerShell version : $PSversion"
+
+# Dump Vagrant version to output
+$VagrantBinary = "/usr/bin/vagrant"
+& $VagrantBinary --version
 
 $Env:PACKER_LOG = "1"
 Write-Host "PACKER_LOG : $Env:PACKER_LOG"
