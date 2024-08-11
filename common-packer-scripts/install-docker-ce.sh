@@ -21,6 +21,7 @@ sudo mkdir -p /etc/docker
 #   http://web.ermin.lan/br2020-packages/daemon.json \
 #   -O /tmp/daemon.json
 sudo cp /tmp/daemon.json /etc/docker/daemon.json
+sudo cp /tmp/docker.service /etc/systemd/system/multi-user.target.wants/docker.service
 
 # Start Docker
 sudo systemctl start docker
