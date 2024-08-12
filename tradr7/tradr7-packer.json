@@ -55,7 +55,7 @@
     }
   ],
   "description": "Tradr7 packer template - VirtualBox",
-  "min_packer_version": "1.5.6",
+  "min_packer_version": "1.9.0",
   "post-processors": [
     {
       "compression_level": 9,
