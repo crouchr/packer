@@ -14,12 +14,6 @@ sudo usermod -aG docker $(whoami)
 
 # Allow use of unauthenticated access to my private Docker v2 Registry hostname registry
 sudo mkdir -p /etc/docker
-# sudo wget --no-check-certificate \
-#   http://web.ermin.lan/br2020-packages/daemon.json \
-#   -O /etc/docker/daemon.json
-# sudo wget --no-check-certificate \
-#   http://web.ermin.lan/br2020-packages/daemon.json \
-#   -O /tmp/daemon.json
 sudo cp /tmp/daemon.json /etc/docker/daemon.json
 sudo cp /tmp/docker.service /usr/lib/systemd/system/docker.service
 
