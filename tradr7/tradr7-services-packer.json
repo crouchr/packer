@@ -100,7 +100,12 @@
       "source": "files/syslog-ng.conf",
       "destination": "/tmp/syslog-ng.conf"
     },
-     {
+    {
+      "type": "file",
+      "source": "files/ntp.conf",
+      "destination": "/tmp/ntp.conf"
+    },
+    {
       "type": "file",
       "source": "files/docker.service",
       "destination": "/tmp/docker.service"
