@@ -12,7 +12,6 @@
 
 # this is only for the mysqld standalone daemon
 [mysqld]
-skip-name-resolve=1
 max_allowed_packet=256M
 max_connections=400
 server-audit-file-path=/var/log/server_audit.log
