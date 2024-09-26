@@ -15,6 +15,10 @@
 skip-name-resolve=1
 max_allowed_packet=256M
 max_connections=400
+server-audit-file-path=/var/log/server_audit.log
+server_audit_events=connect,query
+server_audit_logging=on
+server-audit-output-type=file
 #
 # * Galera-related settings
 #
@@ -41,7 +45,9 @@ bind-address=0.0.0.0
 # This group is only read by MariaDB servers, not by MySQL.
 # If you use the same .cnf file for MySQL and MariaDB,
 # you can put MariaDB-only options here
+# audit plugin https://mariadb.com/kb/en/mariadb-audit-plugin-installation/
 [mariadb]
+plugin_load_add = server_audit
 
 # This group is only read by MariaDB-10.4 servers.
 # If you use the same .cnf file for MariaDB of different versions,
