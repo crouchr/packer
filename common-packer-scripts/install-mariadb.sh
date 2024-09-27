@@ -12,6 +12,10 @@ sudo yum -y install MariaDB-server MariaDB-client MariaDB-devel
 sudo cp /tmp/client.cnf /etc/my.cnf.d/client.cnf
 sudo cp /tmp/server.cnf /etc/my.cnf.d/server.cnf
 
+echo 'Installing MariaDB Audit Plugin...'
+sudo touch /var/log/server_audit.log
+sudo chmod 777 /var/log/server_audit.log
+
 echo "Starting MariaDB..."
 sudo systemctl enable mariadb
 sudo systemctl start mariadb
