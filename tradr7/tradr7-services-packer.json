@@ -102,6 +102,11 @@
     },
     {
       "type": "file",
+      "source": "files/logrotate.conf",
+      "destination": "/tmp/logrotate.conf"
+    },
+    {
+      "type": "file",
       "source": "files/syslog-ng.conf",
       "destination": "/tmp/syslog-ng.conf"
     },
@@ -207,6 +212,7 @@
         "{{template_dir}}/../common-packer-scripts/install-mariadb-client.sh",
         "{{template_dir}}/../common-packer-scripts/install-elk.sh",
         "{{template_dir}}/../common-packer-scripts/configure-sshd.sh",
+        "{{template_dir}}/../common-packer-scripts/configure-logrotate.sh",
         "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
         "{{template_dir}}/../common-packer-scripts/install-grafana-8.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
