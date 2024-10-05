@@ -8,3 +8,10 @@ TODO
 
 
 
+tradr7-services
+- I removed osiris console as it had inatsll issues
+        # "{{template_dir}}/../common-packer-scripts/install-filebeat.sh",
+        # "{{template_dir}}/../common-packer-scripts/install-wazuh-local.sh",
+        "{{template_dir}}/../common-packer-scripts/install-osiris-console.sh",
+        # "{{template_dir}}/../common-packer-scripts/install-chef-workstation.sh",
+        # "{{template_dir}}/../common-packer-scripts/install-java-11.sh",
