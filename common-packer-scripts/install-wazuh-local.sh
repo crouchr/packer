@@ -35,8 +35,12 @@ sudo ./install-wazuh-local.exp
 # override the default config file
 sudo cp /tmp/ossec.conf /var/ossec/etc/ossec.conf
 
-# Note : systemctl stuff is done by the install.sh script
+# install local rules to prevent rules firing for monitoring nodes e.g. Kuma
+sudo cp /tmp/local_rules.xml /var/ossec/etc/ruleset/rules/local_rules.xml
 
+# Note : systemctl stuff is done by the install.sh script
 echo "Finished setup.sh OK for provisioning Wazuh on this node"
 
 echo
+
+

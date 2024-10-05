@@ -102,6 +102,11 @@
     },
     {
       "type": "file",
+      "source": "files/logrotate.conf",
+      "destination": "/tmp/logrotate.conf"
+    },
+    {
+      "type": "file",
       "source": "files/syslog-ng.conf",
       "destination": "/tmp/syslog-ng.conf"
     },
@@ -177,6 +182,11 @@
     },
     {
       "type": "file",
+      "source": "files/wazuh-local_rules.xml",
+      "destination": "/tmp/local_rules.xml"
+    },
+    {
+      "type": "file",
       "source": "files/install-osiris-agent.exp",
       "destination": "/tmp/install-osiris-agent.exp"
     },
@@ -205,6 +215,7 @@
         "{{template_dir}}/../common-packer-scripts/install-java-11.sh",
         "{{template_dir}}/../common-packer-scripts/install-jython.sh",
         "{{template_dir}}/../common-packer-scripts/configure-sshd.sh",
+        "{{template_dir}}/../common-packer-scripts/configure-logrotate.sh",
         "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
         "{{template_dir}}/../common-packer-scripts/install-mariadb.sh",
         "{{template_dir}}/../common-packer-scripts/install-x-windows.sh",

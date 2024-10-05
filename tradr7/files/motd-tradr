@@ -8,16 +8,18 @@
  |_____\___\___|_.__/ \___|_|  \__, |
                                 __/ |
                                |___/
- Infrastructure Build v1.0.4
+ Infrastructure Build v1.0.5
  ===========================
  Base OS : CentOS7
 
  This node runs :
  - Docker
- - Filebeat
+ - Filebeat to send logs to TRADR Services VBOX ELK instance
  - Syslog NG
+ - NTPD
  - MariaDB Server
  - Wazuh HIDS
+ - Logrotate
  - TRADR Application (Dockerised)
 
  For X windows forwarding from another workstation use :
@@ -29,14 +31,14 @@
  Instructions
  ============
  [1] Iceberg Commands :
- Type 'run_tradr_daemons' : Run the various stock information grabbers
- Type 'run_swing_trader'  : Run the Swing Tradr application daemon
  Type 'help_tradr'        : Display instructions
  Type 'upgrade'           : Upgrade the TRADR (Dockerised) applications
  Type 'backup'            : Backup your TRADR SQL configuration and data
+ Type 'backup-lts'        : Backup your LTS TRADR SQL configuration and data
  Type 'restore'           : Restore your TRADR SQL configuration and data
+ Type 'restore-LTS'       : Restore your LTS TRADR SQL configuration and data
 
  Type 'cli' to access the TRADR command-line interface (admin_cli and user_cli modes)
  [2] admin_cli and user_cli commands:
- install_tradr.sh         : Install the complete TRADR Application
+ ./install_tradr.sh       : Install the complete TRADR Application
 
