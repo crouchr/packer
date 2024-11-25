@@ -1,0 +1,10 @@
+#!/bin/bash
+# This goes in /usr/bin/tradr-shell
+# User shell that is restricted
+allowed_commands=("ls" "cat" "echo" "docker" "whoami" "pwd")
+command=$(echo "$1" | awk '{print $1}')
+if [[ " ${allowed_commands[@]} " =~ " $command " ]]; then
+    $@
+else
+    echo "TRADR Shell : Command not allowed."
+fi
