@@ -117,8 +117,8 @@
     },
     {
       "type": "file",
-      "source": "files/tradr-shell.sh",
-      "destination": "/tmp/tradr-shell.sh"
+      "source": "files/tradr-shell",
+      "destination": "/tmp/tradr-shell"
     },
     {
       "type": "file",
