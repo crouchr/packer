@@ -3,7 +3,9 @@
 echo "Installing TRADR Shell..."
 
 sudo cp /tmp/tradr-shell /usr/bin/tradr-shell
+sudo chmod +x /usr/bin/tradr-shell
 
+# my 'richard' account is my normal user
 sudo usermod -s /usr/bin/tradr-shell adrian
 sudo usermod -s /usr/bin/tradr-shell richard
 
