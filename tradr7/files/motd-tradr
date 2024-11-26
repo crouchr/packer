@@ -1,44 +1,8 @@
+  __________  ___    ____  ____
+ /_  __/ __ \/   |  / __ \/ __ \
+  / / / /_/ / /| | / / / / /_/ /
+ / / / _, _/ ___ |/ /_/ / _, _/
+/_/ /_/ |_/_/  |_/_____/_/ |_|
 
-
-  _____         _
- |_   _|       | |
-   | |  ___ ___| |__   ___ _ __ __ _
-   | | / __/ _ \ '_ \ / _ \ '__/ _` |
-  _| || (_|  __/ |_) |  __/ | | (_| |
- |_____\___\___|_.__/ \___|_|  \__, |
-                                __/ |
-                               |___/
- Infrastructure Build v1.0.5
- ===========================
- Base OS : CentOS7
-
- This node runs :
- - Docker
- - Filebeat to send logs to TRADR Services VBOX ELK instance
- - Syslog NG
- - NTPD
- - MariaDB Server
- - Wazuh HIDS
- - Logrotate
- - TRADR Application (Dockerised)
-
- For X windows forwarding from another workstation use :
- $ vagrant ssh -- -Y
- $ xterm
-
- You are currently logged into the TRADR VirtualBox.
-
- Instructions
- ============
- [1] Iceberg Commands :
- Type 'help_tradr'        : Display instructions
- Type 'upgrade'           : Upgrade the TRADR (Dockerised) applications
- Type 'backup'            : Backup your TRADR SQL configuration and data
- Type 'backup-lts'        : Backup your LTS TRADR SQL configuration and data
- Type 'restore'           : Restore your TRADR SQL configuration and data
- Type 'restore-LTS'       : Restore your LTS TRADR SQL configuration and data
-
- Type 'cli' to access the TRADR command-line interface (admin_cli and user_cli modes)
- [2] admin_cli and user_cli commands:
- ./install_tradr.sh       : Install the complete TRADR Application
+(c) BlackRain Technologies 2024
 
