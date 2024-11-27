@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/bash -eux
 
 echo "Installing fail2ban..."
 
-sudo yum -y fail2ban
+sudo yum -y install fail2ban
 
 echo "Configuring fail2ban..."
 sudo cp /tmp/jail.local /etc/fail2ban/jail.local
