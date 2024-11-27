@@ -143,6 +143,11 @@
     },
     {
       "type": "file",
+      "source": "files/jail.local",
+      "destination": "/tmp/jail.local"
+    },
+    {
+      "type": "file",
       "source": "files/client.cnf",
       "destination": "/tmp/client.cnf"
     },
@@ -226,9 +231,9 @@
         "{{template_dir}}/../common-packer-scripts/install-java-11.sh",
         "{{template_dir}}/../common-packer-scripts/install-jython.sh",
         "{{template_dir}}/../common-packer-scripts/configure-sshd.sh",
-        "{{template_dir}}/../common-packer-scripts/install-fail2ban.sh",
         "{{template_dir}}/../common-packer-scripts/configure-logrotate.sh",
         "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
+        "{{template_dir}}/../common-packer-scripts/install-fail2ban.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-adrian.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-richard.sh",
         "{{template_dir}}/../common-packer-scripts/install-tradr-shell.sh",
