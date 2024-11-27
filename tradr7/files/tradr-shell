@@ -4,7 +4,7 @@
 log_file="/var/log/tradr_shell.log"
 
 # List of allowed commands
-allowed_commands=("cli" "exit" "passwd" "whoami")
+allowed_commands=("cli" "exit" "passwd" "whoami" "printenv")
 
 echo "Commands:"
 echo " cli    : enter TRADR CLI"
