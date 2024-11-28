@@ -27,9 +27,9 @@ echo "Commands:"
 echo " cli      : enter TRADR CLI"
 echo " passwd   : change your password"
 echo " exit     : logout of TRADR"
-echo " --------------------------------"
-echo " printenv : display ENV variables"
-echo " whoami   : display username"
+# echo " --------------------------------"
+# echo " printenv : display ENV variables"
+# echo " whoami   : display username"
 echo ""
 
 # Check if running with no arguments (interactive mode)
