@@ -1,15 +1,35 @@
 #!/bin/bash
 
+echo "user is $USER"
+
+# environment variables
+source /home/$USER/.tradrrc
+
+#export VONAGE_API_SECRET=$VONAGE_API_SECRET
+#export VONAGE_API_KEY=$VONAGE_API_KEY
+#export FMP_FREE_API_KEY=$FMP_FREE_API_KEY
+#export ALPHAVANTAGE_BASIC_API_KEY=$ALPHAVANTAGE_BASIC_API_KEY
+#export ALPHAVANTAGE_FREE_API_KEY=$ALPHAVANTAGE_FREE_API_KEY
+#export SQL_DB_HOSTNAME=$SQL_DB_HOSTNAME
+#export PROTONMAIL_PLUS_BRIDGE_HOSTNAME=$PROTONMAIL_PLUS_BRIDGE_HOSTNAME
+#export PROTONMAIL_PLUS_BRIDGE_PORT=$PROTONMAIL_PLUS_BRIDGE_PORT
+#export PROTONMAIL_PLUS_BRIDGE_KEY=$PROTONMAIL_PLUS_BRIDGE_KEY
+#export NAMECHEAP_DNS_PASSWORD=$NAMECHEAP_DNS_PASSWORD
+
+
 # Path to the log file
 log_file="/var/log/tradr_shell.log"
 
 # List of allowed commands
-allowed_commands=("cli" "exit" "passwd" "whoami")
+allowed_commands=("cli" "exit" "passwd" "whoami" "printenv")
 
 echo "Commands:"
-echo " cli    : enter TRADR CLI"
-echo " passwd : change your password"
-echo " exit   : logout of TRADR"
+echo " cli      : enter TRADR CLI"
+echo " passwd   : change your password"
+echo " exit     : logout of TRADR"
+# echo " --------------------------------"
+# echo " printenv : display ENV variables"
+# echo " whoami   : display username"
 echo ""
 
 # Check if running with no arguments (interactive mode)
@@ -20,8 +40,8 @@ if [[ -z "$1" ]]; then
         echo -n "TRADR> "
         read -r input
 
-	# Log the entered command with timestamp and username
-    	echo "$(date '+%Y-%m-%d %H:%M:%S') $(whoami): $input" >> "$log_file"
+	      # Log the entered command with timestamp and username - make the format one that can be monitored by a standard tools ?
+    	  echo "$(date '+%Y-%m-%d %H:%M:%S') $(whoami): $input" >> "$log_file"
 
         # Extract the command (first word)
         command=$(echo "$input" | awk '{print $1}')
