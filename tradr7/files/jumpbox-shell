@@ -6,7 +6,8 @@
 log_file="/var/log/jumpbox.log"
 
 # List of allowed commands
-allowed_commands=("ssh" "passwd" "exit" "whoami" "printenv")
+# allowed_commands=("ssh" "passwd" "exit" "whoami" "printenv")
+allowed_commands=("ssh" "passwd" "exit")
 
 echo "Commands:"
 echo " ssh      : SSH to TRADR (e.g. ssh john@tradr)"
