@@ -1,4 +1,5 @@
 #!/bin/bash -eux
+# also need to add user to install-tradr-shell.sh
 
 echo 'Running add-user-richard.sh...'
 
