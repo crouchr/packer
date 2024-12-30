@@ -97,7 +97,6 @@ $validateargs = @('validate')
 $args = @('build')
 $args += "--only=$PackerBuilder"
 $args += "--force"
-# $args += "-debug"
 $args += "-var-file=box-vars.json"  # pass the box version and description via var-file
 
 $VarFiles = $VarsFiles -split ';'
