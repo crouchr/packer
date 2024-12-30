@@ -4,7 +4,7 @@
     {
       "boot_command": [
         "<tab>",
-        " ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/rch-rocky8-ks.cfg ",
+        " ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/tradr8-ks.cfg ",
         "<enter>"
       ],
       "boot_wait": "30s",
@@ -33,7 +33,7 @@
       "output_directory": "{{ user `virtualbox_output_directory` }}",
       "shutdown_command": "sudo shutdown -h 0",
       "ssh_password": "vagrant",
-      "ssh_timeout": "30m",
+      "ssh_timeout": "40m",
       "ssh_username": "vagrant",
       "type": "virtualbox-iso",
       "vboxmanage": [
@@ -41,7 +41,7 @@
           "modifyvm",
           "{{ .Name }}",
           "--memory",
-          "3072"
+          "6144"
         ],
         [
           "modifyvm",
@@ -51,16 +51,16 @@
         ]
       ],
       "virtualbox_version_file": ".vbox_version",
-      "vm_name": "rch-rocky8-docker-8.9-x86_64"
+      "vm_name": "tradr8-docker-8.9-x86_64"
     }
   ],
-  "description": "RCH Base Rocky8 Server packer template - VirtualBox",
+  "description": "Tradr8 packer template - VirtualBox",
   "min_packer_version": "1.9.0",
   "post-processors": [
     {
       "compression_level": 9,
       "keep_input_artifact": true,
-      "output": "rch-rocky8-docker-v{{ user `box_version` }}.box",
+      "output": "tradr8-v{{ user `box_version` }}.box",
       "type": "vagrant"
     },
     {
@@ -71,10 +71,16 @@
   ],
   "provisioners": [
     {
+      "type": "file",
+      "source": "files/ntp.conf",
+      "destination": "/tmp/ntp.conf"
+    },
+    {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/yum-update-all.sh",
-        "{{template_dir}}/packer-scripts/set-hostname-rocky8-docker.sh",
-        "{{template_dir}}/../common-packer-scripts/install-snap.sh"
+        "{{template_dir}}/packer-scripts/set-hostname-tradr8-docker.sh",
+        "{{template_dir}}/../common-packer-scripts/install-ntp.sh",
+        "{{template_dir}}/../common-packer-scripts/set-timezone.sh"
       ],
       "type": "shell"
     },
@@ -89,16 +95,157 @@
       "type": "shell"
     },
     {
+      "type": "file",
+      "source": "files/motd-tradr",
+      "destination": "/tmp/motd"
+    },
+    {
+      "type": "file",
+      "source": "files/logrotate.conf",
+      "destination": "/tmp/logrotate.conf"
+    },
+    {
+      "type": "file",
+      "source": "files/syslog-ng.conf",
+      "destination": "/tmp/syslog-ng.conf"
+    },
+    {
+      "type": "file",
+      "source": "files/docker.service",
+      "destination": "/tmp/docker.service"
+    },
+    {
+      "type": "file",
+      "source": "files/tradr-shell",
+      "destination": "/tmp/tradr-shell"
+    },
+    {
+      "type": "shell",
+      "inline": [
+      "chmod +x /tmp/tradr-shell"
+      ]
+    },
+    {
+      "type": "file",
+      "source": "files/vagrant.pub",
+      "destination": "/tmp/vagrant.pub"
+    },
+    {
+      "type": "file",
+      "source": "files/sshd_config",
+      "destination": "/tmp/sshd_config"
+    },
+    {
+      "type": "file",
+      "source": "files/daemon.json",
+      "destination": "/tmp/daemon.json"
+    },
+    {
+      "type": "file",
+      "source": "files/jail.local",
+      "destination": "/tmp/jail.local"
+    },
+    {
+      "type": "file",
+      "source": "files/client.cnf",
+      "destination": "/tmp/client.cnf"
+    },
+    {
+      "type": "file",
+      "source": "files/server.cnf",
+      "destination": "/tmp/server.cnf"
+    },
+    {
+      "type": "file",
+      "source": "files/grafana.ini",
+      "destination": "/tmp/grafana.ini"
+    },
+    {
+      "type": "file",
+      "source": "files/jython-installer-2.7.3.jar",
+      "destination": "/tmp/jython-installer.jar"
+    },
+    {
+      "type": "file",
+      "source": "files/calculator.py",
+      "destination": "/home/vagrant/calculator.py"
+    },
+    {
+      "type": "file",
+      "source": "files/swing_trader_log_viewer.py",
+      "destination": "/home/vagrant/swing_trader_log_viewer.py"
+    },
+    {
+      "type": "file",
+      "source": "files/install-jython.exp",
+      "destination": "/tmp/install-jython.exp"
+    },
+    {
+      "type": "file",
+      "source": "files/configure-mariadb.exp",
+      "destination": "/tmp/configure-mariadb.exp"
+    },
+    {
+      "type": "file",
+      "source": "files/install-wazuh-local.exp",
+      "destination": "/tmp/install-wazuh-local.exp"
+    },
+    {
+      "type": "file",
+      "source": "files/wazuh.conf",
+      "destination": "/tmp/ossec.conf"
+    },
+    {
+      "type": "file",
+      "source": "files/wazuh-local_rules.xml",
+      "destination": "/tmp/local_rules.xml"
+    },
+    {
+      "type": "file",
+      "source": "files/install-osiris-agent.exp",
+      "destination": "/tmp/install-osiris-agent.exp"
+    },
+    {
+      "type": "file",
+      "source": "files/client.rb",
+      "destination": "/tmp/client.rb"
+    },
+    {
+      "type": "file",
+      "source": "files/filebeat-tradr.yml",
+      "destination": "/tmp/filebeat.yml"
+    },
+    {
       "scripts": [
+        "{{template_dir}}/../common-packer-scripts/install-ntp.sh",
+        "{{template_dir}}/../common-packer-scripts/install-syslog-ng.sh",
         "{{template_dir}}/../common-packer-scripts/install-tools-packages.sh",
-        "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key.sh",
-        "{{template_dir}}/../common-packer-scripts/add-users.sh",
-        "{{template_dir}}/../common-packer-scripts/add-jenkins.sh",
-        "{{template_dir}}/../common-packer-scripts/install-user-ssh-keys.sh",
-        "{{template_dir}}/../common-packer-scripts/install-jenkins-ssh-keys.sh",
-        "{{template_dir}}/../common-packer-scripts/sshd-config.sh",
+        "{{template_dir}}/../common-packer-scripts/add-vagrant-insecure-key-no-web.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools-dependencies.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools.sh",
+        "{{template_dir}}/../common-packer-scripts/install-filebeat.sh",
+        "{{template_dir}}/../common-packer-scripts/install-wazuh-local.sh",
+        "{{template_dir}}/../common-packer-scripts/install-motd.sh",
+        "{{template_dir}}/../common-packer-scripts/install-chef-workstation.sh",
+        "{{template_dir}}/../common-packer-scripts/install-java-11.sh",
+        "{{template_dir}}/../common-packer-scripts/install-jython.sh",
+        "{{template_dir}}/../common-packer-scripts/configure-sshd.sh",
+        "{{template_dir}}/../common-packer-scripts/configure-logrotate.sh",
+        "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
+        "{{template_dir}}/../common-packer-scripts/install-fail2ban.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-admin.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-johnnybench.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-richard.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-elliot.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-amelia.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-simon.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-adrian.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-oscar.sh",
+        "{{template_dir}}/../common-packer-scripts/install-tradr-shell.sh",
+        "{{template_dir}}/../common-packer-scripts/install-mariadb.sh",
+        "{{template_dir}}/../common-packer-scripts/install-x-windows.sh",
+        "{{template_dir}}/../common-packer-scripts/install-mqtt.sh",
+        "{{template_dir}}/../common-packer-scripts/install-osiris-agent.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
       "type": "shell"
