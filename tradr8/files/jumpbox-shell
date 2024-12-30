@@ -1,0 +1,58 @@
+!/bin/bash
+
+# echo "user is $USER"
+
+# Path to the log file
+log_file="/var/log/jumpbox.log"
+
+# List of allowed commands
+# allowed_commands=("ssh" "passwd" "exit" "whoami" "printenv")
+allowed_commands=("ssh" "passwd" "exit")
+
+echo "Commands:"
+echo " ssh      : SSH to TRADR (e.g. ssh john@tradr)"
+echo " passwd   : change your password on JUMPBOX"
+echo " exit     : logout of JUMPBOX"
+# echo " --------------------------------"
+# echo " printenv : display ENV variables"
+# echo " whoami   : display username"
+echo ""
+
+# Check if running with no arguments (interactive mode)
+if [[ -z "$1" ]]; then
+    # Start an interactive session
+    while true; do
+        # Prompt for input
+        echo -n "JUMPBOX> "
+        read -r input
+
+              # Log the entered command with timestamp and username - make the format one that can be monitored by a standard tools ?
+          echo "$(date '+%Y-%m-%d %H:%M:%S') $(whoami): $input" >> "$log_file"
+
+        # Extract the command (first word)
+        command=$(echo "$input" | awk '{print $1}')
+
+        # Display the entered command
+        # echo "DEBUG : Command entered: $input"
+
+        # Check if the command is allowed
+        if [[ " ${allowed_commands[@]} " =~ " $command " ]]; then
+            # Execute the command
+            eval "$input"
+        else
+            # Reject the command
+            echo "Command not found."
+        fi
+    done
+else
+    # Non-interactive mode (command passed directly)
+    command=$(echo "$1" | awk '{print $1}')
+    echo "Command entered: $@"
+    if [[ " ${allowed_commands[@]} " =~ " $command " ]]; then
+        # Execute the command
+        "$@"
+    else
+        # Reject the command
+        echo "Command not allowed."
+    fi
+fi
