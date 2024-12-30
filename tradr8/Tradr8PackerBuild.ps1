@@ -15,23 +15,31 @@ param (
 # Exit on first error
 $ErrorActionPreference = "Stop"
 
-Write-Host "Running Rocky8PackerBuild.ps1 script..."
+Write-Host "Running Tradr8PackerBuild.ps1 script..."
 Write-Host "Parameters passed from Jenkins:"
 Write-Host "  PackerBuilder  : $PackerBuilder"
 Write-Host "  PackerTemplate : $PackerTemplate"
 Write-Host "  VarsFiles      : $VarsFiles"
 
 ################################################################
-$BoxFile = "rch-rocky8-v$Env:BOX_VERSION.box"
-$MetadataFilename = "rch-rocky8-metadata.json"
-$Json = Get-Content 'stack_vars/rch-rocky8-docker-vars.json' | Out-String | ConvertFrom-Json
-$BoxUrl="https://richardcrouch.s3-eu-west-1.amazonaws.com/boxes/rch-rocky8/$BoxFile"
+$BoxFile = "tradr8-v$Env:BOX_VERSION.box"
+$MetadataFilename = "tradr8-metadata.json"
+$Json = Get-Content 'stack_vars/tradr8-vars.json' | Out-String | ConvertFrom-Json
+# $BoxUrl="https://richardcrouch.s3-eu-west-1.amazonaws.com/boxes/tradr7/$BoxFile"
+$BoxUrl="http://www.tradr.click/boxes/tradr8/$BoxFile"
 ################################################################
 
-$PackerBinary = "/usr/local/bin/packer"
+# Dump Packer version to output
+# $PackerBinary = "/usr/local/bin/packer"
+$PackerBinary = "/usr/bin/packer"
 & $PackerBinary version
+
 $PSversion = $PSVersionTable.PSVersion.Major
 Write-Host "PowerShell version : $PSversion"
+
+# Dump Vagrant version to output
+$VagrantBinary = "/usr/bin/vagrant"
+& $VagrantBinary --version
 
 $Env:PACKER_LOG = "1"
 Write-Host "PACKER_LOG : $Env:PACKER_LOG"
