@@ -45,7 +45,8 @@ $Env:PACKER_LOG = "1"
 Write-Host "PACKER_LOG : $Env:PACKER_LOG"
 
 $WorkingDir = [string](Get-Location)
-$Env:PACKER_LOG_PATH =  $WorkingDir + "\" +"$PackerBuilder.log"
+#$Env:PACKER_LOG_PATH =  $WorkingDir + "\" +"$PackerBuilder.log"
+$Env:PACKER_LOG_PATH =  $WorkingDir + "/" +"$PackerBuilder.log"
 
 Write-Host "WorkingDir is $WorkingDir"
 Write-Host "PACKER_LOG_PATH : $Env:PACKER_LOG_PATH"
