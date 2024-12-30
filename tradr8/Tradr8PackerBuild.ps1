@@ -45,7 +45,6 @@ $Env:PACKER_LOG = "1"
 Write-Host "PACKER_LOG : $Env:PACKER_LOG"
 
 $WorkingDir = [string](Get-Location)
-#$Env:PACKER_LOG_PATH =  $WorkingDir + "\" +"$PackerBuilder.log"
 $Env:PACKER_LOG_PATH =  $WorkingDir + "/" +"$PackerBuilder.log"
 
 Write-Host "WorkingDir is $WorkingDir"
@@ -98,7 +97,7 @@ $validateargs = @('validate')
 $args = @('build')
 $args += "--only=$PackerBuilder"
 $args += "--force"
-$args += "-debug"
+# $args += "-debug"
 $args += "-var-file=box-vars.json"  # pass the box version and description via var-file
 
 $VarFiles = $VarsFiles -split ';'
