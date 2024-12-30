@@ -8,5 +8,5 @@
   "ssh_user": "root",
   "ssh_password": "vagrant",
   "disk_size": "48000",
-  "headless": "false"
+  "headless": "true"
 }

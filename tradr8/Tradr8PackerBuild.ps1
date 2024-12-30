@@ -3,20 +3,18 @@
 # This script is called from Jenkins
 # This script is NOT identical to the NVM one, but is similar
 
-#param (
-#  [Parameter(Mandatory)]
-#  $PackerBuilder,
-#  [Parameter(Mandatory)]
-#  $PackerTemplate,
-#  [Parameter(Mandatory)]
-#  $VarsFiles
-#)
+param (
+  [Parameter(Mandatory)]
+  $PackerBuilder,
+  [Parameter(Mandatory)]
+  $PackerTemplate,
+  [Parameter(Mandatory)]
+  $VarsFiles
+)
 
-$PackerBuilder = "TRADR8_VIRTUALBOX"
-$PackerTemplate = "tradr8-packer.json"
-$VarsFiles = "account_vars/junk_aws_vars.json;stack_vars/tradr8-vars.json"
-
-
+#$PackerBuilder = "TRADR8_VIRTUALBOX"
+#$PackerTemplate = "tradr8-packer.json"
+#$VarsFiles = "account_vars/junk_aws_vars.json;stack_vars/tradr8-vars.json"
 
 # Exit on first error
 $ErrorActionPreference = "Stop"
