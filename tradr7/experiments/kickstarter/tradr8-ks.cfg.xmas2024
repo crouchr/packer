@@ -1,53 +1,66 @@
-#  CDB Rocky8 Minimal Kickstart
-
-cdrom
-skipx
-text
-logging --level=info
-firstboot --disabled
-eula --agreed
-
-keyboard uk
-lang en_GB.UTF8
-timezone --utc Europe/London
-
-rootpw --plaintext vagrant
+#  VCC Rocky8 Packer-Virtualbox Kickstart
 
 zerombr
 clearpart --drives sda --all --initlabel
 
-part /boot --fstype=xfs --size=512 --ondisk sda
+part /boot --fstype=ext4 --size=512 --ondisk sda
 part swap --fstype=swap --recommended
 
 part pv.01 --size=2048 --ondisk=sda --grow
 
 volgroup vg00 pv.01
 logvol / --vgname=vg00 --fstype=xfs --size=2048 --grow --name=lv_root
-logvol /var --vgname=vg00 --fstype=xfs --percent=25 --grow --name=lv_var
-logvol /opt --vgname=vg00 --fstype=xfs --percent=25 --grow --name=lv_opt
+logvol /var --vgname=vg00 --fstype=xfs --percent=25 --name=lv_var
+logvol /opt --vgname=vg00 --fstype=xfs --percent=25 --name=lv_opt
 logvol /tmp --vgname=vg00 --fstype=xfs --size=1024 --name=lv_tmp
 
 bootloader --append "net.ifnames=0 biosdevname=0"
 
-network --bootproto=dhcp --onboot=on
+network --bootproto=dhcp --device=link --noipv6 --onboot=on
+#network --bootproto=dhcp --device=eth0 --noipv6 --onboot=on
 firewall --enabled --trust=lo --ssh
 
-services --enabled=NetworkManager,sshd
-selinux --permissive
+# Set unique hostname for foreman registration
+%pre
+echo "network --hostname=`echo packer-virtualbox-rocky8-$RANDOM$RANDOM`.localdomain" > /tmp/kickstart-hostname
+%end
 
+%include /tmp/kickstart-hostname
+
+cdrom
+
+skipx
+text
+logging --level=info
+firstboot --disabled
 reboot
 
-%packages --excludedocs --instLangs=en
-@Core --nodefault
+rootpw --plaintext vagrant
+user --name=vagrant --plaintext --password=vagrant --groups=vagrant,wheel
 
+# Firewall configuration
+#firewall --enabled --service=ssh
+firewall --disabled
+firstboot --disable
+
+keyboard uk
+lang en_GB.UTF8
+timezone --utc Europe/London
+
+%packages --excludedocs --ignoremissing --instLangs=en
+@core --nodefaults
 yum
 openssh-server
 chrony
 yum-utils
 lvm2
 grub2
+unzip
+# install subscription manager for foreman
+subscription-manager
 
 # Remove unnecessary packages
+# -NetworkManager*
 -avahi*
 -wpa_supplicant
 -fprintd-pam
