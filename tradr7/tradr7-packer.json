@@ -236,6 +236,7 @@
         "{{template_dir}}/../common-packer-scripts/install-fail2ban.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-admin.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-johnnybench.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-sector.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-richard.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-elliot.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-amelia.sh",
