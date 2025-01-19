@@ -11,6 +11,7 @@ sudo usermod -s /usr/bin/tradr-shell johnnybench
 sudo usermod -s /usr/bin/tradr-shell sector
 sudo usermod -s /usr/bin/tradr-shell bitcoin
 sudo usermod -s /usr/bin/tradr-shell watcher
+sudo usermod -s /usr/bin/tradr-shell tester
 sudo usermod -s /usr/bin/tradr-shell richard
 sudo usermod -s /usr/bin/tradr-shell elliot
 sudo usermod -s /usr/bin/tradr-shell amelia
