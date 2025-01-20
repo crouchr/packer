@@ -3,7 +3,7 @@
 
 echo 'Running add-user-tester.sh...'
 
-USER=bitcoin
+USER=tester
 sudo adduser ${USER}
 sudo gpasswd -a ${USER} wheel
 sudo mkdir -p /home/${USER}/.ssh
