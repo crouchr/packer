@@ -3,7 +3,7 @@
   "template": "TRADR9_VIRTUALBOX",
   "virtualbox_output_directory": "packer/packer_cache",
   "iso_filename": "rocky-9.5-minimal.iso",
-  "iso_checksum": "6057943eab05576793e007e39d642cb168060fb6",
+  "iso_checksum": "8e92881b6f5ac845311f5fc698593b1a1ab422a9",
   "iso_checksum_type": "sha1",
   "ssh_user": "root",
   "ssh_password": "vagrant",
