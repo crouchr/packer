@@ -19,18 +19,18 @@ param (
 # Exit on first error
 $ErrorActionPreference = "Stop"
 
-Write-Host "Running Tradr8PackerBuild.ps1 script..."
+Write-Host "Running Tradr9PackerBuild.ps1 script..."
 Write-Host "Parameters passed from Jenkins:"
 Write-Host "  PackerBuilder  : $PackerBuilder"
 Write-Host "  PackerTemplate : $PackerTemplate"
 Write-Host "  VarsFiles      : $VarsFiles"
 
 ################################################################
-$BoxFile = "tradr8-v$Env:BOX_VERSION.box"
-$MetadataFilename = "tradr8-metadata.json"
-$Json = Get-Content 'stack_vars/tradr8-vars.json' | Out-String | ConvertFrom-Json
+$BoxFile = "tradr9-v$Env:BOX_VERSION.box"
+$MetadataFilename = "tradr9-metadata.json"
+$Json = Get-Content 'stack_vars/tradr9-vars.json' | Out-String | ConvertFrom-Json
 # $BoxUrl="https://richardcrouch.s3-eu-west-1.amazonaws.com/boxes/tradr7/$BoxFile"
-$BoxUrl="http://www.tradr.click/boxes/tradr8/$BoxFile"
+$BoxUrl="http://www.tradr.click/boxes/tradr9/$BoxFile"
 ################################################################
 
 # Dump Packer version to output

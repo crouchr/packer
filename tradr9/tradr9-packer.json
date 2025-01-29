@@ -51,16 +51,16 @@
         ]
       ],
       "virtualbox_version_file": ".vbox_version",
-      "vm_name": "tradr8-docker-8.10-x86_64"
+      "vm_name": "tradr9-docker-8.10-x86_64"
     }
   ],
-  "description": "Tradr8 packer template - VirtualBox",
+  "description": "Tradr9 packer template - VirtualBox",
   "min_packer_version": "1.9.0",
   "post-processors": [
     {
       "compression_level": 9,
       "keep_input_artifact": true,
-      "output": "tradr8-v{{ user `box_version` }}.box",
+      "output": "tradr9-v{{ user `box_version` }}.box",
       "type": "vagrant"
     },
     {
@@ -78,7 +78,7 @@
     {
       "scripts": [
         "{{template_dir}}/../common-packer-scripts/yum-update-all.sh",
-        "{{template_dir}}/packer-scripts/set-hostname-tradr8-docker.sh",
+        "{{template_dir}}/packer-scripts/set-hostname-tradr9-docker.sh",
         "{{template_dir}}/../common-packer-scripts/install-ntp.sh",
         "{{template_dir}}/../common-packer-scripts/set-timezone.sh"
       ],
@@ -162,11 +162,6 @@
     },
     {
       "type": "file",
-      "source": "files/jython-installer-2.7.3.jar",
-      "destination": "/tmp/jython-installer.jar"
-    },
-    {
-      "type": "file",
       "source": "files/calculator.py",
       "destination": "/home/vagrant/calculator.py"
     },
@@ -174,11 +169,6 @@
       "type": "file",
       "source": "files/swing_trader_log_viewer.py",
       "destination": "/home/vagrant/swing_trader_log_viewer.py"
-    },
-    {
-      "type": "file",
-      "source": "files/install-jython.exp",
-      "destination": "/tmp/install-jython.exp"
     },
     {
       "type": "file",
@@ -224,15 +214,12 @@
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools-dependencies.sh",
         "{{template_dir}}/../common-packer-scripts/install-vbox-guest-tools.sh",
         "{{template_dir}}/../common-packer-scripts/install-filebeat.sh",
-        "{{template_dir}}/../common-packer-scripts/install-wazuh-local.sh",
         "{{template_dir}}/../common-packer-scripts/install-motd.sh",
         "{{template_dir}}/../common-packer-scripts/install-chef-workstation.sh",
         "{{template_dir}}/../common-packer-scripts/install-java-11.sh",
-        "{{template_dir}}/../common-packer-scripts/install-jython.sh",
         "{{template_dir}}/../common-packer-scripts/configure-sshd.sh",
         "{{template_dir}}/../common-packer-scripts/configure-logrotate.sh",
         "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
-        "{{template_dir}}/../common-packer-scripts/install-fail2ban.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-admin.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-johnnybench.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-richard.sh",
@@ -245,7 +232,6 @@
         "{{template_dir}}/../common-packer-scripts/install-mariadb.sh",
         "{{template_dir}}/../common-packer-scripts/install-x-windows.sh",
         "{{template_dir}}/../common-packer-scripts/install-mqtt.sh",
-        "{{template_dir}}/../common-packer-scripts/install-osiris-agent.sh",
         "{{template_dir}}/../common-packer-scripts/dump-info.sh"
       ],
       "type": "shell"
