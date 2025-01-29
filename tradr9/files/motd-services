@@ -10,8 +10,7 @@
                                |___/
  Infrastructure Build v1.0.0
  ===========================
- Base OS : CentOS7
-
+ Base OS : Rocky9
  This node runs :
  - ELK stack on xxx:5601
  - Grafana on xxx:3000
