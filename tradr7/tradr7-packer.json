@@ -107,6 +107,11 @@
     },
     {
       "type": "file",
+      "source": "files/MariaDB.repo",
+      "destination": "/tmp/MariaDB.repo"
+    },
+    {
+      "type": "file",
       "source": "files/syslog-ng.conf",
       "destination": "/tmp/syslog-ng.conf"
     },
