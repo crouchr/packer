@@ -240,6 +240,8 @@
         "{{template_dir}}/../common-packer-scripts/add-user-watcher.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-tester.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-sector.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-revesting.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-shorts.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-richard.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-elliot.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-amelia.sh",

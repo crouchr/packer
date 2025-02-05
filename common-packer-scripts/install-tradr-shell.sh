@@ -9,6 +9,8 @@ sudo chmod +x /usr/bin/tradr-shell
 sudo usermod -s /usr/bin/tradr-shell admin
 sudo usermod -s /usr/bin/tradr-shell johnnybench
 sudo usermod -s /usr/bin/tradr-shell sector
+sudo usermod -s /usr/bin/tradr-shell revesting
+sudo usermod -s /usr/bin/tradr-shell shorts
 sudo usermod -s /usr/bin/tradr-shell bitcoin
 sudo usermod -s /usr/bin/tradr-shell watcher
 sudo usermod -s /usr/bin/tradr-shell tester
