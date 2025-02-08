@@ -4,7 +4,7 @@
 
 echo 'Running add-user-sniper.sh...'
 
-USER=revesting
+USER=sniper
 sudo adduser ${USER}
 sudo gpasswd -a ${USER} wheel
 sudo mkdir -p /home/${USER}/.ssh
