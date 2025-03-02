@@ -19,7 +19,7 @@
         "{{ user `box_version` }}"
       ],
       "guest_additions_mode": "upload",
-      "guest_additions_sha256": "486f90cbfe9ed4bf2b12d726ebf54a839758a237e967aa65fc2c92d90a963021",
+      "guest_additions_sha256": "17b01cd40bc34a7b79e4922c8f68bea3da3b2348bc4cdeadc962f84f1a63e225",
       "guest_additions_url": "/home/jenkins/isos/VBoxGuestAdditions_{{ .Version }}.iso",
       "guest_os_type": "RedHat_64",
       "hard_drive_interface": "sata",
