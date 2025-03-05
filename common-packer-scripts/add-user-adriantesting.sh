@@ -2,7 +2,7 @@
 # also need to add user to install-tradr-shell.sh
 # This is only for me to use for testing advice against Adrians' dividend portfolio
 
-echo 'Running add-user-adrian-testing.sh...'
+echo 'Running add-user-adriantesting.sh...'
 
 USER=adriantesting
 sudo adduser ${USER}
