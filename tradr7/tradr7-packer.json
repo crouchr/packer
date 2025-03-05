@@ -257,6 +257,7 @@
         "{{template_dir}}/../common-packer-scripts/add-user-amelia.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-simon.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-adrian.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-adriantesting.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-oscar.sh",
         "{{template_dir}}/../common-packer-scripts/install-tradr-shell.sh",
         "{{template_dir}}/../common-packer-scripts/install-mariadb.sh",

@@ -24,6 +24,7 @@ sudo usermod -s /usr/bin/tradr-shell elliot
 sudo usermod -s /usr/bin/tradr-shell amelia
 sudo usermod -s /usr/bin/tradr-shell simon
 sudo usermod -s /usr/bin/tradr-shell adrian
+sudo usermod -s /usr/bin/tradr-shell adriantesting
 sudo usermod -s /usr/bin/tradr-shell oscar
 
 sudo touch /var/log/tradr_shell.log
