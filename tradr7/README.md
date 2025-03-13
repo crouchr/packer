@@ -15,3 +15,7 @@ tradr7-services
         "{{template_dir}}/../common-packer-scripts/install-osiris-console.sh",
         # "{{template_dir}}/../common-packer-scripts/install-chef-workstation.sh",
         # "{{template_dir}}/../common-packer-scripts/install-java-11.sh",
+
+NOTES:
+To add a new user you need to modify 3 files 
+
