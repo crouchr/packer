@@ -23,6 +23,7 @@ sudo usermod -s /usr/bin/tradr-shell bollinger
 sudo usermod -s /usr/bin/tradr-shell candlestick
 sudo usermod -s /usr/bin/tradr-shell dividend
 sudo usermod -s /usr/bin/tradr-shell precious
+sudo usermod -s /usr/bin/tradr-shell miners
 sudo usermod -s /usr/bin/tradr-shell richard
 sudo usermod -s /usr/bin/tradr-shell elliot
 sudo usermod -s /usr/bin/tradr-shell amelia
