@@ -17,6 +17,7 @@ sudo usermod -s /usr/bin/tradr-shell revesting3
 sudo usermod -s /usr/bin/tradr-shell revesting4
 sudo usermod -s /usr/bin/tradr-shell shorts
 sudo usermod -s /usr/bin/tradr-shell bitcoin
+sudo usermod -s /usr/bin/tradr-shell currency
 sudo usermod -s /usr/bin/tradr-shell watcher
 sudo usermod -s /usr/bin/tradr-shell tester
 sudo usermod -s /usr/bin/tradr-shell bollinger

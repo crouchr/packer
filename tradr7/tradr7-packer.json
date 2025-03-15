@@ -242,6 +242,7 @@
         "{{template_dir}}/../common-packer-scripts/add-user-admin.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-johnnybench.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-bitcoin.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-currency.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-watcher.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-tester.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-sector.sh",
