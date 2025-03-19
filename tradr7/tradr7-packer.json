@@ -258,6 +258,8 @@
         "{{template_dir}}/../common-packer-scripts/add-user-dividend.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-precious.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-miners.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-weinstein.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-correlation.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-richard.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-elliot.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-amelia.sh",
