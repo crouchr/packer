@@ -240,6 +240,7 @@
         "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
         "{{template_dir}}/../common-packer-scripts/install-fail2ban.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-admin.sh",
+
         "{{template_dir}}/../common-packer-scripts/add-user-johnnybench.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-bitcoin.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-currency.sh",
@@ -267,6 +268,7 @@
         "{{template_dir}}/../common-packer-scripts/add-user-adrian.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-adriantesting.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-oscar.sh",
+
         "{{template_dir}}/../common-packer-scripts/install-tradr-shell.sh",
         "{{template_dir}}/../common-packer-scripts/install-mariadb.sh",
         "{{template_dir}}/../common-packer-scripts/install-x-windows.sh",

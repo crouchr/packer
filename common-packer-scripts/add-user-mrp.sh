@@ -1,10 +1,9 @@
 #!/bin/bash -eux
 # also need to add user to install-tradr-shell.sh
-# This is only for me to use for testing advice against Adrians' dividend portfolio
 
-echo 'Running add-user-adriantesting.sh...'
+echo 'Running add-user-mrp.sh...'
 
-USER=adriantesting
+USER=mrp
 sudo adduser ${USER}
 sudo gpasswd -a ${USER} wheel
 sudo mkdir -p /home/${USER}/.ssh
