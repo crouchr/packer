@@ -16,6 +16,7 @@ sudo usermod -s /usr/bin/tradr-shell correlation
 sudo usermod -s /usr/bin/tradr-shell currency
 sudo usermod -s /usr/bin/tradr-shell dividend
 sudo usermod -s /usr/bin/tradr-shell elliot
+sudo usermod -s /usr/bin/tradr-shell insider
 sudo usermod -s /usr/bin/tradr-shell johnnybench
 sudo usermod -s /usr/bin/tradr-shell miners
 sudo usermod -s /usr/bin/tradr-shell mrp
