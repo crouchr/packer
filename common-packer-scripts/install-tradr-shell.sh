@@ -11,6 +11,7 @@ sudo usermod -s /usr/bin/tradr-shell adrian
 sudo usermod -s /usr/bin/tradr-shell amelia
 sudo usermod -s /usr/bin/tradr-shell bitcoin
 sudo usermod -s /usr/bin/tradr-shell bollinger
+sudo usermod -s /usr/bin/tradr-shell bonds
 sudo usermod -s /usr/bin/tradr-shell candlestick
 sudo usermod -s /usr/bin/tradr-shell correlation
 sudo usermod -s /usr/bin/tradr-shell currency

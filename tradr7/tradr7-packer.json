@@ -245,6 +245,7 @@
         "{{template_dir}}/../common-packer-scripts/add-user-amelia.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-bitcoin.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-bollinger.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-bonds.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-candlestick.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-correlation.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-currency.sh",
