@@ -257,6 +257,7 @@
         "{{template_dir}}/../common-packer-scripts/add-user-mrp.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-oscar.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-precious.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-reits.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-revesting.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-revesting2.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-revesting3.sh",
