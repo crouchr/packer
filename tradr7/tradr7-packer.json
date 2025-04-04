@@ -251,6 +251,7 @@
         "{{template_dir}}/../common-packer-scripts/add-user-currency.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-dividend.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-elliot.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-energy.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-insider.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-johnnybench.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-miners.sh",
