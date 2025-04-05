@@ -1,9 +1,9 @@
 #!/bin/bash -eux
 # also need to add user to install-tradr-shell.sh
 
-echo 'Running add-user-precious.sh...'
+echo 'Running add-user-staples.sh...'
 
-USER=precious
+USER=staples
 sudo adduser ${USER}
 sudo gpasswd -a ${USER} wheel
 sudo mkdir -p /home/${USER}/.ssh
