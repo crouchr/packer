@@ -3,7 +3,7 @@
 # Country ETFs go in here
 echo 'Running add-user-global.sh...'
 
-USER=commodities
+USER=global
 sudo adduser ${USER}
 sudo gpasswd -a ${USER} wheel
 sudo mkdir -p /home/${USER}/.ssh
