@@ -9,6 +9,7 @@ sudo chmod +x /usr/bin/tradr-shell
 sudo usermod -s /usr/bin/tradr-shell admin
 sudo usermod -s /usr/bin/tradr-shell adrian
 sudo usermod -s /usr/bin/tradr-shell amelia
+sudo usermod -s /usr/bin/tradr-shell banks
 sudo usermod -s /usr/bin/tradr-shell bitcoin
 sudo usermod -s /usr/bin/tradr-shell bollinger
 sudo usermod -s /usr/bin/tradr-shell bonds
