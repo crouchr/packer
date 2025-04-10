@@ -262,6 +262,7 @@
         "{{template_dir}}/../common-packer-scripts/add-user-johnnybench.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-miners.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-mrp.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-oil.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-oscar.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-reits.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-revesting.sh",
@@ -279,6 +280,7 @@
         "{{template_dir}}/../common-packer-scripts/add-user-tester.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-volume.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-watcher.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-water.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-weinstein.sh",
 
         "{{template_dir}}/../common-packer-scripts/install-tradr-shell.sh",

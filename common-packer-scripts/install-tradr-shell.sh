@@ -28,6 +28,7 @@ sudo usermod -s /usr/bin/tradr-shell insider
 sudo usermod -s /usr/bin/tradr-shell johnnybench
 sudo usermod -s /usr/bin/tradr-shell miners
 sudo usermod -s /usr/bin/tradr-shell mrp
+sudo usermod -s /usr/bin/tradr-shell oil
 sudo usermod -s /usr/bin/tradr-shell oscar
 sudo usermod -s /usr/bin/tradr-shell reits
 sudo usermod -s /usr/bin/tradr-shell revesting
@@ -45,6 +46,7 @@ sudo usermod -s /usr/bin/tradr-shell staples
 sudo usermod -s /usr/bin/tradr-shell tester
 sudo usermod -s /usr/bin/tradr-shell volume
 sudo usermod -s /usr/bin/tradr-shell watcher
+sudo usermod -s /usr/bin/tradr-shell water
 sudo usermod -s /usr/bin/tradr-shell weinstein
 
 sudo touch /var/log/tradr_shell.log
