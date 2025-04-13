@@ -7,5 +7,5 @@ USER=currency
 sudo adduser ${USER}
 sudo gpasswd -a ${USER} wheel
 sudo mkdir -p /home/${USER}/.ssh
-echo "${USER}:Faguar1968!" | sudo chpasswd
+echo "${USER}:Tradr1066!" | sudo chpasswd
 sudo usermod -aG docker ${USER}

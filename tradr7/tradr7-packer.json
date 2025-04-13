@@ -253,6 +253,7 @@
         "{{template_dir}}/../common-packer-scripts/add-user-currency.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-dividend.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-elliot.sh",
+        "{{template_dir}}/../common-packer-scripts/add-user-futures.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-energy.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-global.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-gold.sh",

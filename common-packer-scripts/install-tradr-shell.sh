@@ -20,6 +20,7 @@ sudo usermod -s /usr/bin/tradr-shell currency
 sudo usermod -s /usr/bin/tradr-shell dividend
 sudo usermod -s /usr/bin/tradr-shell elliot
 sudo usermod -s /usr/bin/tradr-shell energy
+sudo usermod -s /usr/bin/tradr-shell futures
 sudo usermod -s /usr/bin/tradr-shell global
 sudo usermod -s /usr/bin/tradr-shell gold
 sudo usermod -s /usr/bin/tradr-shell healthcare
