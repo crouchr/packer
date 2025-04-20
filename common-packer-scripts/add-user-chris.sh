@@ -1,5 +1,6 @@
 #!/bin/bash -eux
 # also need to add user to install-tradr-shell.sh
+# User whose trades correspond to Chris Vermuellen in Revesting Book
 
 echo 'Running add-user-chris.sh...'
 
