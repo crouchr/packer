@@ -19,6 +19,6 @@ tradr7-services
 NOTES:
 To add a new user you need to modify 3 files 
 1. install-tradr-shell.sh
-2. create a add-user-foo.sh
+2. create an add-user-foo.sh
 3. Add the add-user-foo.sh to the tradr7-packer.json file (in alphabetical order)
 

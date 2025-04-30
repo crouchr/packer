@@ -32,6 +32,7 @@ sudo usermod -s /usr/bin/tradr-shell miners
 sudo usermod -s /usr/bin/tradr-shell mrp
 sudo usermod -s /usr/bin/tradr-shell oil
 sudo usermod -s /usr/bin/tradr-shell oscar
+sudo usermod -s /usr/bin/tradr-shell quantum
 sudo usermod -s /usr/bin/tradr-shell reits
 sudo usermod -s /usr/bin/tradr-shell revesting
 sudo usermod -s /usr/bin/tradr-shell revesting2
