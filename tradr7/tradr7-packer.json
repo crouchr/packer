@@ -41,7 +41,7 @@
           "modifyvm",
           "{{ .Name }}",
           "--memory",
-          "6144"
+          "8192"
         ],
         [
           "modifyvm",
@@ -239,7 +239,6 @@
         "{{template_dir}}/../common-packer-scripts/configure-logrotate.sh",
         "{{template_dir}}/../common-packer-scripts/install-docker-ce.sh",
         "{{template_dir}}/../common-packer-scripts/install-fail2ban.sh",
-
         "{{template_dir}}/../common-packer-scripts/add-user-admin.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-adrian.sh",
         "{{template_dir}}/../common-packer-scripts/add-user-amelia.sh",
